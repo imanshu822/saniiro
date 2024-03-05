@@ -10,12 +10,12 @@ import Footer from "../utils/Footer";
 import Awards from "./parts/Awards";
 import Testimonial from "./parts/Testimonial";
 import { Stack } from "@mui/material";
+import NavLight from "../Navbar/NavLight";
 
 const Home = () => {
   return (
     <>
-      <Nav />
-      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+      <Stack fontFamily={"Work Sans"} maxWidth={"1536px"} margin={"0 auto"}>
         <Simplify />
         <RequestDemo />
         <Billing />

@@ -40,7 +40,7 @@ const RequestDemo = () => {
       <Typography
         sx={{
           fontSize: { xs: "12px", sm: "18px", md: "22px" },
-          width: { xs: "280px", sm: "360px", md: "700px", lg: "800px" },
+          width: { xs: "270px", sm: "360px", md: "700px", lg: "800px" },
         }}
         textAlign={"center"}
         pt={2}

@@ -1,7 +1,6 @@
-
-.text-stroke{
-    -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #F69F7F;
+.text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f69f7f;
 }
 .textured-background {
   position: relative;

@@ -60,6 +60,7 @@ const Billing = ({ bgColor }) => {
   return (
     <>
       <Stack
+        fontFamily={"Work Sans"}
         sx={{
           display: {
             xs: "none",
@@ -118,21 +119,22 @@ const Billing = ({ bgColor }) => {
               >
                 Billing
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Who said world-class software can only be built in Silicon
                 Valley? Zoho CRM empowers 250,000+ global businesses to deliver
                 fantastic customer experiences and drive remarkable growth.
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Made right here in India–try the SaaS from Madras!
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 - Try the SaaS from Madras <br />- India–try the SaaS from
                 Madras. <br /> - The SaaS from Madra. <br /> - Made right here
                 in India–try
               </Typography>
               <Button
                 type="button"
+                fontFamily={"Work Sans"}
                 sx={{
                   color: "white",
                   width: "186px",
@@ -193,21 +195,22 @@ const Billing = ({ bgColor }) => {
               >
                 Billing
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Who said world-class software can only be built in Silicon
                 Valley? Zoho CRM empowers 250,000+ global businesses to deliver
                 fantastic customer experiences and drive remarkable growth.
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Made right here in India–try the SaaS from Madras!
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 - Try the SaaS from Madras <br />- India–try the SaaS from
                 Madras. <br /> - The SaaS from Madra. <br /> - Made right here
                 in India–try
               </Typography>
               <Button
                 type="button"
+                fontFamily={"Work Sans"}
                 sx={{
                   color: "white",
                   width: "186px",
@@ -267,21 +270,22 @@ const Billing = ({ bgColor }) => {
               >
                 Billing
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Who said world-class software can only be built in Silicon
                 Valley? Zoho CRM empowers 250,000+ global businesses to deliver
                 fantastic customer experiences and drive remarkable growth.
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 Made right here in India–try the SaaS from Madras!
               </Typography>
-              <Typography>
+              <Typography fontFamily={"Work Sans"}>
                 - Try the SaaS from Madras <br />- India–try the SaaS from
                 Madras. <br /> - The SaaS from Madra. <br /> - Made right here
                 in India–try
               </Typography>
               <Button
                 type="button"
+                fontFamily={"Work Sans"}
                 sx={{
                   color: "white",
                   width: "186px",
@@ -301,6 +305,8 @@ const Billing = ({ bgColor }) => {
           </Stack>
         </Stack>
       </Stack>
+
+      {/* for mobile */}
       <Box
         sx={{
           display: {
@@ -329,6 +335,7 @@ const Billing = ({ bgColor }) => {
                   alt={`billingImg ${index}`}
                 />
                 <Typography
+                  fontFamily={"Work Sans"}
                   sx={{
                     fontFamily: "Work Sans",
                     fontSize: "38px",
@@ -341,6 +348,7 @@ const Billing = ({ bgColor }) => {
                   {d.title}
                 </Typography>
                 <Typography
+                  fontFamily={"Work Sans"}
                   sx={{
                     textAlign: "center",
                   }}
@@ -348,6 +356,7 @@ const Billing = ({ bgColor }) => {
                   {d.disc}
                 </Typography>
                 <Typography
+                  fontFamily={"Work Sans"}
                   sx={{
                     textAlign: "center",
                   }}
@@ -361,16 +370,24 @@ const Billing = ({ bgColor }) => {
                 >
                   <ul>
                     <li>
-                      <Typography>{d.bulltePoints1}</Typography>
+                      <Typography fontFamily={"Work Sans"}>
+                        {d.bulltePoints1}
+                      </Typography>
                     </li>
                     <li>
-                      <Typography>{d.bulltePoints2}</Typography>
+                      <Typography fontFamily={"Work Sans"}>
+                        {d.bulltePoints2}
+                      </Typography>
                     </li>
                     <li>
-                      <Typography>{d.bulltePoints3}</Typography>
+                      <Typography fontFamily={"Work Sans"}>
+                        {d.bulltePoints3}
+                      </Typography>
                     </li>
                     <li>
-                      <Typography>{d.bulltePoints4}</Typography>
+                      <Typography fontFamily={"Work Sans"}>
+                        {d.bulltePoints4}
+                      </Typography>
                     </li>
                   </ul>
                 </Stack>
