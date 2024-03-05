@@ -60,7 +60,7 @@ const NavLight = () => {
             lg: "flex",
           },
         }}
-        zIndex={10}
+        zIndex={16}
         direction={"row"}
         justifyContent={"space-between"}
         p={"20px 90px"}
@@ -506,7 +506,7 @@ const NavLight = () => {
       </Stack>
       {/* mobile view */}
       <Stack
-        zIndex={100}
+        zIndex={25}
         alignItems={"end"}
         width={"98%"}
         sx={{
@@ -522,7 +522,8 @@ const NavLight = () => {
           alignSelf={"center"}
           justifyContent={"space-between"}
           alignItems={"center"}
-          padding={"20px 29px"}
+          margin={"0 auto"}
+          padding={"20px 0px"}
         >
           <Link to={"/"}>
             <img src={logoLight} alt="" />

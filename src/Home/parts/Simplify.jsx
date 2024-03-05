@@ -35,7 +35,7 @@ const Simplify = () => {
 
       <Stack
         // direction={"row"}
-        zIndex={13}
+        zIndex={15}
         sx={{
           flexDirection: {
             xs: "column",
