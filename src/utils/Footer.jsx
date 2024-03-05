@@ -67,7 +67,23 @@ const Footer = () => {
       to: "/Resources/Blog",
     },
   ];
+
   const list3 = [
+    {
+      item: "Case studies",
+      to: "/subfooter/legal",
+    },
+    {
+      item: "Testimonials",
+      to: "/subfooter/legal",
+    },
+    {
+      item: "Become A Partner",
+      to: "/subfooter/legal",
+    },
+  ];
+
+  const list4 = [
     {
       item: "Legal",
       to: "/subfooter/legal",
@@ -89,6 +105,7 @@ const Footer = () => {
       to: "/subfooter/employee-login",
     },
   ];
+
   return (
     <>
       <Stack
@@ -304,7 +321,7 @@ const Footer = () => {
           justifyContent={"Center"}
           gap={5}
         >
-          {list3.map((d) => (
+          {list4.map((d) => (
             <Link
               to={`${d.to}`}
               style={{ color: "lightgray", textDecoration: "none" }}
@@ -471,27 +488,25 @@ const Footer = () => {
                   >
                     <Typography>
                       {" "}
-                      <Link to="/Features" className="navlink-link">
-                        <Box
-                          display={"flex"}
-                          justifyContent="center"
-                          alignItems={"center"}
+                      <Box
+                        display={"flex"}
+                        justifyContent="center"
+                        alignItems={"center"}
+                      >
+                        <Typography
+                          alignSelf="center"
+                          display="inline-block"
+                          fontSize={20}
+                          fontFamily={"Work Sans"}
+                          className="navlink"
+                          sx={{
+                            transition: "all 0.4s ease-in",
+                            color: "white",
+                          }}
                         >
-                          <Typography
-                            alignSelf="center"
-                            display="inline-block"
-                            fontSize={20}
-                            fontFamily={"Work Sans"}
-                            className="navlink"
-                            sx={{
-                              transition: "all 0.4s ease-in",
-                              color: "white",
-                            }}
-                          >
-                            Company
-                          </Typography>
-                        </Box>
-                      </Link>
+                          Company
+                        </Typography>
+                      </Box>
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
@@ -537,28 +552,25 @@ const Footer = () => {
                     }
                   >
                     <Typography>
-                      {" "}
-                      <Link to="/Features" className="navlink-link">
-                        <Box
-                          display={"flex"}
-                          justifyContent="center"
-                          alignItems={"center"}
+                      <Box
+                        display={"flex"}
+                        justifyContent="center"
+                        alignItems={"center"}
+                      >
+                        <Typography
+                          alignSelf="center"
+                          display="inline-block"
+                          fontSize={20}
+                          fontFamily={"Work Sans"}
+                          className="navlink"
+                          sx={{
+                            transition: "all 0.4s ease-in",
+                            color: "white",
+                          }}
                         >
-                          <Typography
-                            alignSelf="center"
-                            display="inline-block"
-                            fontSize={20}
-                            fontFamily={"Work Sans"}
-                            className="navlink"
-                            sx={{
-                              transition: "all 0.4s ease-in",
-                              color: "white",
-                            }}
-                          >
-                            Features
-                          </Typography>
-                        </Box>
-                      </Link>
+                          Features
+                        </Typography>
+                      </Box>
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
@@ -605,27 +617,25 @@ const Footer = () => {
                   >
                     <Typography>
                       {" "}
-                      <Link to="/Features" className="navlink-link">
-                        <Box
-                          display={"flex"}
-                          justifyContent="center"
-                          alignItems={"center"}
+                      <Box
+                        display={"flex"}
+                        justifyContent="center"
+                        alignItems={"center"}
+                      >
+                        <Typography
+                          alignSelf="center"
+                          display="inline-block"
+                          fontSize={20}
+                          fontFamily={"Work Sans"}
+                          className="navlink"
+                          sx={{
+                            transition: "all 0.4s ease-in",
+                            color: "white",
+                          }}
                         >
-                          <Typography
-                            alignSelf="center"
-                            display="inline-block"
-                            fontSize={20}
-                            fontFamily={"Work Sans"}
-                            className="navlink"
-                            sx={{
-                              transition: "all 0.4s ease-in",
-                              color: "white",
-                            }}
-                          >
-                            Customers
-                          </Typography>
-                        </Box>
-                      </Link>
+                          Customers
+                        </Typography>
+                      </Box>
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
@@ -733,7 +743,7 @@ const Footer = () => {
                 },
               }}
             >
-              {list3.map((d) => (
+              {list4.map((d) => (
                 <Link
                   to={`${d.to}`}
                   style={{ color: "lightgray", textDecoration: "none" }}
