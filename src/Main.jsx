@@ -31,6 +31,11 @@ import HelpAndTraining from "./HelpAndTraining/HelpAndTraining";
 import WatchMoreVideos from "./Resources/Videos/WatchMoreVideos";
 import PlayVideo from "./Resources/Videos/PlayVideo";
 import CaseStudyForm1 from "./Forms/CaseStudyForm1";
+import Legal from "./SubFooter/Legal";
+import LegalEmployeeLogin from "./SubFooter/EmployeeLogin";
+import CancalationRefundPolicy from "./SubFooter/CancalationRefundPolicy";
+import PrivacyPolicy from "./SubFooter/PrivacyPolicy";
+import TnC from "./SubFooter/TnC";
 
 const Main = () => {
   return (
@@ -105,6 +110,25 @@ const Main = () => {
         <Route exact path="/Updates/:id" element={<UpdatesActivities />} />
 
         <Route exact path="/HelpAndTraining" element={<HelpAndTraining />} />
+
+        {/* SubFooter pages  */}
+        <Route exact path="/subfooter/legal" element={<Legal />} />
+        <Route exact path="/subfooter/terms-and-conditions" element={<TnC />} />
+        <Route
+          exact
+          path="/subfooter/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          exact
+          path="/subfooter/cancalation-and-refund-policy"
+          element={<CancalationRefundPolicy />}
+        />
+        <Route
+          exact
+          path="/subfooter/employee-login"
+          element={<LegalEmployeeLogin />}
+        />
       </Routes>
     </>
   );

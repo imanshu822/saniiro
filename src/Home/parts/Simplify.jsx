@@ -55,13 +55,16 @@ const Simplify = () => {
             lg: "30px auto",
             xl: "50px 100px",
           },
+          padding: {
+            xs: "10px 0",
+          },
         }}
       >
         <Typography
           textTransform={"uppercase"}
           sx={{
             fontSize: {
-              xs: "35px",
+              xs: "45px",
               sm: "55px",
               lg: "85px",
               xl: "115px",
@@ -83,7 +86,7 @@ const Simplify = () => {
           sx={{
             textTransform: "uppercase",
             fontSize: {
-              xs: "35px",
+              xs: "45px",
               sm: "55px",
               lg: "85px",
               xl: "115px",

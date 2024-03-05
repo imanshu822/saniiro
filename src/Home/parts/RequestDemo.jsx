@@ -89,10 +89,11 @@ const RequestDemo = () => {
       </Stack>
       <Stack>
         <Box
+          margin={"0 auto"}
           sx={{
             width: {
               xs: "200px",
-              sm: "380px ",
+              sm: "330px ",
               md: "600px",
               lg: "1018px",
             },
@@ -101,10 +102,11 @@ const RequestDemo = () => {
           <img src={section2} style={{ width: "100%" }} />
         </Box>
         <Box
+          margin={"0 auto"}
           sx={{
             width: {
               xs: "200px",
-              sm: "380px ",
+              sm: "330px ",
               md: "600px",
               lg: "1018px",
             },

@@ -503,7 +503,7 @@ const Nav = () => {
       {/* for Mobile view */}
       <Stack
         alignItems={"end"}
-        width={"100%"}
+        width={"98%"}
         sx={{
           display: {
             xs: "flex",
@@ -543,7 +543,7 @@ const Nav = () => {
         <Stack
           id="menu-container"
           width={"100%"}
-          margin={"30px auto"}
+          margin={"10px auto"}
           position={"absolute"}
           gap={2}
           sx={{

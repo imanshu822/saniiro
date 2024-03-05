@@ -91,10 +91,10 @@ const Testimonial = () => {
           >
             {isVideoPlaying ? (
               <ReactPlayer
-                url="https://www.example.com/your-video-url.mp4" // Replace with your video URL
+                url="https://www.youtube.com/watch?v=SlhESAKF1Tk" // Replace with your video URL
                 controls
-                width="100%"
-                height="100%"
+                width={"100%"}
+                height={"100%"}
               />
             ) : (
               <Stack alignItems={"center"}>

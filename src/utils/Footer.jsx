@@ -11,7 +11,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+// import ArrowDropDownIcon from "@mui/icons-material/KeyboardArrowRight";
 import "./Footer.css";
 const Footer = () => {
   const list1 = [
@@ -70,15 +70,23 @@ const Footer = () => {
   const list3 = [
     {
       item: "Legal",
+      to: "/subfooter/legal",
     },
     {
       item: "Terms & Conditions",
+      to: "/subfooter/terms-and-conditions",
     },
     {
       item: "Privacy Policy",
+      to: "/subfooter/privacy-policy",
+    },
+    {
+      item: "Canclenatin/Refund Policy",
+      to: "/subfooter/cancalation-and-refund-policy",
     },
     {
       item: "Employee Login",
+      to: "/subfooter/employee-login",
     },
   ];
   return (
@@ -272,7 +280,7 @@ const Footer = () => {
                   <EmailIcon sx={{ color: "white" }} />
                   <Typography color={"white"}>info@saniiro.com</Typography>
                 </Stack>
-                <Stack
+                {/* <Stack
                   direction={"row"}
                   border={"1px solid white"}
                   bgcolor={"#F15B25"}
@@ -283,7 +291,7 @@ const Footer = () => {
                 >
                   <CallIcon sx={{ color: "white" }} />
                   <Typography color={"white"}>+91-9829232322</Typography>
-                </Stack>
+                </Stack> */}
               </Stack>
             </Stack>
           </Stack>
@@ -298,8 +306,9 @@ const Footer = () => {
         >
           {list3.map((d) => (
             <Link
-              to={"#"}
+              to={`${d.to}`}
               style={{ color: "lightgray", textDecoration: "none" }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               {d.item}
             </Link>
@@ -453,7 +462,7 @@ const Footer = () => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <KeyboardArrowRightIcon
+                      <ArrowDropDownIcon
                         sx={{
                           color: "white",
                         }}
@@ -520,7 +529,7 @@ const Footer = () => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <KeyboardArrowRightIcon
+                      <ArrowDropDownIcon
                         sx={{
                           color: "white",
                         }}
@@ -587,7 +596,7 @@ const Footer = () => {
                 >
                   <AccordionSummary
                     expandIcon={
-                      <KeyboardArrowRightIcon
+                      <ArrowDropDownIcon
                         sx={{
                           color: "white",
                         }}
@@ -688,7 +697,7 @@ const Footer = () => {
                     info@saniiro.com
                   </Typography>
                 </Stack>
-                <Stack
+                {/* <Stack
                   direction={"row"}
                   border={"1px solid white"}
                   bgcolor={"#F15B25"}
@@ -702,7 +711,7 @@ const Footer = () => {
                   <Typography variant="p" color={"white"}>
                     +91-9829232322
                   </Typography>
-                </Stack>
+                </Stack> */}
               </Stack>
             </Stack>
             <hr
@@ -726,8 +735,9 @@ const Footer = () => {
             >
               {list3.map((d) => (
                 <Link
-                  to={"#"}
+                  to={`${d.to}`}
                   style={{ color: "lightgray", textDecoration: "none" }}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   {d.item}
                 </Link>

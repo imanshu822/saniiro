@@ -50,6 +50,10 @@ const Slider = () => {
       items: 3,
     },
     mobile: {
+      breakpoint: { max: 765, min: 0 },
+      items: 2,
+    },
+    mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
     },
@@ -59,13 +63,13 @@ const Slider = () => {
       sx={{
         width: {
           xs: "200px",
-          sm: "380px ",
+          sm: "315px ",
           md: "600px",
           lg: "1018px",
         },
         top: {
-          xs: "5%",
-          sm: "14%",
+          xs: "3%",
+          sm: "8%",
           md: "27%",
         },
         left: {
