@@ -48,7 +48,13 @@ export default function DottedMaps() {
   const [pin, setActivePin] = useState(pins[0]);
   const viewBox = `0 0 100 100`;
   return (
-    <Box height={"100vh"}>
+    <Box
+      sx={{
+        height: {
+          xs: "100%",
+        },
+      }}
+    >
       {/* {pins.map((pin) => (
         <button type="button" onClick={() => setActivePin(pin)}>
           {pin.data}
@@ -57,7 +63,7 @@ export default function DottedMaps() {
       <Stack alignItems={"center"} pt={3}>
         <svg
           viewBox={viewBox}
-          style={{ background: svgOptions.backgroundColor, width: "70%" }}
+          style={{ background: svgOptions.backgroundColor, width: "80%" }}
         >
           {points.map((point) => (
             <circle

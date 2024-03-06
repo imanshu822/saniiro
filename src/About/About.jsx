@@ -17,6 +17,7 @@ const About = () => {
       <Nav />
       <Stack
         sx={{
+          gap: 5,
           maxWidth: "1440px",
           margin: "0 auto",
         }}
