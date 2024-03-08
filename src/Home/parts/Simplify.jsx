@@ -30,304 +30,303 @@ const Simplify = () => {
     console.log("Form submitted!");
   };
   return (
-    <Stack bgcolor={"#052973"} className="textured-background">
-      <NavLight />
-
+    <Stack
+      // direction={"row"}
+      zIndex={-1}
+      sx={{
+        flexDirection: {
+          xs: "column",
+          lg: "row",
+        },
+        // width: "100%",
+        margin: {
+          xs: "0px",
+          sm: "20px",
+          lg: "0px auto",
+        },
+      }}
+    >
       <Stack
-        // direction={"row"}
-        zIndex={15}
         sx={{
-          flexDirection: {
-            xs: "column",
-            lg: "row",
+          width: {
+            xs: "100%",
+            lg: "40%",
+            xl: "42%",
+            xxl: "50%",
           },
-          // width: "100%",
           margin: {
-            xs: "0px",
-            sm: "20px",
-            lg: "0px auto",
+            lg: "30px auto",
+            xl: "50px 100px",
+          },
+          padding: {
+            xs: "10px 0",
           },
         }}
       >
-        <Stack
+        <Typography
+          textTransform={"uppercase"}
+          sx={{
+            fontSize: {
+              xs: "55px",
+              sm: "60px",
+              lg: "85px",
+              xl: "115px",
+            },
+            textAlign: {
+              xs: "center",
+              lg: "left",
+            },
+          }}
+          color={"#052973"}
+          // color={"white"}
+          fontWeight={900}
+          lineHeight={0.9}
+          letterSpacing={"0.05em"}
+        >
+          Simplify Your
+        </Typography>
+        <Typography
+          className="text-stroke"
+          fontFamily={"monospace"}
+          sx={{
+            textTransform: "uppercase",
+            fontSize: {
+              xs: "55px",
+              sm: "60px",
+              lg: "85px",
+              xl: "115px",
+            },
+            textAlign: {
+              xs: "center",
+              lg: "left",
+            },
+            fontWeight: "bold",
+            letterSpacing: 1,
+            color: "transparent",
+            lineHeight: 1,
+          }}
+        >
+          Business
+        </Typography>
+        <Typography
+          fontFamily={"Work Sans"}
+          // color={"white"}
+          color={"black"}
           sx={{
             width: {
-              xs: "100%",
-              lg: "40%",
-              xl: "42%",
-              xxl: "50%",
+              xs: "90%",
+              sm: "80%",
+              lg: "90%",
             },
             margin: {
-              lg: "30px auto",
-              xl: "50px 100px",
+              xs: "20px auto 0px",
+              lg: "20px 0px 0px",
             },
-            padding: {
-              xs: "10px 0",
+
+            fontSize: {
+              xs: "14px",
+              lg: "18px",
+            },
+            textAlign: {
+              xs: "center",
+              lg: "left",
             },
           }}
         >
-          <Typography
-            textTransform={"uppercase"}
-            sx={{
-              fontSize: {
-                xs: "55px",
-                sm: "60px",
-                lg: "85px",
-                xl: "115px",
-              },
-              textAlign: {
-                xs: "center",
-                lg: "left",
-              },
-            }}
-            // color={"#052973"}
-            color={"white"}
-            fontWeight={900}
-            lineHeight={0.9}
-            letterSpacing={"0.05em"}
-          >
-            Simplify Your
-          </Typography>
-          <Typography
-            className="text-stroke"
-            sx={{
-              textTransform: "uppercase",
-              fontSize: {
-                xs: "55px",
-                sm: "60px",
-                lg: "85px",
-                xl: "115px",
-              },
-              textAlign: {
-                xs: "center",
-                lg: "left",
-              },
-              fontWeight: "bold",
-              letterSpacing: 1,
-              color: "transparent",
-              lineHeight: 1,
-            }}
-          >
-            Buisness
-          </Typography>
-          <Typography
-            fontFamily={"Work Sans"}
-            color={"white"}
-            sx={{
-              width: {
-                xs: "90%",
-                sm: "80%",
-                lg: "90%",
-              },
-              margin: {
-                xs: "20px auto 0px",
-                lg: "20px 0px 0px",
-              },
+          Who said world-class software can only be built in Silicon Valley?
+          Zoho CRM empowers 250,000+ global businesses to deliver fantastic
+          customer experiences and drive remarkable growth. Made right here in
+          India–try the SaaS from Madras!
+        </Typography>
+      </Stack>
 
-              fontSize: {
-                xs: "14px",
-                lg: "18px",
-              },
-              textAlign: {
-                xs: "center",
-                lg: "left",
-              },
-            }}
-          >
-            Who said world-class software can only be built in Silicon Valley?
-            Zoho CRM empowers 250,000+ global businesses to deliver fantastic
-            customer experiences and drive remarkable growth. Made right here in
-            India–try the SaaS from Madras!
-          </Typography>
-        </Stack>
+      <Stack
+        gap={2}
+        sx={{
+          width: {
+            xs: "100%",
+            lg: "50%",
+            xl: "50%",
+          },
+          padding: {
+            xs: "20px 0px",
+            lg: "20px 0px",
+            xl: "40px 0px",
+          },
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: {
+              xs: "18px",
+              sm: "22px",
+              md: "28px",
 
+              xl: "38px",
+            },
+            textAlign: {
+              xs: "center",
+            },
+          }}
+          color={"#052973"}
+          // color={"white"}
+          fontWeight={"bold"}
+          fontSize={"22px"}
+          textAlign={"center"}
+          fontFamily={"Work Sans"}
+        >
+          Get started with your free trial
+        </Typography>
         <Stack
+          alignItems={"center"}
           gap={2}
+          margin={"0 auto"}
           sx={{
             width: {
-              xs: "100%",
-              lg: "50%",
-              xl: "50%",
-            },
-            padding: {
-              xs: "20px 0px",
-              lg: "20px 0px",
-              xl: "40px 0px",
+              xs: "80%",
+              md: "70%",
+              lg: "100%",
+              xl: "100%",
             },
           }}
         >
-          <Typography
-            sx={{
-              fontSize: {
-                xs: "18px",
-                sm: "22px",
-                md: "28px",
-
-                xl: "38px",
-              },
-              textAlign: {
-                xs: "center",
-              },
-            }}
-            // color={"#052973"}
-            color={"white"}
-            fontWeight={"bold"}
-            fontSize={"22px"}
-            textAlign={"center"}
-            fontFamily={"Work Sans"}
-          >
-            Get started with your free trial
-          </Typography>
           <Stack
-            alignItems={"center"}
-            gap={2}
-            margin={"0 auto"}
+            style={{ position: "relative" }}
             sx={{
               width: {
-                xs: "80%",
-                md: "70%",
-                lg: "100%",
-                xl: "100%",
+                xs: "220px",
+                sm: "300px",
+                md: "480px",
+                lg: "385px",
+                xl: "480px",
+              },
+              height: {
+                xs: "45px",
+                sm: "55px",
+                md: "67px",
+                lg: "57px",
+                xl: "67px",
               },
             }}
           >
-            <Stack
-              style={{ position: "relative" }}
-              sx={{
-                width: {
-                  xs: "220px",
-                  sm: "300px",
-                  md: "480px",
-                  lg: "385px",
-                  xl: "480px",
-                },
-                height: {
-                  xs: "45px",
-                  sm: "55px",
-                  md: "67px",
-                  lg: "57px",
-                  xl: "67px",
-                },
+            <input
+              type="text"
+              style={{
+                fontFamily: "Work Sans",
+                width: "94%",
+                height: "100%",
+                border: "1px solid #AAAAAA",
+                color: "#AAAAAA",
+                paddingLeft: "5%",
+                fontSize: "20px",
               }}
-            >
-              <input
-                type="text"
-                style={{
-                  fontFamily: "Work Sans",
-                  width: "94%",
-                  height: "100%",
-                  border: "1px solid #AAAAAA",
-                  color: "#AAAAAA",
-                  paddingLeft: "5%",
-                  fontSize: "20px",
-                }}
-                placeholder="Full Name"
-              />
-              <PersonIcon
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "8px",
-                  transform: "translateY(-50%)",
-                  color: "#AAAAAA",
-                  fontSize: "40px",
-                }}
-              />
-            </Stack>
-            <Stack
-              style={{ position: "relative" }}
-              sx={{
-                width: {
-                  xs: "220px",
-                  sm: "300px",
-                  md: "480px",
-                  lg: "385px",
-                  xl: "480px",
-                },
-                height: {
-                  xs: "45px",
-                  sm: "55px",
-                  md: "67px",
-                  lg: "57px",
-                  xl: "67px",
-                },
+              placeholder="Full Name"
+            />
+            <PersonIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "8px",
+                transform: "translateY(-50%)",
+                color: "#AAAAAA",
+                fontSize: "40px",
               }}
-            >
-              <input
-                type="Email"
-                className="input-new"
-                placeholder="Work Email"
-                style={{
-                  fontFamily: "Work Sans",
-                  width: "94%",
-                  height: "100%",
-                  border: "1px solid #AAAAAA",
-                  color: "#AAAAAA",
-                  paddingLeft: "5%",
-                  fontSize: "20px",
-                }}
-              />
-              <EmailIcon
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "8px",
-                  transform: "translateY(-50%)",
-                  color: "#AAAAAA",
-                  fontSize: "40px",
-                }}
-              />
-            </Stack>
+            />
+          </Stack>
+          <Stack
+            style={{ position: "relative" }}
+            sx={{
+              width: {
+                xs: "220px",
+                sm: "300px",
+                md: "480px",
+                lg: "385px",
+                xl: "480px",
+              },
+              height: {
+                xs: "45px",
+                sm: "55px",
+                md: "67px",
+                lg: "57px",
+                xl: "67px",
+              },
+            }}
+          >
+            <input
+              type="Email"
+              className="input-new"
+              placeholder="Work Email"
+              style={{
+                fontFamily: "Work Sans",
+                width: "94%",
+                height: "100%",
+                border: "1px solid #AAAAAA",
+                color: "#AAAAAA",
+                paddingLeft: "5%",
+                fontSize: "20px",
+              }}
+            />
+            <EmailIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "8px",
+                transform: "translateY(-50%)",
+                color: "#AAAAAA",
+                fontSize: "40px",
+              }}
+            />
+          </Stack>
 
-            <Stack
-              style={{ position: "relative" }}
-              sx={{
-                width: {
-                  xs: "220px",
-                  sm: "300px",
-                  md: "480px",
-                  lg: "385px",
-                  xl: "480px",
-                },
-                height: {
-                  xs: "45px",
-                  sm: "55px",
-                  md: "67px",
-                  lg: "57px",
-                  xl: "67px",
-                },
+          <Stack
+            style={{ position: "relative" }}
+            sx={{
+              width: {
+                xs: "220px",
+                sm: "300px",
+                md: "480px",
+                lg: "385px",
+                xl: "480px",
+              },
+              height: {
+                xs: "45px",
+                sm: "55px",
+                md: "67px",
+                lg: "57px",
+                xl: "67px",
+              },
+            }}
+          >
+            <input
+              name="Password"
+              type={showPassword ? "text" : "password"}
+              placeholder="Create Password"
+              className="input-new"
+              style={{
+                fontFamily: "Work Sans",
+                width: "94%",
+                height: "100%",
+                border: "1px solid #AAAAAA",
+                color: "#AAAAAA",
+                paddingLeft: "5%",
+                fontSize: "20px",
               }}
+            />
+            <IconButton
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "8px",
+                transform: "translateY(-50%)",
+                color: "#AAAAAA",
+                fontSize: "50px",
+              }}
+              onClick={() => setShowPassword(!showPassword)}
             >
-              <input
-                name="Password"
-                type={showPassword ? "text" : "password"}
-                placeholder="Create Password"
-                className="input-new"
-                style={{
-                  fontFamily: "Work Sans",
-                  width: "94%",
-                  height: "100%",
-                  border: "1px solid #AAAAAA",
-                  color: "#AAAAAA",
-                  paddingLeft: "5%",
-                  fontSize: "20px",
-                }}
-              />
-              <IconButton
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  right: "8px",
-                  transform: "translateY(-50%)",
-                  color: "#AAAAAA",
-                  fontSize: "50px",
-                }}
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
-              </IconButton>
-            </Stack>
-            {/* <Stack
+              {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
+            </IconButton>
+          </Stack>
+          {/* <Stack
             style={{ position: "relative" }}
             sx={{
               width: {
@@ -344,109 +343,113 @@ const Simplify = () => {
           >
             <PhoneNumberInput />
           </Stack> */}
-            <CitySelector />
+          <CitySelector />
 
-            <Typography
-              color={"white"}
-              fontFamily={"Work Sans"}
-              fontSize={"13px"}
+          <Typography
+            // color={"white"}
+            color={"black"}
+            fontFamily={"Work Sans"}
+            fontSize={"13px"}
+            sx={{
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
+          >
+            It looks like you‘re in INDIA based on your IP.
+          </Typography>
+
+          <Stack
+            gap={2}
+            sx={{
+              alignItems: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
+          >
+            <Stack
+              direction={"row"}
+              gap={1}
               sx={{
                 textAlign: {
-                  xs: "center",
+                  xs: "left",
                   lg: "left",
                 },
               }}
             >
-              It looks like you‘re in INDIA based on your IP.
-            </Typography>
-
-            <Stack
-              gap={2}
-              sx={{
-                alignItems: {
-                  xs: "center",
-                  lg: "left",
-                },
-              }}
-            >
-              <Stack
-                direction={"row"}
-                gap={1}
-                sx={{
-                  textAlign: {
-                    xs: "left",
-                    lg: "left",
-                  },
-                }}
-              >
-                <Stack>
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                  />
-                </Stack>
-                <Typography
-                  fontFamily={"Work Sans"}
-                  fontSize={"13px"}
-                  color={"white"}
-                >
-                  I agree to the Terms of Service and Privacy Policy.
-                </Typography>
+              <Stack>
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
               </Stack>
-              <Button
-                type="button"
+              <Typography
                 fontFamily={"Work Sans"}
-                sx={{
-                  width: {
-                    xs: "220px",
-                    sm: "300px",
-                    md: "480px",
-                    lg: "385px",
-                    xl: "480px",
-                  },
-                  height: {
-                    xs: "45px",
-                    sm: "55px",
-                    md: "67px",
-                    lg: "57px",
-                    xl: "67px",
-                  },
-                  color: "white",
-                  fontSize: {
-                    xs: "16px",
-                    sm: "19px",
-                    md: "22px",
-                  },
-                  border: "1px solid #F15B25",
-                  // bgcolor: "#052973",
-                  bgcolor: "#F15B25",
-                  fontWeight: "bold",
-                  "&:hover": {
-                    backgroundColor: "transparent",
-                    border: "1px solid #F15B25",
-                    color: "white",
-                  },
-                }}
-                onClick={handleSubmit}
+                fontSize={"13px"}
+                // color={"white"}
+                color={"black"}
               >
-                Get Started
-              </Button>
-              <Stack
-                direction={"row"}
-                alignSelf={{ xs: "center", md: "end" }}
-                gap={1}
+                I agree to the Terms of Service and Privacy Policy.
+              </Typography>
+            </Stack>
+            <Button
+              type="button"
+              fontFamily={"Work Sans"}
+              sx={{
+                width: {
+                  xs: "220px",
+                  sm: "300px",
+                  md: "480px",
+                  lg: "385px",
+                  xl: "480px",
+                },
+                height: {
+                  xs: "45px",
+                  sm: "55px",
+                  md: "67px",
+                  lg: "57px",
+                  xl: "67px",
+                },
+                color: "white",
+                fontSize: {
+                  xs: "16px",
+                  sm: "19px",
+                  md: "22px",
+                },
+                // border: "1px solid #F15B25",
+                bgcolor: "#052973",
+                // bgcolor: "#F15B25",
+                fontWeight: "bold",
+                "&:hover": {
+                  backgroundColor: "transparent",
+                  // border: "1px solid #F15B25",
+                  border: "1px solid #052973",
+                  // color: "white",
+                  color: "black",
+                },
+              }}
+              onClick={handleSubmit}
+            >
+              Get Started
+            </Button>
+            <Stack
+              direction={"row"}
+              alignSelf={{ xs: "center", md: "end" }}
+              gap={1}
+            >
+              <Typography
+                display={"flex"}
+                fontFamily={"Work Sans"}
+                // color={"white"}
+                color={"black"}
               >
-                <Typography
-                  display={"flex"}
-                  fontFamily={"Work Sans"}
-                  color={"white"}
-                >
-                  or sign in using
-                </Typography>
-                <img src={Google} style={{ width: "32px", height: "32px" }} />
-                <img src={LinkedIn} style={{ width: "32px", height: "32px" }} />
-              </Stack>
+                or sign in using
+              </Typography>
+              <img src={Google} style={{ width: "32px", height: "32px" }} />
+              <img src={LinkedIn} style={{ width: "32px", height: "32px" }} />
             </Stack>
           </Stack>
         </Stack>

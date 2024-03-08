@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import log from "../assets/log.png"
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ import Button from "../utils/Button";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import menuImg from "../assets/menuIconHomePage.png";
+import { RxCross2 } from "react-icons/rx";
 import { CgMenuRight } from "react-icons/cg";
 const NavLight = () => {
   const [popoverState, setPopoverState] = useState({});
@@ -21,20 +21,20 @@ const NavLight = () => {
     setMenuClick(!menuClick);
   };
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     const menuContainer = document.getElementById("menu-container");
-  //     if (menuContainer && !menuContainer.contains(event.target)) {
-  //       setMenuClick(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const menuContainer = document.getElementById("menu-container");
+      if (menuContainer && !menuContainer.contains(event.target)) {
+        setMenuClick(false);
+      }
+    };
 
-  //   document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleMouseEnter = (linkId) => {
     setPopoverState((prevState) => ({
@@ -52,7 +52,6 @@ const NavLight = () => {
   const isPopoverOpen = (linkId) => Boolean(popoverState[linkId]);
   return (
     <>
-      {/* desktip view */}
       <Stack
         sx={{
           display: {
@@ -60,15 +59,21 @@ const NavLight = () => {
             lg: "flex",
           },
         }}
-        zIndex={16}
         direction={"row"}
         justifyContent={"space-between"}
         p={"20px 90px"}
         alignItems={"center"}
       >
-        <Link to={"/"}>
-          <img src={logoLight} alt="" />
-        </Link>
+        <Stack width={{ xl: "19%", md: "25%", sm: "35%" }}>
+          <Link to={"/"}>
+            <img
+              src={logoLight}
+              alt=""
+              style={{ width: "100%", height: "100%" }}
+            />
+          </Link>
+        </Stack>
+
         <Stack
           direction="row"
           justifyContent="space-between"
@@ -525,9 +530,12 @@ const NavLight = () => {
           margin={"0 auto"}
           padding={"20px 0px"}
         >
-          <Link to={"/"}>
-            <img src={logoLight} alt="" />
-          </Link>
+          <Stack width={{ xs: "45%", md: "30%" }}>
+            <Link to={"/"}>
+              <img src={logoLight} alt="" width={"100%"} height={"100%"} />
+            </Link>
+          </Stack>
+
           <Stack
             onClick={handleClick}
             width={"23px"}
@@ -542,26 +550,69 @@ const NavLight = () => {
               },
             }}
           >
-            <CgMenuRight
-              style={{ color: "white", width: "32px", height: "32px" }}
-            />
+            {menuClick ? (
+              <RxCross2
+                style={{ color: "white", width: "32px", height: "32px" }}
+              />
+            ) : (
+              <CgMenuRight
+                style={{ color: "white", width: "32px", height: "32px" }}
+              />
+            )}
           </Stack>
         </Stack>
 
         <Stack
           id="menu-container"
+          height={"100dvh"}
           width={"100%"}
-          margin={"10px auto"}
-          position={"absolute"}
+          position={"fixed"}
           gap={2}
           sx={{
-            top: 65,
+            top: 0,
+            // bottom: 0,
             left: menuClick ? "0" : "-100%",
+            // right: menuClick ? "0" : "-100%",
+
             transition: "all 0.2s ease-in",
             backgroundColor: "white",
-            zIndex: "11",
+            zIndex: "1000001",
           }}
         >
+          <Stack
+            margin={"10px auto"}
+            width={"100%"}
+            height={"40px"}
+            direction={"row"}
+            justifyContent={"end"}
+          >
+            <Stack
+              onClick={handleClick}
+              width={"32px"}
+              height={"32px"}
+              marginRight={"20px"}
+              marginTop={"15px"}
+              sx={{
+                display: {
+                  xs: "block",
+                  lg: "none",
+                },
+                "&:hover": {
+                  cursor: "pointer",
+                },
+              }}
+            >
+              {menuClick ? (
+                <RxCross2
+                  style={{ color: "#052973", width: "32px", height: "32px" }}
+                />
+              ) : (
+                <CgMenuRight
+                  style={{ color: "#052973", width: "32px", height: "32px" }}
+                />
+              )}
+            </Stack>
+          </Stack>
           <Accordion
             sx={{
               border: "none",
