@@ -73,10 +73,11 @@ const BillingBanner = () => {
               gap={1}
             >
               <Typography
+                fontFamily={"monospace"}
                 width={"50%"}
                 textAlign={"right"}
                 textTransform={"uppercase"}
-                fontSize={"calc(6vw + 10px)"}
+                fontSize={"calc(6vw + 13px)"}
                 letterSpacing={1}
                 fontWeight={"bold"}
                 color={"transparent"}
