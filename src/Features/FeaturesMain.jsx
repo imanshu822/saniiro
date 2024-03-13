@@ -524,15 +524,21 @@ function FeaturesMain() {
           lg: "none",
         }}
       >
-        <Stack alignItems={"center"} p={"20px 0"} bgcolor={"white"}>
+        <Stack
+          className="sidebar"
+          width={{ xl: "20%", xs: "100%" }}
+          alignItems={"center"}
+          p={"20px 0"}
+          bgcolor={"white"}
+          zIndex={11}
+        >
           <Stack
-            display={"fixed"}
+            height={{ xs: "55px", xl: "" }}
+            width={{ xl: "29%", xs: "95%" }}
+            // display={"fixed"}
             margin={"0 auto"}
-            width={{
-              xs: "95%",
-            }}
-            direction={"row"}
-            gap={2}
+            direction={{ xl: "column", xs: "row" }}
+            gap={{ xl: 2, xs: "30px" }}
             sx={{
               overflowY: "scroll",
               scrollbarWidth: "none",
@@ -541,28 +547,40 @@ function FeaturesMain() {
                 display: "none",
               },
             }}
-            justifyContent={"center"}
+            // justifyContent={"center"}
           >
             {lists.map((d) => (
-              <Box
-                borderBottom={"2px solid transparent"}
-                padding={{
-                  xs: "10px 5px",
-                  sm: "10px 5px",
-                  md: "10px 5px",
-                }}
-                sx={{
-                  "&:hover": {
-                    cursor: "pointer",
-                    borderBottom: "1px solid grey",
-                  },
-                }}
-                alignItems={"center"}
-                onClick={() => handleItemClick(`item${d.id}`)}
-                className={activeItem === `item${d.id}` ? "active" : ""}
-              >
-                {d.heading}
-              </Box>
+              <ul>
+                <li
+                  style={{ listStyle: "none" }}
+                  onClick={() => handleItemClick(`item${d.id}`)}
+                  className={activeItem === `item${d.id}` ? "active" : ""}
+                >
+                  {d.heading}
+                </li>
+              </ul>
+              // <Box
+              //   marginBottom={"15px"}
+              //   border={"1px solid lightgrey"}
+              //   borderRadius={"10px"}
+              //   margin={"5px"}
+              //   padding={{
+              //     xs: "10px 5px",
+              //     sm: "10px 5px",
+              //     md: "10px 5px",
+              //   }}
+              //   sx={{
+              //     "&:hover": {
+              //       cursor: "pointer",
+              //       backgroundColor: "#F0F8FE",
+              //     },
+              //   }}
+              //   alignItems={"center"}
+              //   onClick={() => handleItemClick(`item${d.id}`)}
+              //   className={activeItem === `item${d.id}` ? "active" : ""}
+              // >
+              //   {d.heading}
+              // </Box>
             ))}
           </Stack>
         </Stack>
