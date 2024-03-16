@@ -47,120 +47,297 @@ function Banner(props) {
   });
 
   return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "10px 0",
-      }}
-    >
-      <Table
-        style={{ width: "90%", margin: "0 auto", borderCollapse: "collapse" }}
+    <>
+      <Stack
+        display={{
+          xs: "none",
+          lg: "block",
+        }}
+        style={{
+          width: "100%",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "10px 0",
+        }}
       >
-        <TableHead style={{ bgcolor: "#F7FCFF" }}>
-          <TableRow>
-            <TableCell style={{ padding: "10px" }}>Features</TableCell>
-            {packages.map((pkg, i) => (
-              <TableCell key={i} align="center">
-                {pkg[0]}
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {features.map((feature, i) => (
-            <React.Fragment key={i}>
-              <TableRow
-                style={{ border: 0, cursor: "pointer" }}
-                onClick={() => handleOpen(i)}
-              >
-                <TableCell
-                  style={{ padding: "10px", fontWeight: "bold" }}
-                  colSpan={packages.length + 1}
-                >
-                  <Stack direction="row" alignItems="center">
-                    <ArrowDropDownIcon
-                      className="navlinkli-link-downarrow"
-                      style={{
-                        fontSize: 25,
-                        transition: "all 0.3s ease-in",
-                        color: isPopoverOpen(1) ? "#818181" : "#818181",
-                        transform: isPopoverOpen(1)
-                          ? "rotate(180deg)"
-                          : "rotate(0)",
-                      }}
-                    />
-                    <Typography>{feature.category}</Typography>
-                  </Stack>
+        <Table
+          style={{ width: "90%", margin: "0 auto", borderCollapse: "collapse" }}
+        >
+          <TableHead style={{ bgcolor: "#F7FCFF" }}>
+            <TableRow>
+              <TableCell style={{ padding: "10px" }}>Features</TableCell>
+              {packages.map((pkg, i) => (
+                <TableCell key={i} align="center">
+                  {pkg[0]}
                 </TableCell>
-              </TableRow>
-              {feature.items.map((item, j) => (
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {features.map((feature, i) => (
+              <React.Fragment key={i}>
                 <TableRow
-                  key={j}
-                  style={{ display: openStates[i] ? "table-row" : "none" }}
+                  style={{ border: 0, cursor: "pointer" }}
+                  onClick={() => handleOpen(i)}
                 >
                   <TableCell
+                    style={{ padding: "10px", fontWeight: "bold" }}
+                    colSpan={packages.length + 1}
+                  >
+                    <Stack direction="row" alignItems="center">
+                      <ArrowDropDownIcon
+                        className="navlinkli-link-downarrow"
+                        style={{
+                          fontSize: 25,
+                          transition: "all 0.3s ease-in",
+                          color: isPopoverOpen(1) ? "#818181" : "#818181",
+                          transform: isPopoverOpen(1)
+                            ? "rotate(180deg)"
+                            : "rotate(0)",
+                        }}
+                      />
+                      <Typography>{feature.category}</Typography>
+                    </Stack>
+                  </TableCell>
+                </TableRow>
+                {feature.items.map((item, j) => (
+                  <TableRow
+                    key={j}
+                    style={{ display: openStates[i] ? "table-row" : "none" }}
+                  >
+                    <TableCell
+                      style={{
+                        paddingLeft: "50px",
+                        paddingTop: "5px",
+                        paddingBottom: "5px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {item.name}
+                    </TableCell>
+                    {item.availability.map((available, k) => (
+                      <TableCell key={k} align="center">
+                        {available ? "✅" : "❌"}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </React.Fragment>
+            ))}
+          </TableBody>
+          <TableFooter style={{ bgcolor: "#F7FCFF" }}>
+            <TableRow>
+              <TableCell style={{ padding: "10px", fontWeight: "bold" }}>
+                Total
+              </TableCell>
+              {packageTotals.map((total, i) => (
+                <TableCell key={i} align="center">
+                  <Typography
                     style={{
-                      paddingLeft: "50px",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
+                      padding: "5px",
+                      fontFamily: "Work Sans",
+                      fontSize: "17px",
+                      fontWeight: "bold",
+                      lineHeight: "19px",
+                      textAlign: "center",
+                    }}
+                  >
+                    {total} %
+                    <Typography style={{ fontSize: "14px", paddingTop: "5px" }}>
+                      {packages[i][0]}
+                    </Typography>
+                  </Typography>
+                  <Typography
+                    style={{
+                      fontFamily: "Work Sans",
+                      fontSize: "9px",
+                      fontWeight: "500",
+                      lineHeight: "12px",
+                      textAlign: "center",
+                    }}
+                  >
+                    {packages[i][1]}
+                  </Typography>
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableFooter>
+        </Table>
+      </Stack>
+      <Stack
+        display={{
+          xs: "flex",
+          lg: "none",
+        }}
+        style={{
+          width: "100%",
+
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "10px 0",
+        }}
+      >
+        <Table
+          style={{
+            width: "90%",
+            margin: "0 auto",
+            borderCollapse: "collapse",
+          }}
+        >
+          <TableBody>
+            {features.map((feature, i) => (
+              <React.Fragment key={i}>
+                <TableRow
+                  style={{ border: 0, cursor: "pointer" }}
+                  onClick={() => handleOpen(i)}
+                >
+                  <TableCell
+                    style={{ padding: "10px", fontWeight: "bold" }}
+                    colSpan={packages.length + 1}
+                  >
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      width={"90vw"}
+                      justifyContent={"space-between"}
+                      border={"1px solid lightgray"}
+                      p={" 8px 5px"}
+                    >
+                      <Typography fontWeight={"bold"}>
+                        {feature.category}
+                      </Typography>
+                      <ArrowDropDownIcon
+                        className="navlinkli-link-downarrow"
+                        style={{
+                          fontSize: 25,
+                          transition: "all 0.3s ease-in",
+                          color: isPopoverOpen(1) ? "#818181" : "#818181",
+                          transform: isPopoverOpen(1)
+                            ? "rotate(180deg)"
+                            : "rotate(0)",
+                        }}
+                      />
+                    </Stack>
+                  </TableCell>
+                </TableRow>
+                <div
+                  style={{
+                    overflowX: "auto",
+                    width: "90vw",
+                    margin: "0 auto",
+                  }}
+                >
+                  <table>
+                    <tbody>
+                      {feature.items.map((item, j) => (
+                        <tr
+                          key={j}
+                          style={{
+                            display: openStates[i] ? "table-row" : "none",
+                          }}
+                        >
+                          <td
+                            style={{
+                              position: "sticky",
+                              left: 0,
+                              backgroundColor: "#fff",
+                              zIndex: 1,
+                              paddingLeft: "20px",
+                              paddingTop: "5px",
+                              paddingBottom: "5px",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            <Typography p={2} fontWeight={"bold"}>
+                              {item.name}
+                            </Typography>
+                          </td>
+
+                          {item.availability.map((available, k) => (
+                            <td key={k} align="center">
+                              <Typography p={1.5}>
+                                {available === true
+                                  ? "✅"
+                                  : available === false
+                                  ? "❌"
+                                  : available}
+                              </Typography>
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </React.Fragment>
+            ))}
+          </TableBody>
+          <div
+            style={{
+              overflowX: "auto",
+              width: "90vw",
+              margin: "0 auto",
+            }}
+          >
+            <table>
+              <tbody>
+                <tr>
+                  <td
+                    style={{
+                      position: "sticky",
+                      left: 0,
+                      backgroundColor: "#fff",
+                      zIndex: 1,
+                      padding: "25px",
                       fontWeight: "bold",
                     }}
                   >
-                    {item.name}
-                  </TableCell>
-                  {item.availability.map((available, k) => (
-                    <TableCell key={k} align="center">
-                      {available ? "✅" : "❌"}
-                    </TableCell>
+                    <Typography p={2} fontWeight={"bold"}>
+                      Total
+                    </Typography>
+                  </td>
+
+                  {packageTotals.map((total, i) => (
+                    <td key={i} align="center">
+                      <Typography
+                        p={1.5}
+                        style={{
+                          fontFamily: "Work Sans",
+                          fontSize: "14px",
+                          fontWeight: "bold",
+                          lineHeight: "19px",
+                          textAlign: "center",
+                        }}
+                      >
+                        {total} %
+                        <Typography
+                          style={{ fontSize: "12px", paddingTop: "5px" }}
+                        >
+                          {packages[i][0]}
+                        </Typography>
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "Work Sans",
+                          fontSize: "9px",
+                          fontWeight: "500",
+                          lineHeight: "12px",
+                          textAlign: "center",
+                        }}
+                      >
+                        {packages[i][1]}
+                      </Typography>
+                    </td>
                   ))}
-                </TableRow>
-              ))}
-            </React.Fragment>
-          ))}
-        </TableBody>
-        <TableFooter style={{ bgcolor: "#F7FCFF" }}>
-          <TableRow>
-            <TableCell style={{ padding: "10px", fontWeight: "bold" }}>
-              Total
-            </TableCell>
-            {packageTotals.map((total, i) => (
-              <TableCell key={i} align="center">
-                <Typography
-                  style={{
-                    padding: "5px",
-                    fontFamily: "Work Sans",
-                    fontSize: "17px",
-                    fontWeight: "bold",
-                    lineHeight: "19px",
-                    textAlign: "center",
-                  }}
-                >
-                  {total} %
-                  <Typography style={{ fontSize: "14px", paddingTop: "5px" }}>
-                    {packages[i][0]}
-                  </Typography>
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Work Sans",
-                    fontSize: "9px",
-                    fontWeight: "500",
-                    lineHeight: "12px",
-                    textAlign: "center",
-                  }}
-                >
-                  {packages[i][1]}
-                </Typography>
-              </TableCell>
-            ))}
-          </TableRow>
-        </TableFooter>
-      </Table>
-    </div>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Table>
+      </Stack>
+    </>
   );
 }
 

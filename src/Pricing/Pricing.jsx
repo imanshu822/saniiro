@@ -13,10 +13,10 @@ const Pricing = () => {
     <>
       <PRicingBAnner />
       <PricingTab />
-      <JoinBusinesses />
-      <ContactFaq />
-      <Readytosign />
-      <Footer />
+      {/* <JoinBusinesses /> */}
+      {/* <ContactFaq /> */}
+      {/* <Readytosign /> */}
+      {/* <Footer /> */}
     </>
   );
 };

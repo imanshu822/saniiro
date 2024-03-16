@@ -26,7 +26,7 @@ const PRicingBAnner = () => {
   return (
     <Stack bgcolor={"#052973"} className="textured-background">
       <NavLight />
-      <Stack gap={4} pb={10}>
+      <Stack gap={4} pb={10} width={"95%"} m={"0 auto"}>
         <Stack
           p={"50px 0px 0 0"}
           gap={2}
@@ -35,31 +35,59 @@ const PRicingBAnner = () => {
         >
           <Typography
             textTransform={"uppercase"}
-            fontSize={"75px"}
+            fontSize={{
+              xs: "30px",
+              sm: "40px",
+              md: "60px",
+              lg: "70px",
+              xl: "80px",
+            }}
             letterSpacing={1}
             fontWeight={"bold"}
             color={"transparent"}
             lineHeight={1}
             className="text-stroke"
+            textAlign={"center"}
           >
             Sensational software,
           </Typography>
           <Typography
             textTransform={"uppercase"}
-            fontSize={"75px"}
+            fontSize={{
+              xs: "30px",
+              sm: "40px",
+              md: "60px",
+              lg: "70px",
+              xl: "80px",
+            }}
             letterSpacing={1}
             fontWeight={"bold"}
             color={"white"}
             lineHeight={1}
+            textAlign={"center"}
           >
             Sensible price
           </Typography>
         </Stack>
         <Stack
-          direction={"row"}
+          pl={6}
+          direction={{
+            xs: "column",
+            sm: "row",
+            lg: "row",
+            xl: "row",
+          }}
           flexWrap={"wrap"}
-          justifyContent={"center"}
-          gap={"70px"}
+          justifyContent={{
+            xs: "center",
+          }}
+          gap={{
+            xs: 1,
+            sm: 4,
+            md: 6,
+            lg: 8,
+            xl: 10,
+          }}
         >
           {lists.map((d) => (
             <Stack direction={"row"} gap={1}>
@@ -68,7 +96,13 @@ const PRicingBAnner = () => {
               </Stack>
               <Stack>
                 <Typography
-                  fontSize={"20px"}
+                  fontSize={{
+                    xs: "12px",
+                    sm: "14px",
+                    md: "16px",
+                    lg: "20px",
+                    xl: "22px",
+                  }}
                   fontWeight={"bold"}
                   color={"white"}
                 >

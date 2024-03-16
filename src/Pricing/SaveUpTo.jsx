@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-
+import roundedAwwow from "../assets/curveArrow.png";
 const SaveUpTo = () => {
   return (
     <Box
@@ -10,17 +10,17 @@ const SaveUpTo = () => {
         alignItems: "center",
       }}
     >
-      <Box
+      <Stack
+        direction={"row"}
         sx={{
           zIndex: "1",
-          position: "absolute",
-          marginTop: "95px",
-          marginLeft: "340px",
+          marginTop: "25px",
         }}
       >
         <Typography
           sx={{
-            padding: "20px",
+            paddingY: "25px",
+            paddingX: "8px",
             fontFamily: "Work Sans",
             fontSize: "10px",
             fontWeight: "bold",
@@ -33,7 +33,17 @@ const SaveUpTo = () => {
         >
           Save up to 34%
         </Typography>
-      </Box>
+        <Box
+          component={"img"}
+          src={roundedAwwow}
+          alt="arrow"
+          sx={{
+            transform: "scaleX(-1)",
+            width: "50px",
+            height: "50px",
+          }}
+        />
+      </Stack>
     </Box>
   );
 };

@@ -12,7 +12,7 @@ const Card = ({ Subsplan, onClick, isActive, plan }) => {
       sx={{
         position: "relative",
         height: "396px",
-        width: "250px",
+        width: "260px",
         border: isActive ? "1px solid black" : "1px solid #CECECE",
         display: "flex",
         flexDirection: "column",
@@ -133,6 +133,8 @@ const Card = ({ Subsplan, onClick, isActive, plan }) => {
       </Button>
 
       <Typography
+        ml={1}
+        mr={1}
         sx={{
           marginTop: "24px",
           fontFamily: "Work Sans",

@@ -2,7 +2,16 @@ import React from "react";
 import { Stack, Typography } from "@mui/material";
 const PracingTagSection = () => {
   return (
-    <Stack marginTop={"82px"} marginBottom={"25px"} gap={4}>
+    <Stack
+      marginTop={"82px"}
+      marginBottom={"25px"}
+      gap={4}
+      width={"95%"}
+      m={{
+        xs: "10px auto 25px",
+        lg: "82px auto 25px",
+      }}
+    >
       <Typography
         sx={{
           fontFamily: "Work Sans",

@@ -89,6 +89,7 @@ const PricingTab = () => {
         </Box>
       </Box>
       <SaveUpTo />
+
       <PriceCardSection plan={plan} />
     </>
   );
