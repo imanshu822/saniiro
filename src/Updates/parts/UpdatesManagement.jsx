@@ -50,25 +50,8 @@ const UpdatesManagement = () => {
   };
 
   return (
-    <Stack
-      width={{
-        xs: "95%",
-        xl: "1240px",
-      }}
-      gap={4}
-      margin={"50px auto"}
-      direction={{
-        xs: "column",
-        lg: "row",
-      }}
-    >
-      <Stack
-        width={{
-          xs: "95%",
-          lg: "60%",
-        }}
-        margin={"0 auto"}
-      >
+    <Stack width={"1240px"} margin={"50px auto"} direction={"row"}>
+      <Stack width={"60%"}>
         {Updates.map((update, index) => (
           <Stack
             key={index}
@@ -94,14 +77,8 @@ const UpdatesManagement = () => {
                 }}
               >
                 <Box
-                  width={{
-                    xs: "50px",
-                    lg: "67px",
-                  }}
-                  height={{
-                    xs: "50px",
-                    lg: "67px",
-                  }}
+                  width={"40px"}
+                  height={"40px"}
                   component="img"
                   src={update.image}
                   alt="Files image"
@@ -159,10 +136,7 @@ const UpdatesManagement = () => {
                     <Stack
                       direction={"row"}
                       gap={3}
-                      margin={{
-                        xs: "10px 50px",
-                        lg: "20px 100px",
-                      }}
+                      margin={"10px 100px"}
                       sx={{
                         "&:hover": {
                           textDecoration: "none",
@@ -187,19 +161,10 @@ const UpdatesManagement = () => {
         ))}
       </Stack>
       <Stack
-        width={{
-          xs: "95%",
-          lg: "40%",
-        }}
-        margin={"0 auto"}
-        paddingLeft={{
-          xs: "0",
-          lg: "80px",
-        }}
-        borderLeft={{
-          xs: "none",
-          lg: "1px solid gray",
-        }}
+        width={"40%"}
+        paddingLeft={"80px"}
+        marginLeft={"40px"}
+        borderLeft={"1px solid gray"}
       >
         <Typography
           sx={{

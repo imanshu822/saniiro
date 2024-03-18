@@ -8,7 +8,10 @@ const JoinBusinesses = () => {
       justifyContent={"center"}
       alignItems={"center"}
       sx={{
-        margin: "151px auto",
+        margin: {
+          xs: "12px auto",
+          lg: "151px auto",
+        },
         width: "100%",
         maxWidth: "1060px",
         height: "375px",
@@ -33,15 +36,30 @@ const JoinBusinesses = () => {
         <Button
           sx={{
             position: "absolute",
-            top: "105px",
+            left: {
+              xs: "28%",
+              sm: "35%",
+              md: "40%",
+              lg: "40%",
+            },
+            top: {
+              xs: "130px",
+              lg: "105px",
+            },
             border: "1px solid #F97316",
             background: "#F97316",
             color: "white",
-            fontSize: "14px",
+            fontSize: {
+              xs: "10px",
+              lg: "12px",
+            },
             fontWeight: "600",
             lineHeight: "13px",
             textAlign: "center",
-            padding: "13px 16px",
+            padding: {
+              xs: "10px 20px",
+              lg: "15px 30px",
+            },
             borderRadius: "5px",
             cursor: "pointer",
             "&:hover": {
@@ -53,11 +71,21 @@ const JoinBusinesses = () => {
           START FREE TRIAL
         </Button>
       </Stack>
-      <Stack>
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "100%",
+        }}
+        height={{
+          xs: "200px",
+          md: "95%",
+        }}
+      >
         <img
           style={{
             height: "auto", // Auto adjust height
-            width: "100%", // Full width
+            width: "100%",
+            height: "100%",
             maxWidth: "1060px", // Limit maximum width
           }}
           alt="company-logo"

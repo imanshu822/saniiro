@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import contactsection3 from "../../assets/Contactsection3.svg"
+import contactsection3 from "../../assets/Contactsection3.svg";
 import Button from "../../utils/Button";
-import indiaFlag from "../../assets/indiaflag.svg"
+import indiaFlag from "../../assets/indiaflag.svg";
 import gmail1 from "../../assets/gmail1.svg";
 import gmail from "../../assets/gmail.svg";
 import icon1Contact from "../../assets/icon1contact.svg";
@@ -15,15 +15,15 @@ const GrennSection = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Stack
-        alignItems={{xl:"center",xs:"none"}}
-        pt={{xl:4,xs:"none"}}
+        alignItems={{ xl: "center", xs: "none" }}
+        pt={{ xl: 4, xs: "none" }}
         position={{ xl: "absolute", xs: "none" }}
         top={"-11%"}
       >
         <Stack
           bgcolor={"#248F41"}
-          width={{xl:"85%",xs:"none"}}
-          borderRadius={{xl:1,xs:"none"}}
+          width={{ xl: "85%", xs: "none" }}
+          borderRadius={{ xl: 1, xs: "none" }}
           p={"20px 24px"}
           direction={{ xl: "row", xs: "column" }}
           gap={2}
@@ -146,16 +146,23 @@ const GrennSection = () => {
         </Stack>
       </Stack>
 
-      <Stack alignItems={"center"} pt={"19%"} gap={{xl:10,xs:3}}>
-        <Stack width={{xl:"90%",xs:"100%"}} direction={{xl:"row",xs:"column"}}>
-          <Stack width={{xl:"47%",xs:"100%"}}>
+      <Stack alignItems={"center"} pt={"19%"} gap={{ xl: 10, xs: 3 }}>
+        <Stack
+          width={{ xl: "90%", xs: "100%" }}
+          direction={{ xl: "row", xs: "column" }}
+        >
+          <Stack width={{ xl: "47%", xs: "100%" }}>
             <img
               src={contactsection3}
               alt=""
               style={{ width: "100%", height: "100%" }}
             />
           </Stack>
-          <Stack p={"20px 25px"} gap={{xl:3,xs:"10px"}} width={{xl:"40%",xs:"none"}}>
+          <Stack
+            p={"20px 25px"}
+            gap={{ xl: 3, xs: "10px" }}
+            width={{ xl: "40%", xs: "none" }}
+          >
             <Button
               sx={{
                 borderRadius: 1,
@@ -169,7 +176,7 @@ const GrennSection = () => {
             >
               I'M NEW HERE
             </Button>
-            <Typography fontSize={{xl:"40px",xs:"24px"}} letterSpacing={1}>
+            <Typography fontSize={{ xl: "40px", xs: "24px" }} letterSpacing={1}>
               Find your way around Saniiro with Concierge
             </Typography>
             <Typography>
@@ -179,8 +186,19 @@ const GrennSection = () => {
             </Typography>
           </Stack>
         </Stack>
-        <Stack width={{xl:"90%",xs:"100%"}} direction={{xl:"row",xs:"column-reverse"}}>
-          <Stack p={"20px 25px"} gap={3} width={{xl:"40%",xs:"100%"}}>
+        <Stack
+          width={{ xl: "90%", xs: "100%" }}
+          direction={{ xl: "row", xs: "column-reverse" }}
+        >
+          <Stack
+            m={"0 auto"}
+            p={{
+              lg: "20px 25px",
+              xs: "20px 0px",
+            }}
+            gap={3}
+            width={{ xl: "40%", xs: "90%" }}
+          >
             <Button
               sx={{
                 borderRadius: 1,
@@ -194,20 +212,38 @@ const GrennSection = () => {
             >
               I'M NEW HERE
             </Button>
-            <Typography fontSize={{xl:"40px",xs:"24px"}} letterSpacing={1}>
+            <Typography
+              sx={{
+                width: {
+                  xs: "95%",
+                },
+              }}
+              fontSize={{ xl: "40px", xs: "24px" }}
+              letterSpacing={1}
+            >
               Interested in a product? Talk to our sales team
             </Typography>
-            <Typography>
+            <Typography
+              sx={{
+                width: {
+                  xs: "95%",
+                },
+              }}
+            >
               From questions about pricing to one-on-one personalized demos,
               we'd love to connect and help get you started.
             </Typography>
           </Stack>
-          <Stack width={{xl:"60%",xs:"none"}} alignItems={"center"} justifyContent={"center"}>
+          <Stack
+            width={{ xl: "60%", xs: "100%" }}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
             <Stack
-              width={{xl:"80%",xs:"90%"}}
+              width={{ xl: "80%", xs: "90%" }}
               bgcolor={"#FFFFFF"}
               gap={3}
-              p={{xl:"50px 70px",xs:"30px 19px"}}
+              p={{ xl: "50px 70px", xs: "20px 0px" }}
               borderRadius={1}
             >
               <Stack direction={"row"} gap={1} justifyContent={"center"}>

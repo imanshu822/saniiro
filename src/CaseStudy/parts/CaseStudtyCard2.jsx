@@ -57,7 +57,11 @@ const CaseStudtyCard1 = () => {
             >
               Complete a quick survey, and we’ll get in touch with you soon.
             </Typography>
-            <Link to={"/CaseStudyForm1"}>
+            <Link
+              to={"/CaseStudyForm1"}
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 margin={"30px auto 0px"}
                 direction={"row"}
@@ -95,7 +99,7 @@ const CaseStudtyCard1 = () => {
                     color: "white",
                   }}
                 >
-                  Dowenload Case Study
+                  SUBMIT YOUR STORY
                 </Typography>
               </Button>
             </Link>

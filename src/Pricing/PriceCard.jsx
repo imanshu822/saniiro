@@ -12,7 +12,7 @@ const Card = ({ Subsplan, onClick, isActive, plan }) => {
       sx={{
         position: "relative",
         height: "396px",
-        width: "260px",
+        width: "270px",
         border: isActive ? "1px solid black" : "1px solid #CECECE",
         display: "flex",
         flexDirection: "column",

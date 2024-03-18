@@ -31,6 +31,8 @@ import HelpAndTraining from "./HelpAndTraining/HelpAndTraining";
 import WatchMoreVideos from "./Resources/Videos/WatchMoreVideos";
 import PlayVideo from "./Resources/Videos/PlayVideo";
 import CaseStudyForm1 from "./Forms/CaseStudyForm1";
+import CaseStudyForm2 from "./Forms/CaseStudyForm2";
+import CaseStudyForm3 from "./Forms/CaseStudyForm3";
 import Legal from "./SubFooter/Legal";
 import LegalEmployeeLogin from "./SubFooter/EmployeeLogin";
 import CancalationRefundPolicy from "./SubFooter/CancalationRefundPolicy";
@@ -96,6 +98,9 @@ const Main = () => {
 
         <Route exact path="/Resources/CaseStudy" element={<CaseStudy />} />
         <Route exact path="/CaseStudyForm1" element={<CaseStudyForm1 />} />
+        <Route exact path="/CaseStudyForm2" element={<CaseStudyForm2 />} />
+        <Route exact path="/CaseStudyForm3" element={<CaseStudyForm3 />} />
+
         <Route
           exact
           path="/Resources/CaseStudy/:id"

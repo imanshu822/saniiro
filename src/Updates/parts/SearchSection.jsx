@@ -4,40 +4,14 @@ import searchImg from "./../../assets/icons/search.png";
 const SearchSection = () => {
   return (
     <>
-      <Stack
-        width={{
-          xs: "100%",
-          sm: "100%",
-          md: "100%",
-          lg: "100%",
-          xl: "1240px",
-        }}
-        direction={"column"}
-        margin={"0px auto"}
-      >
+      <Stack maxWidth={"1240px"} direction={"column"} margin={"0px auto"}>
         <Stack
-          direction={{
-            xs: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-          }}
+          direction={"row"}
           margin={"20px 0 20px"}
           gap={1}
           justifyContent={"center"}
         >
-          <Stack
-            margin={{
-              xs: "0 auto",
-              lg: "",
-            }}
-            width={{
-              xs: "95%",
-              lg: "870px",
-            }}
-            height={"53px"}
-            position={"relative"}
-          >
+          <Stack width={"870px"} height={"53px"} position={"relative"}>
             <img
               width={"30px"}
               height={"30px"}
@@ -53,11 +27,7 @@ const SearchSection = () => {
             <input
               type="text"
               style={{
-                width: {
-                  xs: "95%",
-                  lg: "745px",
-                },
-
+                width: "745px",
                 height: "53px",
                 border: "1px solid #8C8C8C",
                 padding: "10px 60px ",
@@ -65,86 +35,69 @@ const SearchSection = () => {
               placeholder="Search articles"
             />
           </Stack>
+
           <Stack
-            direction={"row"}
-            gap={2}
-            width={{
-              xs: "95%",
-              lg: "33%",
-            }}
-            margin={{
-              xs: "20px auto",
-              lg: "0",
+            sx={{
+              width: "100px",
+              height: "33px",
+              padding: "10px 30px",
+              gap: "10px",
+              justifyContent: "center",
+              backgroundColor: "#F15B25",
+              "&:hover": {
+                cursor: "pointer",
+                boxShadow: "1px 1px 5px 1px #000000",
+              },
             }}
           >
-            <Stack
+            <Typography
               sx={{
-                width: "100px",
-                height: "33px",
-                padding: "10px 30px",
-                gap: "10px",
-                justifyContent: "center",
-                backgroundColor: "#F15B25",
-                "&:hover": {
-                  cursor: "pointer",
-                  boxShadow: "1px 1px 5px 1px #000000",
-                },
+                fontFamily: "Work Sans",
+                fontSize: "12px",
+                fontWeight: 700,
+                lineHeight: "12px",
+                letterSpacing: "0em",
+                textAlign: "center",
+                color: "white",
               }}
             >
-              <Typography
-                sx={{
-                  fontFamily: "Work Sans",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  lineHeight: "12px",
-                  letterSpacing: "0em",
-                  textAlign: "center",
-                  color: "white",
-                }}
-              >
-                Add Request
-              </Typography>
-            </Stack>
-            <Stack
+              Add Request
+            </Typography>
+          </Stack>
+          <Stack
+            sx={{
+              width: "100px",
+              height: "33px",
+              padding: "10px 30px",
+              gap: "10px",
+              justifyContent: "center",
+              backgroundColor: "#052973",
+              "&:hover": {
+                cursor: "pointer",
+                boxShadow: "1px 1px 5px 1px #000000",
+              },
+            }}
+          >
+            <Typography
               sx={{
-                width: "100px",
-                height: "33px",
-                padding: "10px 30px",
-                gap: "10px",
-                justifyContent: "center",
-                backgroundColor: "#052973",
-                "&:hover": {
-                  cursor: "pointer",
-                  boxShadow: "1px 1px 5px 1px #000000",
-                },
+                fontFamily: "Work Sans",
+                fontSize: "12px",
+                fontWeight: 700,
+                lineHeight: "12px",
+                letterSpacing: "0em",
+                textAlign: "center",
+                color: "white",
               }}
             >
-              <Typography
-                sx={{
-                  fontFamily: "Work Sans",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                  lineHeight: "12px",
-                  letterSpacing: "0em",
-                  textAlign: "center",
-                  color: "white",
-                }}
-              >
-                Add Request
-              </Typography>
-            </Stack>
+              Add Request
+            </Typography>
           </Stack>
         </Stack>
-        <Typography
-          margin={"0 auto"}
+        {/* <Typography
           sx={{
-            width: {
-              xs: "95%",
-              lg: "100%",
-            },
             fontFamily: "Work Sans",
             fontSize: "9px",
-            fontWeight: 400,
+            fontWeight: 400, // or '500' depending on the specific style
             lineHeight: "9px",
             letterSpacing: "0em",
             textAlign: "left",
@@ -152,7 +105,7 @@ const SearchSection = () => {
           }}
         >
           CRM {`>`} SOLUTIONS {`>`} REAL ESTATE CRM
-        </Typography>
+        </Typography> */}
       </Stack>
     </>
   );

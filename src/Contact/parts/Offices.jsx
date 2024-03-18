@@ -106,7 +106,15 @@ const Offices = () => {
   return (
     <Stack bgcolor={"#F6F8FF"} pt={5}>
       <Stack alignItems={"center"} gap={1}>
-        <Typography fontSize={"45px"} textAlign={"center"}>
+        <Typography
+          fontSize={{
+            xs: "20px",
+            sm: "26px",
+            md: "30px",
+            lg: "35px",
+          }}
+          textAlign={"center"}
+        >
           Our offices around the world
         </Typography>
         <Typography textAlign={"center"}>
@@ -115,7 +123,7 @@ const Offices = () => {
         </Typography>
       </Stack>
       <Stack alignItems={"Center"} pt={6}>
-        <Stack bgcolor={"white"} width={"85%"}>
+        <Stack bgcolor={"white"} width={"95%"}>
           <Stack direction={"row"} gap={2} justifyContent={"center"} pt={4}>
             <Stack justifyContent={"center"}>
               <img
@@ -127,15 +135,36 @@ const Offices = () => {
             <Typography fontSize={"35px"}>India</Typography>
           </Stack>
           <Stack
-            direction={"row"}
+            direction={{
+              xs: "column",
+              md: "row",
+              lg: "row",
+            }}
             flexWrap={"wrap"}
             justifyContent={"center"}
             rowGap={6}
             columnGap={2}
-            p={"30px 0px"}
+            p={{
+              xs: "30px 0px",
+              md: "30px 0px",
+              lg: "30px 0px",
+            }}
           >
             {lists.map((d) => (
-              <Stack width={"23%"} gap={1} p={"0 20px"}>
+              <Stack
+                width={{
+                  xs: "95%",
+                  sm: "50%",
+                  md: "23%",
+                }}
+                gap={1}
+                p={{
+                  xs: "0",
+                  sm: "0",
+                  md: "0 20px",
+                }}
+                margin={"0 auto"}
+              >
                 <Typography fontWeight={"bold"} fontSize={"25px"}>
                   {d.state}
                 </Typography>
@@ -153,13 +182,21 @@ const Offices = () => {
                     <Typography>{d.Fax}</Typography>
                   </Box>
                 </Stack>
+                <hr
+                  style={{
+                    marginTop: "30px",
+                    width: "95%",
+                    color: "black",
+                    height: "1px",
+                  }}
+                />
               </Stack>
             ))}
           </Stack>
         </Stack>
       </Stack>
       <Stack alignItems={"Center"} pt={6} pb={10}>
-        <Stack bgcolor={"white"} width={"85%"} pb={2}>
+        <Stack bgcolor={"white"} width={"95%"} pb={2}>
           <Stack direction={"row"} gap={2} justifyContent={"center"} pt={4}>
             <Stack justifyContent={"center"}>
               <img
@@ -171,15 +208,36 @@ const Offices = () => {
             <Typography fontSize={"35px"}>USA</Typography>
           </Stack>
           <Stack
-            direction={"row"}
+            direction={{
+              xs: "column",
+              md: "row",
+              lg: "row",
+            }}
             flexWrap={"wrap"}
             justifyContent={"center"}
             rowGap={6}
             columnGap={2}
-            p={"30px 0px"}
+            p={{
+              xs: "30px 0px",
+              md: "30px 0px",
+              lg: "30px 0px",
+            }}
           >
             {list2.map((d) => (
-              <Stack width={"23%"} gap={1} p={"0 20px"}>
+              <Stack
+                width={{
+                  xs: "95%",
+                  sm: "50%",
+                  md: "23%",
+                }}
+                gap={1}
+                p={{
+                  xs: "0",
+                  sm: "0",
+                  md: "0 20px",
+                }}
+                margin={"0 auto"}
+              >
                 <Typography fontWeight={"bold"} fontSize={"25px"}>
                   {d.state}
                 </Typography>
@@ -197,6 +255,14 @@ const Offices = () => {
                     <Typography>{d.Fax}</Typography>
                   </Box>
                 </Stack>
+                <hr
+                  style={{
+                    marginTop: "30px",
+                    width: "95%",
+                    color: "black",
+                    height: "1px",
+                  }}
+                />
               </Stack>
             ))}
           </Stack>

@@ -13,17 +13,20 @@ import ProductSlider from "../About/parts/ProductSlider";
 const SolutionByIndustries = () => {
   return (
     <>
-      <Stack position={"relative"}>
-        <Nav />
-        <Industries1 />
-        <Industries2 />
-      </Stack>
-      <Industries3 />
-      <Industries4 />
-      <Stack bgcolor={"#f1f1f1"} pt={5}>
-        <ProductSlider />
-        <Clock />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Stack position={"relative"}>
+          <Nav />
+          <Industries1 />
+          <Industries2 />
+        </Stack>
+        <Industries3 />
+        <Industries4 />
+        <Stack bgcolor={"#f1f1f1"} pt={5}>
+          <ProductSlider />
+          <Clock />
+        </Stack>
         <ContactFaq />
+
         <Footer />
       </Stack>
     </>

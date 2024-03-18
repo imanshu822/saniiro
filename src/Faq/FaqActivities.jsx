@@ -4,13 +4,16 @@ import FaqBanner from "./parts/FaqBanner";
 import FeqBodyTop from "./parts/FeqBodytop";
 import FeqBodyContent from "./parts/FaqBodyContent";
 import Footer from "../utils/Footer";
+import { Stack } from "@mui/material";
 const FaqActivities = () => {
   return (
     <>
-      <Nav />
-      <FaqBanner />
-      <FeqBodyTop />
-      <FeqBodyContent />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Nav />
+        <FaqBanner />
+        <FeqBodyTop />
+        <FeqBodyContent />
+      </Stack>
       <Footer />
     </>
   );

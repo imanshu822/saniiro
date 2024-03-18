@@ -11,8 +11,17 @@ const HnTVirtal = () => {
   };
   return (
     <Stack
+      mt={{
+        xs: 0,
+        sm: 0,
+        md: 4,
+      }}
       width={"100%"}
-      height={"740px"}
+      height={{
+        xs: "100%",
+        md: "740px",
+      }}
+      pb={2}
       gap={4}
       sx={{
         background: "linear-gradient(180deg, #052973 0%, #052973 100%)",
@@ -22,13 +31,21 @@ const HnTVirtal = () => {
         <Typography
           sx={{
             fontFamily: "Work Sans",
-            fontSize: "40px",
+            fontSize: {
+              xs: "24px",
+              md: "30px",
+              md: "40px",
+            },
             fontWeight: 600,
             lineHeight: "43px",
             letterSpacing: "0em",
             textAlign: "center",
             color: "#FFFFFF",
-            width: "922px",
+            width: {
+              xs: "95%",
+              md: "922px",
+            },
+
             marginTop: "70px",
           }}
         >
@@ -37,13 +54,19 @@ const HnTVirtal = () => {
         <Typography
           sx={{
             fontFamily: "Work Sans",
-            fontSize: "18px",
+            fontSize: {
+              xs: "16px",
+              md: "18px",
+            },
             fontWeight: 400,
             lineHeight: "27px",
             letterSpacing: "0em",
             textAlign: "center",
             color: "#FFFFFF",
-            width: "922px",
+            width: {
+              xs: "95%",
+              md: "922px",
+            },
           }}
         >
           We're bringing the classroom experience to you, wherever you are. The
@@ -54,8 +77,14 @@ const HnTVirtal = () => {
         </Typography>
       </Stack>
       <Stack
-        width={"56%"}
-        direction={"row"}
+        width={{
+          xs: "95%",
+          md: "56%",
+        }}
+        direction={{
+          xs: "column",
+          md: "row",
+        }}
         margin={"0 auto"}
         gap={2}
         justifyContent={"center"}

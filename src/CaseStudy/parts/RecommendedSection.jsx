@@ -7,11 +7,6 @@ import Review from "./data";
 const column2 = Review.slice(3, 6);
 
 const RecommendedSection = () => {
-  const handleClick = () => {
-    // Scroll to the top of the page
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <>
       <Stack width={"90%"} margin={"40px auto 70px"}>
@@ -45,7 +40,7 @@ const RecommendedSection = () => {
               style={{ textDecoration: "none", color: "black" }}
               to={`/Resources/CaseStudy/${review.id}`}
               key={review.id}
-              onClick={handleClick} // Use onClick instead of onCllick
+              onClick={() => window.scrollTo(0, 0)}
             >
               <FeedbackCard {...review} />
             </Link>

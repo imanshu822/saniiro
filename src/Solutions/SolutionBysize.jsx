@@ -15,35 +15,37 @@ const SolutionBysize = () => {
   return (
     <>
       {/* for desktop view  */}
-      <Stack>
-        <Stack position={"relative"} gap={5}>
-          <Stack>
-            <Nav />
-            <Industries1 />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Stack>
+          <Stack position={"relative"} gap={5}>
+            <Stack>
+              <Nav />
+              <Industries1 />
+            </Stack>
+            <Stack gap={5}>
+              <Line />
+              <SliderIndustry />
+            </Stack>
+            <Stack
+              alignItems={"center"}
+              p={"100px 0"}
+              display={{
+                xs: "none",
+                lg: "flex",
+              }}
+            >
+              <img src={Boxes} alt="" style={{ width: "100px" }} />
+            </Stack>
+            <Industries2 />
           </Stack>
-          <Stack gap={5}>
-            <Line />
-            <SliderIndustry />
+          <Stack bgcolor={"#F8F8F8"} pt={5}>
+            <ProductSlider />
+            <Clock />
           </Stack>
-          <Stack
-            alignItems={"center"}
-            p={"100px 0"}
-            display={{
-              xs: "none",
-              lg: "flex",
-            }}
-          >
-            <img src={Boxes} alt="" style={{ width: "100px" }} />
-          </Stack>
-          <Industries2 />
-        </Stack>
-        <Stack bgcolor={"#F8F8F8"} pt={5}>
-          <ProductSlider />
-          <Clock />
-          <ContactFaq />
-          <Footer />
         </Stack>
       </Stack>
+      <ContactFaq />
+      <Footer />
 
       {/* for mobile view  */}
       {/* <Stack

@@ -8,10 +8,12 @@ import Footer from "./../utils/Footer";
 const Faq = () => {
   return (
     <>
-      <Nav />
-      <UpdatesBanner />
-      <SearchSection />
-      <UpdatesManagement />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Nav />
+        <UpdatesBanner />
+        <SearchSection />
+        <UpdatesManagement />
+      </Stack>
       <Footer />
     </>
   );

@@ -4,15 +4,16 @@ import Nav from "../Navbar/Nav";
 import BlogFeed from "./parts/BlogFeed";
 import Footer from "../utils/Footer";
 import BlogContentFeed from "./parts/BlogContentFeed";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 const BlogContent = () => {
   return (
     <>
-      <Nav />
-      <BlogBanner GrayBanner={true} />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Nav />
+        <BlogBanner GrayBanner={true} />
 
-      <BlogContentFeed />
-
+        <BlogContentFeed />
+      </Stack>
       <Footer />
     </>
   );

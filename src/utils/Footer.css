@@ -1,11 +1,12 @@
-.Footer-new{
-    color: "lightgray"; text-decoration: "none"
+.Footer-new {
+  color: "lightgray";
+  text-decoration: "none";
 }
-.Footer-new:hover{
-    color: "#F15B25";
+.Footer-new:hover {
+  color: "#F15B25";
 }
 .list-item:hover {
-  color: #F15B25; /* Change color on hover */
+  color: #f15b25; /* Change color on hover */
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
@@ -24,11 +25,10 @@
   mix-blend-mode: color-dodge; /* Adjust blend mode as needed */
   opacity: 0.7; /* Adjust opacity of the texture */
 }
-.input-Login{
+.input-Login {
   width: 333px;
   height: 55px;
-  border: 1px solid #AAAAAA;
-  color: #AAAAAA;
+  border: 1px solid #aaaaaa;
+  color: #aaaaaa;
   padding-left: 5%;
-  font-size: 18px;
 }

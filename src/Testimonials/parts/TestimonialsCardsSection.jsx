@@ -53,6 +53,7 @@ const TestimonialsCardsSection = () => {
                   to={`/Resources/CaseStudy/${review.id}`}
                   key={review.id}
                   style={{ textDecoration: "none", color: "black" }}
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   <FeedbackCard key={review.id} {...review} />
                 </Link>
@@ -216,6 +217,7 @@ const TestimonialsCardsSection = () => {
                 to={`/Resources/CaseStudy/${review.id}`}
                 key={review.id}
                 style={{ textDecoration: "none", color: "black" }}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 <FeedbackCard key={review.id} {...review} />
               </Link>

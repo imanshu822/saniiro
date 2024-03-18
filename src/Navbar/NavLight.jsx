@@ -53,6 +53,7 @@ const NavLight = () => {
   return (
     <>
       <Stack
+        zIndex={25}
         sx={{
           display: {
             xs: "none",

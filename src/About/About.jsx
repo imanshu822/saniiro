@@ -14,7 +14,6 @@ import { Stack } from "@mui/material";
 const About = () => {
   return (
     <>
-      <Nav />
       <Stack
         sx={{
           gap: 5,
@@ -22,6 +21,7 @@ const About = () => {
           margin: "0 auto",
         }}
       >
+        <Nav />
         <AboutBanner />
         <WelcomeToSaniiro />
         <ExploreAbout />
@@ -31,8 +31,8 @@ const About = () => {
         <Name />
         <Clock />
         <Awards />
-        <Footer />
       </Stack>
+      <Footer />
     </>
   );
 };

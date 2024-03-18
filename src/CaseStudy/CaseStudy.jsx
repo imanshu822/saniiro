@@ -4,13 +4,13 @@ import CompanyBanner from "./parts/CompanyBanner";
 import ReviewSection from "./parts/ReviewSection";
 import Footer from ".././utils/Footer";
 import TestimonialsCardsSection from "../Testimonials/parts/TestimonialsCardsSection";
+import { Stack } from "@mui/material";
 const CaseStudy = () => {
   return (
     <>
       <CaseStudyBanner />
       <CompanyBanner />
       <TestimonialsCardsSection />
-
       <Footer />
     </>
   );

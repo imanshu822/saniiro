@@ -4,12 +4,15 @@ import Nav from "../../Navbar/Nav";
 import VideoFeedSection from "./parts/VideoFeedSection";
 import Signupfree from "../../Solutions/Signupfree";
 import Footer from "../../utils/Footer";
+import { Stack } from "@mui/material";
 const WatchMoreVideos = () => {
   return (
     <div>
-      <Nav />
-      <Header />
-      <VideoFeedSection />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Nav />
+        <Header />
+        <VideoFeedSection />
+      </Stack>
       <Signupfree />
       <Footer />
     </div>

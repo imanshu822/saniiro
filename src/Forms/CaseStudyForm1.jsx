@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import lo from "../assets/lo.svg";
+import { Link } from "react-router-dom";
 
 const CaseStudyForm1 = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const CaseStudyForm1 = () => {
   };
 
   return (
-    <Stack width={"1420px"}>
+    <Stack width={"100%"}>
       <Stack
         marginTop={"40px"}
         direction={"column"}
@@ -54,18 +55,25 @@ const CaseStudyForm1 = () => {
           Customer Story Form
         </Typography>
       </Stack>
-      <Stack width={"750px"} margin={"0px auto"}>
+      <Stack
+        width={{
+          xs: "95%",
+          sm: "90%",
+          md: "750px",
+        }}
+        margin={"0px auto"}
+      >
         <form onSubmit={handleSubmit}>
           <hr
             style={{
-              width: "750px",
+              width: "100%",
               marginTop: "40px",
               border: "0.5px solid gray",
               backgroundColor: "gray",
             }}
           />
           <Typography
-            width={"710px"}
+            width={"100%"}
             margin={"0px auto"}
             sx={{
               fontFamily: "Work Sans",
@@ -85,14 +93,21 @@ const CaseStudyForm1 = () => {
           </Typography>
           <hr
             style={{
-              width: "750px",
+              width: "100%",
               border: "0.5px solid gray",
               backgroundColor: "gray",
             }}
           />
           <Stack>
-            <Stack gap={3}>
-              <Stack direction={"row"} gap={4} margin={"0px auto"}>
+            <Stack gap={3} width={"95%"}>
+              <Stack
+                direction={{
+                  xs: "column",
+                  md: "row",
+                }}
+                gap={4}
+                margin={"0px auto"}
+              >
                 <Stack
                   sx={{
                     fontFamily: "Work Sans",
@@ -104,20 +119,33 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="firstName">First Name*</label>
-                  <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "330px",
-                      height: "55px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "275px",
+                      sm: "310px",
+                      md: "330px",
                     }}
-                  />
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
+                    }}
+                  >
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        marginTop: "5px",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        fontSize: "18px",
+                      }}
+                    />
+                  </Stack>
                 </Stack>
                 <Stack
                   sx={{
@@ -130,23 +158,43 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="company">Company*</label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "330px",
-                      height: "55px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "275px",
+                      sm: "310px",
+                      md: "330px",
                     }}
-                  />
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
+                    }}
+                  >
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        marginTop: "5px",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        fontSize: "18px",
+                      }}
+                    />
+                  </Stack>
                 </Stack>
               </Stack>
-              <Stack direction={"row"} gap={4} margin={"0px auto"}>
+              <Stack
+                direction={{
+                  xs: "column",
+                  md: "row",
+                }}
+                gap={4}
+                margin={"0px auto"}
+              >
                 <Stack
                   sx={{
                     fontFamily: "Work Sans",
@@ -158,21 +206,33 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="phone">Phone*</label>
-                  <input
-                    type="number"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "310px",
-                      height: "55px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      paddingRight: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "275px",
+                      sm: "310px",
+                      md: "330px",
                     }}
-                  />
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
+                    }}
+                  >
+                    <input
+                      type="number"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        marginTop: "5px",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        fontSize: "18px",
+                      }}
+                    />
+                  </Stack>
                 </Stack>
                 <Stack
                   sx={{
@@ -185,32 +245,52 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="email">Email*</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "330px",
-                      height: "55px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "275px",
+                      sm: "310px",
+                      md: "330px",
                     }}
-                  />
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
+                    }}
+                  >
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        marginTop: "5px",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        fontSize: "18px",
+                      }}
+                    />
+                  </Stack>
                 </Stack>
               </Stack>
             </Stack>
             <hr
               style={{
-                width: "750px",
+                width: "95%",
                 marginTop: "40px",
                 borderTop: "1px dashed gray",
               }}
             />
             <Stack marginTop={"40px"} gap={3}>
-              <Stack direction={"row"} gap={4} margin={"0px auto"}>
+              <Stack
+                direction={{
+                  xs: "column",
+                  md: "row",
+                }}
+                gap={2}
+                margin={"0px auto"}
+              >
                 <Stack
                   sx={{
                     fontFamily: "Work Sans",
@@ -222,25 +302,38 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="industry">Industry</label>
-                  <select
-                    id="industry"
-                    name="industry"
-                    value={formData.industry}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "350px",
-                      height: "60px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      paddingRight: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "295px",
+                      sm: "320px",
+                      md: "350px",
+                    }}
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
                     }}
                   >
-                    <option value="select">Select</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                  </select>
+                    <select
+                      id="industry"
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleChange}
+                      style={{
+                        marginTop: "5px",
+                        width: "100%",
+                        height: "100%",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        paddingRight: "20px",
+                        fontSize: "18px",
+                      }}
+                    >
+                      <option value="select">Select</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                    </select>
+                  </Stack>
                 </Stack>
                 <Stack
                   sx={{
@@ -253,26 +346,39 @@ const CaseStudyForm1 = () => {
                   }}
                 >
                   <label htmlFor="companyIndustry">Company Industry*</label>
-                  <input
-                    type="text"
-                    name="companyIndustry"
-                    value={formData.companyIndustry}
-                    onChange={handleChange}
-                    style={{
-                      marginTop: "5px",
-                      width: "330px",
-                      height: "55px",
-                      border: "1px solid #C4C4C4",
-                      paddingLeft: "20px",
-                      fontSize: "18px",
+                  <Stack
+                    width={{
+                      xs: "275px",
+                      sm: "310px",
+                      md: "330px",
                     }}
-                  />
+                    height={{
+                      xs: "45px",
+                      sm: "55px",
+                      md: "60px",
+                    }}
+                  >
+                    <input
+                      type="text"
+                      name="companyIndustry"
+                      value={formData.companyIndustry}
+                      onChange={handleChange}
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        marginTop: "5px",
+                        border: "1px solid #C4C4C4",
+                        paddingLeft: "20px",
+                        fontSize: "18px",
+                      }}
+                    />
+                  </Stack>
                 </Stack>
               </Stack>
             </Stack>
             <hr
               style={{
-                width: "750px",
+                width: "100%",
                 marginTop: "40px",
                 borderTop: "1px dashed gray",
               }}
@@ -293,7 +399,9 @@ const CaseStudyForm1 = () => {
                       value="Free"
                       onChange={handleChange}
                     />
-                    <label htmlFor="free">Free</label>
+                    <Typography>
+                      <label htmlFor="free">Free</label>
+                    </Typography>
                   </Stack>
                   <Stack direction="row" gap={2}>
                     <input
@@ -303,7 +411,9 @@ const CaseStudyForm1 = () => {
                       value="Professional"
                       onChange={handleChange}
                     />
-                    <label htmlFor="professional">Professional</label>
+                    <Typography>
+                      <label htmlFor="professional">Professional</label>
+                    </Typography>
                   </Stack>
                 </Stack>
                 <Stack
@@ -319,7 +429,9 @@ const CaseStudyForm1 = () => {
                       value="Standard"
                       onChange={handleChange}
                     />
-                    <label htmlFor="standard">Standard</label>
+                    <Typography>
+                      <label htmlFor="standard">Standard</label>
+                    </Typography>
                   </Stack>
                   <Stack direction="row" gap={2}>
                     <input
@@ -329,7 +441,9 @@ const CaseStudyForm1 = () => {
                       value="Enterprise"
                       onChange={handleChange}
                     />
-                    <label htmlFor="enterprise">Enterprise</label>
+                    <Typography>
+                      <label htmlFor="enterprise">Enterprise</label>
+                    </Typography>
                   </Stack>
                 </Stack>
                 <Stack direction="row" gap={2} sx={{ marginY: "20px" }}>
@@ -340,7 +454,9 @@ const CaseStudyForm1 = () => {
                     value="CRM Plus"
                     onChange={handleChange}
                   />
-                  <label htmlFor="crmPlus">CRM Plus</label>
+                  <Typography>
+                    <label htmlFor="crmPlus">CRM Plus</label>
+                  </Typography>
                 </Stack>
                 <Stack direction="row" gap={2} sx={{ marginY: "20px" }}>
                   <input
@@ -350,7 +466,9 @@ const CaseStudyForm1 = () => {
                     value="Others"
                     onChange={handleChange}
                   />
-                  <label htmlFor="other">Others (Please specify)</label>
+                  <Typography>
+                    <label htmlFor="other">Others (Please specify)</label>
+                  </Typography>
                 </Stack>
               </Stack>
               <textarea
@@ -369,20 +487,48 @@ const CaseStudyForm1 = () => {
               />
             </Stack>
           </Stack>
-          <button
-            type="submit"
-            style={{
-              width: "140px",
-              height: "40px",
-              backgroundColor: "#F2994A",
-              borderRadius: "5px",
-              marginTop: "40px",
-              marginLeft: "25px",
+          <Stack alignItems={"center"} mb={"40px"}>
+            <Link
+              to="/CaseStudyForm2"
+              onClick={() => window.scrollTo(0, 0)}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                type="submit"
+                style={{
+                  width: "140px",
+                  height: "40px",
+                  backgroundColor: "#F15B25",
+                  marginTop: "40px",
+                  borderRadius: "0px",
+                  alignSelf: "center",
+                }}
+              >
+                <Typography color={"white"}>NEXT</Typography>
+              </Button>
+            </Link>
+          </Stack>
+        </form>
+        <Stack alignItems={"center"} mb={"40px"}>
+          <Typography
+            width={"100%"}
+            margin={"0px auto"}
+            sx={{
+              fontFamily: "Work Sans",
+              fontSize: "12px",
+              fontWeight: 400,
+              lineHeight: "20px",
+              letterSpacing: "0em",
+              textAlign: "center",
+              marginTop: "15px",
+              marginBottom: "15px",
+              opacity: 0.6,
             }}
           >
-            <Typography>NEXT</Typography>
-          </button>
-        </form>
+            The information collected through this survey will be used in
+            accordance with our Privacy Policy
+          </Typography>
+        </Stack>
       </Stack>
     </Stack>
   );

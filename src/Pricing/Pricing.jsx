@@ -8,15 +8,18 @@ import Readytosign from "../Contact/parts/Readytosign";
 import Footer from "../utils/Footer";
 import ContactFaq from "../Home/parts/ContactFaq";
 import JoinBusinesses from "./JoinBusinesses";
+import { Stack } from "@mui/material";
 const Pricing = () => {
   return (
     <>
-      <PRicingBAnner />
-      <PricingTab />
-      {/* <JoinBusinesses /> */}
-      {/* <ContactFaq /> */}
-      {/* <Readytosign /> */}
-      {/* <Footer /> */}
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <PRicingBAnner />
+        <PricingTab />
+        <JoinBusinesses />
+        <ContactFaq />
+      </Stack>
+      <Readytosign />
+      <Footer />
     </>
   );
 };
