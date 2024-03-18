@@ -61,18 +61,20 @@ const BlogFeed = () => {
             xs: "100%",
             sm: "100%",
             md: "100%",
-            lg: "1200px",
+            lg: "90%",
           }}
         >
           <Stack
-            width={"100%"}
+            width={{
+              xs: "100%",
+              lg: "63%",
+            }}
             direction="column"
             gap={2}
             sx={{
               marginTop: "0px",
               paddingTop: "30px",
             }}
-            m={"0 auto"}
             justifyContent={{
               xs: "center",
             }}
