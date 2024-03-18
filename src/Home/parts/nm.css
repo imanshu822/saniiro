@@ -1,5 +1,8 @@
 /* PhoneNumberInput.css */
-
+.text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f69f7f;
+}
 /* Increase the width of the phone input */
 .react-tel-input {
   width: 480px;

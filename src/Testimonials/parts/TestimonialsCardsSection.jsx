@@ -35,7 +35,6 @@ const TestimonialsCardsSection = () => {
         }}
         backgroundColor={"#052973"}
         paddingBottom={"50px"}
-        margin={"0 auto"}
       >
         <Stack
           justifyContent={"center"}

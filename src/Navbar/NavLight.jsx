@@ -53,7 +53,6 @@ const NavLight = () => {
   return (
     <>
       <Stack
-        zIndex={25}
         sx={{
           display: {
             xs: "none",
@@ -64,8 +63,10 @@ const NavLight = () => {
         justifyContent={"space-between"}
         p={"20px 90px"}
         alignItems={"center"}
+        zIndex={1}
+        
       >
-        <Stack width={{ xl: "19%", md: "25%", sm: "35%" }}>
+        <Stack width={{ xl: "16%", md: "25%", sm: "35%" }}>
           <Link to={"/"}>
             <img
               src={logoLight}
@@ -512,7 +513,6 @@ const NavLight = () => {
       </Stack>
       {/* mobile view */}
       <Stack
-        zIndex={25}
         alignItems={"end"}
         width={"100%"}
         sx={{
@@ -523,6 +523,7 @@ const NavLight = () => {
         }}
       >
         <Stack
+          zIndex={1000}
           width={"90%"}
           direction={"row"}
           alignSelf={"center"}

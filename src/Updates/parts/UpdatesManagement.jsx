@@ -50,9 +50,27 @@ const UpdatesManagement = () => {
   };
 
   return (
-    <Stack width={"1240px"} margin={"50px auto"} direction={"row"}>
-      <Stack width={"60%"}>
-        {Updates.map((update, index) => (
+   
+    <Stack
+      width={{
+        xs: "95%",
+        xl: "1240px",
+      }}
+      gap={4}
+      margin={"50px auto"}
+      direction={{
+        xs: "column",
+        lg: "row",
+      }}
+    >
+      <Stack
+        width={{
+          xs: "95%",
+          lg: "60%",
+        }}
+        margin={"0 auto"}
+      >
+        {Updates.map((Updates, index) => (
           <Stack
             key={index}
             onClick={() => handleClick(index)}
@@ -64,37 +82,35 @@ const UpdatesManagement = () => {
               gap={2}
               padding={"10px 0px"}
             >
-              <Stack
-                direction={"row"}
-                alignItems={"center"}
-                gap={4}
-                opacity={1}
-                sx={{
-                  "&:hover": {
-                    textDecoration: "none",
-                    cursor: "pointer",
-                  },
-                }}
-              >
+              <Stack direction={"row"} alignItems={"center"} gap={2}>
                 <Box
-                  width={"40px"}
-                  height={"40px"}
+                  width={{
+                    xs: "50px",
+                    lg: "67px",
+                  }}
+                  height={{
+                    xs: "50px",
+                    lg: "67px",
+                  }}
                   component="img"
-                  src={update.image}
+                  src={Updates.image}
                   alt="Files image"
                 />
                 <Stack>
                   <Typography
                     sx={{
                       fontFamily: "Work Sans",
-                      fontSize: "25px",
+                      fontSize: {
+                        xs: "15px",
+                        lg: "25px",
+                      },
                       fontWeight: 700,
                       lineHeight: "37px",
                       letterSpacing: "0em",
                       textAlign: "left",
                     }}
                   >
-                    {update.title}
+                    {Updates.title}
                   </Typography>
                   <Typography
                     sx={{
@@ -106,28 +122,33 @@ const UpdatesManagement = () => {
                       textAlign: "left",
                     }}
                   >
-                    {update.date}
+                    {Updates.date}
                   </Typography>
                 </Stack>
               </Stack>
               <ArrowDropDownIcon
-                // className="navlink-link-downarrow"
                 sx={{
-                  fontSize: 25,
-                  transition: "all 0.3s ease-in",
+                  paddingTop: "10px",
+                  height: {
+                    xs: "30px",
+                    lg: "50px",
+                  },
+                  width: {
+                    xs: "30px",
+                    lg: "50px",
+                  },
                   color: "#F15B25",
-                  width: "60px",
-                  height: "60px",
-                  transform: activities[index] ? "rotate(180deg)" : "rotate(0)",
+                  transform: activities[index] ? "rotate(0deg)" : "rotate(180deg)",
+                  transition: "transform 0.3s ease",
                 }}
               />
             </Stack>
             {activities[index] && (
               <>
-                {update.updatesFeatures.map((feature, i) => (
+                {Updates.updatesFeatures.map((feature, i) => (
                   <Link
                     key={i}
-                    to={`/Updates/${update.id}`}
+                    to={`/Updates/${Updates.id}`}
                     style={{
                       textDecoration: "none",
                       color: "black",
@@ -136,17 +157,23 @@ const UpdatesManagement = () => {
                     <Stack
                       direction={"row"}
                       gap={3}
-                      margin={"10px 100px"}
                       sx={{
                         "&:hover": {
                           textDecoration: "none",
                           color: "#F15B25",
                         },
                       }}
+                      margin={{
+                        xs: "10px 50px",
+                        lg: "20px 100px",
+                      }}
                     >
                       <Typography
                         sx={{
-                          width: "40%",
+                          "&:hover": {
+                            textDecoration: "none",
+                            color: "#F15B25",
+                          },
                         }}
                       >
                         {feature}
@@ -160,11 +187,21 @@ const UpdatesManagement = () => {
           </Stack>
         ))}
       </Stack>
+
       <Stack
-        width={"40%"}
-        paddingLeft={"80px"}
-        marginLeft={"40px"}
-        borderLeft={"1px solid gray"}
+        width={{
+          xs: "95%",
+          lg: "40%",
+        }}
+        margin={"0 auto"}
+        paddingLeft={{
+          xs: "0",
+          lg: "80px",
+        }}
+        borderLeft={{
+          xs: "none",
+          lg: "1px solid gray",
+        }}
       >
         <Typography
           sx={{

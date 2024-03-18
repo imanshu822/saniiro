@@ -11,6 +11,7 @@ import Google from "../../assets/google.png";
 import LinkedIn from "../../assets/linkedIn.png";
 import "../../Solutions/parts/Solution.css";
 import NavLight from "../../Navbar/NavLight";
+import "./nm.css"
 const Simplify = () => {
   const [showPassword, setShowPassword] = useState(false);
   const textStyle = {

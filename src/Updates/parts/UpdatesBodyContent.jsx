@@ -5,16 +5,33 @@ import utilityImg from "../../assets/utilitySettings.png";
 const FaqBodyContent = () => {
   return (
     <Stack
-      width={"1200px"}
+      width={{
+        xl: "1200px",
+        lg: " 85",
+        md: "90",
+        xs: "93%",
+      }}
       margin={"10px auto"}
-      direction={"row"}
+      direction={{
+        xs: "column",
+        lg: "row",
+      }}
       gap={2}
       padding={"30px 0px"}
     >
       <Stack
-        width={"850px"}
-        borderRight={"1px solid gray"}
-        paddingRight={"10px"}
+        width={{
+          lg: "850px",
+          xs: "100%",
+        }}
+        borderRight={{
+          lg: "1px solid #E5E5E5",
+          xs: "none",
+        }}
+        paddingRight={{
+          lg: "20px",
+          xs: "0px",
+        }}
       >
         <Stack gap={2}>
           <Typography
@@ -379,7 +396,6 @@ const FaqBodyContent = () => {
           style={{
             width: "97%",
             backgroundColor: "gray",
-            height: "5px",
           }}
         />
         <Stack
@@ -460,7 +476,10 @@ const FaqBodyContent = () => {
           direction={"row"}
           alignItems={"center"}
           sx={{
-            width: "702px",
+            width: {
+              lg: "702px",
+              xs: "90%",
+            },
             height: "66px",
             padding: "7px 15px",
             gap: "15px",
@@ -506,8 +525,10 @@ const FaqBodyContent = () => {
           direction={"column"}
           alignItems={"center"}
           sx={{
-            width: "702px",
-
+            width: {
+              lg: "702px",
+              xs: "90%",
+            },
             padding: "7px 15px",
             gap: "15px",
             margin: "50px 0",
@@ -543,7 +564,12 @@ const FaqBodyContent = () => {
             </Typography>
           </Stack>
 
-          <Typography>
+          <Typography
+            width={{
+              lg: "90%",
+              xs: "100%",
+            }}
+          >
             <ul>
               <li
                 sx={{
@@ -577,7 +603,12 @@ const FaqBodyContent = () => {
           </Typography>
         </Stack>
       </Stack>
-      <Stack width={"350px"}>
+      <Stack
+        width={{
+          lg: "350px",
+          xs: "100%",
+        }}
+      >
         <Stack padding={"20px 30px"} gap={3}>
           <Typography
             sx={{

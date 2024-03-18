@@ -1,12 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
-import stopWatch from "../../assets/stopWatch.svg";
-import PhoneNumberInput from "./nm";
-import Google from "../../assets/google.png";
-import LinkedIn from "../../assets/linkedIn.png";
 import Button from "../../utils/Button";
-import PhoneInput from "react-phone-input-2";
-
+import "./Virtualtraining.css"
 const Clock = () => {
   const [isChecked, setChecked] = useState(false);
 
@@ -20,10 +15,9 @@ const Clock = () => {
     setPhone(value);
   };
   return (
-    <Stack alignItems={"center"} p={"10px 0 40px"} sx={{}}>
+    <Stack alignItems={"center"}>
       <Stack
-        padding={"20px "}
-        width={"80%"}
+        width={"100%"}
         bgcolor={"#F15B25"}
         gap={4}
         sx={{
@@ -38,7 +32,7 @@ const Clock = () => {
         }}
       >
         <Stack
-          width={"60%"}
+          width={"50%"}
           alignItems={"center"}
           justifyContent={"center"}
           height={"100%"}
@@ -49,6 +43,50 @@ const Clock = () => {
             },
           }}
         >
+          <Typography
+            className="text-strokes"
+            fontFamily={"monospace"}
+            sx={{
+              textTransform: "uppercase",
+              fontSize: {
+                xs: "55px",
+                sm: "60px",
+                lg: "85px",
+                xl: "146px",
+              },
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+              fontWeight: "bold",
+              letterSpacing: 1,
+              color: "transparent",
+              lineHeight: 1,
+            }}
+          >
+            Get in
+          </Typography>
+          <Typography
+            textTransform={"uppercase"}
+            sx={{
+              fontSize: {
+                xs: "55px",
+                sm: "60px",
+                lg: "85px",
+                xl: "136px",
+              },
+              textAlign: {
+                xs: "center",
+                lg: "left",
+              },
+            }}
+            color={"white"}
+            fontWeight={900}
+            lineHeight={0.9}
+            letterSpacing={"0.05em"}
+          >
+            TOUCH
+          </Typography>
           <Typography
             color={"white"}
             fontWeight={"bold"}
@@ -65,40 +103,7 @@ const Clock = () => {
             }}
             letterSpacing={2}
           >
-            Get Started in Less Then
-          </Typography>
-          <Stack
-            sx={{
-              width: {
-                xs: "100px",
-                lg: "200px",
-              },
-              height: {
-                xs: "150px",
-                lg: "200px",
-              },
-            }}
-            gap={2}
-            alignItems={"center"}
-            justifyContent={"center"}
-          >
-            <img
-              src={stopWatch}
-              alt=""
-              style={{ width: "100%", height: "100%" }}
-            />
-          </Stack>
-          <Typography
-            sx={{
-              fontSize: {
-                xs: "30px",
-                lg: "50px",
-              },
-            }}
-            fontWeight={"bold"}
-            color={"white"}
-          >
-            60 seconds
+            Got questions? Write to us.
           </Typography>
         </Stack>
         <Stack
@@ -109,8 +114,8 @@ const Clock = () => {
               lg: "40%",
             },
             padding: {
-              xs: "0",
-              md: "20px 0 0 20px",
+              xs: "0 0 40px 0",
+              md: "40px 20px",
             },
           }}
           alignItems={"center"}
@@ -140,9 +145,9 @@ const Clock = () => {
               alignItems={"center"}
               sx={{
                 width: {
-                  xs: "50%",
-                  sm: "60%",
-                  md: "70%",
+                  xs:"50%",
+                  sm:"60%",
+                  md:"70%",
                   lg: "80%",
                 },
                 height: {
@@ -154,7 +159,7 @@ const Clock = () => {
               <input
                 type="text"
                 className="input-clock"
-                placeholder="Full Name"
+                placeholder="First Name"
                 style={{ width: "100%", height: "55px" }}
               />
             </Stack>
@@ -162,9 +167,31 @@ const Clock = () => {
               alignItems={"center"}
               sx={{
                 width: {
-                  xs: "50%",
-                  sm: "60%",
-                  md: "70%",
+                  xs:"50%",
+                  sm:"60%",
+                  md:"70%",
+                  lg: "80%",
+                },
+                height: {
+                  xs: "55px",
+                  lg: "67px",
+                },
+              }}
+            >
+              <input
+                type="text"
+                className="input-clock"
+                placeholder="Last Name"
+                style={{ width: "100%", height: "55px" }}
+              />
+            </Stack>
+            <Stack
+              alignItems={"center"}
+              sx={{
+                width: {
+                  xs:"50%",
+                  sm:"60%",
+                  md:"70%",
                   lg: "80%",
                 },
                 height: {
@@ -176,17 +203,17 @@ const Clock = () => {
               <input
                 type="Email"
                 className="input-clock"
-                placeholder="Work Email"
+                placeholder="Email"
                 style={{ width: "100%", height: "55px" }}
               />
             </Stack>
             <Stack
               alignItems={"center"}
               sx={{
-                width: {
-                  xs: "50%",
-                  sm: "60%",
-                  md: "70%",
+               width: {
+                  xs:"50%",
+                  sm:"60%",
+                  md:"70%",
                   lg: "80%",
                 },
                 height: {
@@ -212,22 +239,8 @@ const Clock = () => {
                 id: "phoneInput",
               }}
             /> */}
-            <Box textAlign={"left"} width={"85%"}>
-              <Typography fontSize={"13px"} color={"white"} textAlign={"left"}>
-                It looks like you‘re in INDIA based on your IP.
-              </Typography>
-            </Box>
+
             <Stack gap={2} width={"85%"}>
-              <Stack direction={"row"} gap={1}>
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
-                />
-                <Typography fontSize={"13px"} color={"white"}>
-                  I agree to the Terms of Service and Privacy Policy.
-                </Typography>
-              </Stack>
               <Button
                 type="button"
                 sx={{
@@ -243,19 +256,8 @@ const Clock = () => {
                   },
                 }}
               >
-                Get Started
+                Submit
               </Button>
-              <Stack direction={"row"} justifyContent={"right"} gap={1}>
-                <Typography
-                  display={"flex"}
-                  alignItems={"center"}
-                  color={"white"}
-                >
-                  or sign in using
-                </Typography>
-                <img src={Google} style={{ width: "32px", height: "32px" }} />
-                <img src={LinkedIn} style={{ width: "32px", height: "32px" }} />
-              </Stack>
             </Stack>
           </Stack>
         </Stack>

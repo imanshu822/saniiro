@@ -7,7 +7,7 @@ import icon6section from "../../assets/icon6section.png";
 
 const Bluescreen = () => {
   return (
-    <Stack alignItems={"center"} p={"100px 0"}>
+    <Stack alignItems={"center"} p={{ xl: "100px 0", xs: "0" }}>
       <Stack
         bgcolor={"#052973"}
         width={"85%"}

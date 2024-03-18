@@ -17,7 +17,10 @@ const CaseStudyBanner = () => {
         bgcolor={"#052973"}
         className="textured-background"
       >
+        <Stack zIndex={110}>
+
         <NavLight />
+        </Stack>
         <Stack gap={4} pb={14}>
           <Stack
             p={"50px 0px 0 0"}

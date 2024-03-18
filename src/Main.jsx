@@ -38,6 +38,7 @@ import LegalEmployeeLogin from "./SubFooter/EmployeeLogin";
 import CancalationRefundPolicy from "./SubFooter/CancalationRefundPolicy";
 import PrivacyPolicy from "./SubFooter/PrivacyPolicy";
 import TnC from "./SubFooter/TnC";
+import VirtualTraining from "./VirtualTraining/VirtualTraining";
 
 const Main = () => {
   return (
@@ -115,6 +116,7 @@ const Main = () => {
         <Route exact path="/Updates/:id" element={<UpdatesActivities />} />
 
         <Route exact path="/HelpAndTraining" element={<HelpAndTraining />} />
+        <Route exact path="/VirtualTraining" element={<VirtualTraining />} />
 
         {/* SubFooter pages  */}
         <Route exact path="/subfooter/legal" element={<Legal />} />

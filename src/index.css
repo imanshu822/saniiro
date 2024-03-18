@@ -30,8 +30,8 @@ code {
 }
 
 .input-clock{
-  width: 80%;
-  height: 55px;
+  /* width: 80%;
+  height: 55px; */
   border: 1px solid #AAAAAA;
   color: #AAAAAA;
   padding-left: 5%;
