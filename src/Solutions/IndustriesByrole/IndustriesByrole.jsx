@@ -13,9 +13,8 @@ import Footer from "../../utils/Footer";
 const IndustriesByrole = () => {
   return (
     <>
+      <Nav />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-
         <Stack
           pb={{
             xs: "50px",
@@ -29,7 +28,21 @@ const IndustriesByrole = () => {
         >
           <Industry1 />
           <Industry2 />
-          <Industry3 />
+        </Stack>
+      </Stack>
+      <Industry3 />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <Stack
+          pb={{
+            xs: "50px",
+            md: "100px",
+          }}
+          gap={{
+            xs: "20px",
+            md: "40px",
+            lg: "60px",
+          }}
+        >
           <Industry4 />
           <Industry5 />
           <Industry6 />

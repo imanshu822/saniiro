@@ -33,6 +33,8 @@ const Industries2 = () => {
         alignItems={"center"}
       >
         <Stack
+          maxWidth={"1536px"}
+          margin={"0 auto"}
           position={{ xl: "absolute", xs: "none" }}
           bgcolor={"#052973"}
           width={{ xl: "85%", xs: "95%" }}
@@ -98,7 +100,7 @@ const Industries2 = () => {
                       xs: "8px",
                       sm: "10px",
                       md: "12px",
-                      xl:"18px"
+                      xl: "18px",
                     }}
                     dangerouslySetInnerHTML={{ __html: d.title }}
                   />

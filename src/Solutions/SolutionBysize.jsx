@@ -15,11 +15,11 @@ const SolutionBysize = () => {
   return (
     <>
       {/* for desktop view  */}
+      <Nav />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
         <Stack>
           <Stack position={"relative"} gap={5}>
             <Stack>
-              <Nav />
               <Industries1 />
             </Stack>
             <Stack gap={5}>

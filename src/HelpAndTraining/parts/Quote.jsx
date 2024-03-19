@@ -203,6 +203,9 @@ const Quote = () => {
               }}
             >
               <Stack
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
                 sx={{
                   width: "86px",
                   height: "36px",

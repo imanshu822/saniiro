@@ -32,6 +32,10 @@ const Footer = () => {
       item: "Contact us",
       to: "/Contact-us",
     },
+    {
+      item: "Request Callback",
+      to: "/Contact-us",
+    },
     // {
     //   item: "Product Reviews",
     // },
@@ -60,6 +64,10 @@ const Footer = () => {
     {
       item: "Blog",
       to: "/Resources/Blog",
+    },
+    {
+      item: "Videos",
+      to: "/Resources/Videos",
     },
     // {
     //   item: "Gallery",

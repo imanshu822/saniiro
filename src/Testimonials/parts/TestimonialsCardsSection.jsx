@@ -161,33 +161,39 @@ const TestimonialsCardsSection = () => {
                 our
               </Typography>
             </Box>
-            <Box
-              sx={{
-                marginTop: "30px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "200px",
-                height: "20px",
-                padding: "20px 54px 20px 54px",
-                gap: "10px",
-                backgroundColor: "#FFFFFF",
-              }}
+            <Link
+              to="/Resources/Testimonials/share-your-experince-form"
+              style={{ textDecoration: "none", color: "black" }}
             >
-              <Typography
+              <Box
+                onClick={() => window.scrollTo(0, 0)}
                 sx={{
-                  fontFamily: "Work Sans",
-                  fontSize: "19px",
-                  fontWeight: 600,
-                  lineHeight: "18px",
-                  letterSpacing: "0em",
-                  textAlign: "center",
-                  color: "#000000",
+                  marginTop: "30px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "200px",
+                  height: "20px",
+                  padding: "20px 54px 20px 54px",
+                  gap: "10px",
+                  backgroundColor: "#FFFFFF",
                 }}
               >
-                Share your Story
-              </Typography>
-            </Box>
+                <Typography
+                  sx={{
+                    fontFamily: "Work Sans",
+                    fontSize: "19px",
+                    fontWeight: 600,
+                    lineHeight: "18px",
+                    letterSpacing: "0em",
+                    textAlign: "center",
+                    color: "#000000",
+                  }}
+                >
+                  Share your Story
+                </Typography>
+              </Box>
+            </Link>
           </Stack>
         </Stack>
       </Stack>

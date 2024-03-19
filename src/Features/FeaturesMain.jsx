@@ -412,15 +412,17 @@ function FeaturesMain() {
           >
             {lists.map((d) => (
               <ul key={d.id}>
-                <li
-                  style={{
-                    listStyle: "none",
-                    borderBottom:
-                      activeItem === `item${d.id}` ? "1px solid gray" : "none",
-                  }}
-                  onClick={() => handleItemClick(`item${d.id}`)}
-                >
-                  <Typography>{d.heading}</Typography>
+                <li onClick={() => handleItemClick(`item${d.id}`)}>
+                  <Typography
+                    style={{
+                      listStyle: "none",
+                      textDecoration:
+                        activeItem === `item${d.id}` ? "underline" : "none",
+                      textUnderlineOffset: "5px",
+                    }}
+                  >
+                    {d.heading}
+                  </Typography>
                 </li>
               </ul>
             ))}

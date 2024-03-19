@@ -12,8 +12,8 @@ import { Stack } from "@mui/material";
 const Pricing = () => {
   return (
     <>
+      <PRicingBAnner />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <PRicingBAnner />
         <PricingTab />
         <JoinBusinesses />
         <ContactFaq />

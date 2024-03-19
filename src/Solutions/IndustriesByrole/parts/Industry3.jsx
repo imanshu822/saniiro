@@ -22,7 +22,7 @@ const Industry3 = () => {
         }}
         gap={5}
       >
-        <Stack alignItems={"center"}>
+        <Stack alignItems={"center"} maxWidth={"1536px"} margin={"0 auto"}>
           <Typography
             fontSize={"35px"}
             fontWeight={"bold"}
@@ -38,8 +38,12 @@ const Industry3 = () => {
             organization sales.
           </Typography>
         </Stack>
-        <Stack justifyContent={"center"} position={"relative"}>
-          <Stack bgcolor={"#35373E"} height={"700px"} gap={2}>
+        <Stack
+          bgcolor={"#35373E"}
+          justifyContent={"center"}
+          position={"relative"}
+        >
+          <Stack height={"700px"} gap={2} maxWidth={"1536px"} margin={"0 auto"}>
             <Typography
               marginTop={"50px"}
               color={"white"}
@@ -109,7 +113,7 @@ const Industry3 = () => {
               </Stack>
             </Stack>
           </Stack>
-          <Stack margin={"0px auto"}>
+          <Stack margin={"0px auto"} maxWidth={"1536px"}>
             <Stack
               width={"886px"}
               height={"415px"}
@@ -177,78 +181,81 @@ const Industry3 = () => {
               </Stack>
             </Stack>
           </Stack>
-          <Stack
-            bgcolor={"#052973"}
-            height={"700px"}
-            gap={2}
-            paddingTop={"350px"}
-          >
-            <Typography
-              marginTop={"50px"}
-              color={"white"}
-              fontSize={"35px"}
-              fontWeight={"bold"}
-              textAlign={"center"}
+          <Stack bgcolor={"#052973"}>
+            <Stack
+              height={"500px"}
+              gap={2}
+              paddingTop={"350px"}
+              maxWidth={"1536px"}
+              margin={"0 auto"}
             >
-              Sales readiness and priority
-            </Typography>
-            <Stack direction={"row"} justifyContent={"center"} gap={5}>
-              <Stack width={"40%"}>
-                <Stack
-                  width={"100%"}
-                  borderRight={"1px solid lightgrey"}
-                  borderBottom={"1px solid lightgrey"}
-                  p={2}
-                  gap={2}
-                >
+              <Typography
+                marginTop={"50px"}
+                color={"white"}
+                fontSize={"35px"}
+                fontWeight={"bold"}
+                textAlign={"center"}
+              >
+                Sales readiness and priority
+              </Typography>
+              <Stack direction={"row"} justifyContent={"center"} gap={5}>
+                <Stack width={"40%"}>
+                  <Stack
+                    width={"100%"}
+                    borderRight={"1px solid lightgrey"}
+                    borderBottom={"1px solid lightgrey"}
+                    p={2}
+                    gap={2}
+                  >
+                    <Typography
+                      color={"white"}
+                      fontWeight={"bold"}
+                      fontSize={"25px"}
+                    >
+                      ARE YOU STILL COLD-CALLING?
+                    </Typography>
+                    <Typography color={"#ffffff"} fontSize={"14px"}>
+                      When you hand your reps a list of leads to follow-up,
+                      where exactly do they start? Cold-calling them right away
+                      may seem like the best option, but it certainly isn't the
+                      most efficient way to sell, especially given that 50% of a
+                      sales rep's time is wasted on leads that don't convert.
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    width={"100%"}
+                    borderRight={"1px solid lightgrey"}
+                    p={2}
+                    gap={2}
+                  >
+                    <Typography
+                      color={"#FFC849"}
+                      fontWeight={"bold"}
+                      fontSize={"25px"}
+                    >
+                      ARE YOU STILL COLD-CALLING?
+                    </Typography>
+                    <Typography color={"#ffffff"} fontSize={"14px"}>
+                      When you hand your reps a list of leads to follow-up,
+                      where exactly do they start? Cold-calling them right away
+                      may seem like the best option, but it certainly isn't the
+                      most efficient way to sell, especially given that 50% of a
+                      sales rep's time is wasted on leads that don't convert.
+                    </Typography>
+                  </Stack>
+                </Stack>
+                <Stack width={"17%"} marginLeft={"40px"} marginTop={"20px"}>
+                  <Progressbar />
                   <Typography
+                    textAlign={"center"}
                     color={"white"}
                     fontWeight={"bold"}
                     fontSize={"25px"}
                   >
-                    ARE YOU STILL COLD-CALLING?
-                  </Typography>
-                  <Typography color={"#ffffff"} fontSize={"14px"}>
-                    When you hand your reps a list of leads to follow-up, where
-                    exactly do they start? Cold-calling them right away may seem
-                    like the best option, but it certainly isn't the most
-                    efficient way to sell, especially given that 50% of a sales
-                    rep's time is wasted on leads that don't convert.
+                    Sales reps can spend up to 40% of their time looking for
+                    somebody to call.
                   </Typography>
                 </Stack>
-                <Stack
-                  width={"100%"}
-                  borderRight={"1px solid lightgrey"}
-                  p={2}
-                  gap={2}
-                >
-                  <Typography
-                    color={"#FFC849"}
-                    fontWeight={"bold"}
-                    fontSize={"25px"}
-                  >
-                    ARE YOU STILL COLD-CALLING?
-                  </Typography>
-                  <Typography color={"#ffffff"} fontSize={"14px"}>
-                    When you hand your reps a list of leads to follow-up, where
-                    exactly do they start? Cold-calling them right away may seem
-                    like the best option, but it certainly isn't the most
-                    efficient way to sell, especially given that 50% of a sales
-                    rep's time is wasted on leads that don't convert.
-                  </Typography>
-                </Stack>
-              </Stack>
-              <Stack width={"17%"} marginLeft={"40px"} marginTop={"20px"}>
-                <Progressbar />
-                <Typography
-                  textAlign={"center"}
-                  color={"white"}
-                  fontWeight={"bold"}
-                  fontSize={"25px"}
-                >
-                  Sales reps can spend up to 40% of their time looking for
-                  somebody to call.
-                </Typography>
               </Stack>
             </Stack>
           </Stack>

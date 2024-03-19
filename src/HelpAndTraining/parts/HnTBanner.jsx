@@ -106,6 +106,8 @@
 import React, { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import BannerImg from "../../assets/Frame.png";
+import { Link } from "react-router-dom";
+import Button from "../../utils/Button";
 
 const CareerBanner = () => {
   return (
@@ -202,6 +204,27 @@ const CareerBanner = () => {
           requirements. The online training program will be custom-made for your
           business.
         </Typography>
+        <Link
+          to="/LookingFor"
+          style={{
+            textDecoration: "none",
+            color: "white",
+          }}
+        >
+          <Stack
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Button
+              sx={{
+                padding: "10px 20px",
+              }}
+            >
+              <Typography>REGISTER NOW</Typography>
+            </Button>
+          </Stack>
+        </Link>
       </Stack>
     </>
   );

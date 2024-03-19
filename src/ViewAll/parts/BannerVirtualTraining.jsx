@@ -1,15 +1,16 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
+import Button from "../../utils/Button";
 import Nav from "../../Navbar/Nav";
 
-const HeaderBanner = () => {
+const BannerVirtualTraining = () => {
   return (
     <Stack
       sx={{
         background:
           "linear-gradient(0deg, rgba(133, 159, 255, 0) 38.85%, #859FFF 84.69%)",
         width: "100%",
-        height: "50vh",
+        height: "45vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "Start",
@@ -47,7 +48,7 @@ const HeaderBanner = () => {
             color: "#052973",
           }}
         >
-          Over 840+ customers trained and counting
+          Virtual Training
         </Typography>
         <Typography
           sx={{
@@ -63,12 +64,13 @@ const HeaderBanner = () => {
             textAlign: "center",
           }}
         >
-          Take a look at what our customers have to say about Saniiro CRM
-          Training.
+          Virtual training on Zoho CRM will be an instructor-led program where
+          trainees can see and interact with our expert trainers to study,
+          practice, and master Zoho CRM online.
         </Typography>
       </Stack>
     </Stack>
   );
 };
 
-export default HeaderBanner;
+export default BannerVirtualTraining;

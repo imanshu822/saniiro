@@ -395,18 +395,18 @@ function FeaturesBysize() {
       >
         <Stack
           className="sidebar"
-          width={{ xl: "20%", xs: "100%" }}
+          width={{ lg: "20%", xs: "100%" }}
           alignItems={"center"}
-          p={"20px 0"}
           bgcolor={"white"}
+          border={"1px solid lightgrey"}
           zIndex={11}
         >
           <Stack
-            height={{ xs: "70px", xl: "" }}
-            width={{ xl: "29%", xs: "95%" }}
+            height={{ xs: "70px", lg: "" }}
+            width={{ lg: "29%", xs: "95%" }}
             margin={"0 auto"}
-            direction={{ xl: "column", xs: "row" }}
-            gap={{ xl: 2, xs: "30px" }}
+            direction={{ lg: "column", xs: "row" }}
+            gap={{ lg: 1, xs: "30px" }}
             sx={{
               overflowY: "scroll",
               scrollbarWidth: "none",
@@ -418,15 +418,17 @@ function FeaturesBysize() {
           >
             {lists.map((d) => (
               <ul key={d.id}>
-                <li
-                  style={{
-                    listStyle: "none",
-                    borderBottom:
-                      activeItem === `item${d.id}` ? "1px solid gray" : "none",
-                  }}
-                  onClick={() => handleItemClick(`item${d.id}`)}
-                >
-                  <Typography>{d.heading}</Typography>
+                <li onClick={() => handleItemClick(`item${d.id}`)}>
+                  <Typography
+                    style={{
+                      listStyle: "none",
+                      textDecoration:
+                        activeItem === `item${d.id}` ? "underline" : "none",
+                      textUnderlineOffset: "5px",
+                    }}
+                  >
+                    {d.heading}
+                  </Typography>
                 </li>
               </ul>
             ))}

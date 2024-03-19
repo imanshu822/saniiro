@@ -1,21 +1,3 @@
-// import { Stack } from '@mui/material'
-// import React from 'react'
-// import testi from "../../assets/testi.svg"
-// const Testimonial = () => {
-//   return (
-//     <Stack alignItems={"center"}>
-//       <Stack width={"90%"} direction={"row"} justifyContent={"center"} gap={3}>
-//         <Stack width={"50%"}>
-//           <img src={testi} style={{height:"500px", width:"500px"}}/>
-//         </Stack>
-//         <Stack width={"50%"}></Stack>
-//       </Stack>
-//     </Stack>
-//   );
-// }
-
-// export default Testimonial
-
 import React, { useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import ReactPlayer from "react-player";

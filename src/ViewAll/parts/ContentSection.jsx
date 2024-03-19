@@ -11,6 +11,7 @@ const ContentSection = () => {
         md: "85%",
         lg: "80%",
       }}
+      hieight={"100%"}
       margin={"0 auto"}
       direction={{
         xs: "column",
@@ -18,19 +19,28 @@ const ContentSection = () => {
       }}
     >
       <Stack
+        justifyContent={"center"}
+        alignItems={"center"}
+        margin={"0 auto"}
         width={{
           md: "50%",
         }}
+        gap={3}
       >
         <QuoteCard />
         <TweetCard />
       </Stack>
       <Stack
+        margin={"0 auto"}
         width={{
           md: "50%",
         }}
+        justifyContent={"center"}
+        alignItems={"center"}
+        gap={3}
       >
         <TweetCard />
+
         <QuoteCard />
       </Stack>
     </Stack>

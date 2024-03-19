@@ -6,9 +6,7 @@ import { Stack } from "@mui/material";
 const Resources = () => {
   return (
     <>
-      <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <ResourceBanner />
-      </Stack>
+      <ResourceBanner />
       <Readytosign />
       <Footer />
     </>

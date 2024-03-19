@@ -25,6 +25,7 @@ import CaseStudyUserExperience from "./CaseStudy/CaseStudyUserExperience";
 import Faq from "./Faq/Faq";
 import FaqActivities from "./Faq/FaqActivities";
 import Testimonials from "./Testimonials/Testimonials";
+import ShareExperience from "./Testimonials/ShareExperience";
 import Updates from "./Updates/Updates";
 import UpdatesActivities from "./Updates/UpdatesActivities";
 import HelpAndTraining from "./HelpAndTraining/HelpAndTraining";
@@ -40,6 +41,9 @@ import PrivacyPolicy from "./SubFooter/PrivacyPolicy";
 import TnC from "./SubFooter/TnC";
 import VirtualTraining from "./VirtualTraining/VirtualTraining";
 import ViewAll1 from "./ViewAll/ViewAll1";
+import ViewAll2 from "./ViewAll/ViewAll2";
+import ViewAll3 from "./ViewAll/ViewAll3";
+import LookingFor from "./ViewAll/LookingFor";
 
 const Main = () => {
   return (
@@ -113,12 +117,20 @@ const Main = () => {
           path="/Resources/Testimonials"
           element={<Testimonials />}
         />
+        <Route
+          exact
+          path="/Resources/Testimonials/share-your-experince-form"
+          element={<ShareExperience />}
+        />
         <Route exact path="/Updates" element={<Updates />} />
         <Route exact path="/Updates/:id" element={<UpdatesActivities />} />
 
         <Route exact path="/HelpAndTraining" element={<HelpAndTraining />} />
         <Route exact path="/VirtualTraining" element={<VirtualTraining />} />
         <Route exact path="/view-all1" element={<ViewAll1 />} />
+        <Route exact path="/view-all2" element={<ViewAll2 />} />
+        <Route exact path="/view-all3" element={<ViewAll3 />} />
+        <Route exact path="/LookingFor" element={<LookingFor />} />
 
         {/* SubFooter pages  */}
         <Route exact path="/subfooter/legal" element={<Legal />} />
