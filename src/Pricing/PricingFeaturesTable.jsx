@@ -21,7 +21,7 @@ const packages = [
 
 function Banner(props) {
   const features = props.features || [];
-  const [openStates, setOpenStates] = useState(features.map(() => false));
+  const [openStates, setOpenStates] = useState(features.map(() => true));
   const [popoverState, setPopoverState] = useState({});
 
   const handleOpen = (index) => {
@@ -118,7 +118,11 @@ function Banner(props) {
                     </TableCell>
                     {item.availability.map((available, k) => (
                       <TableCell key={k} align="center">
-                        {available ? "✅" : "❌"}
+                        {available ? (
+                          <Typography color={" #05d105"}>✓</Typography>
+                        ) : (
+                          <Typography color={" #ff0000"}>✘</Typography>
+                        )}
                       </TableCell>
                     ))}
                   </TableRow>
@@ -258,11 +262,13 @@ function Banner(props) {
                           {item.availability.map((available, k) => (
                             <td key={k} align="center">
                               <Typography p={1.5}>
-                                {available === true
-                                  ? "✅"
-                                  : available === false
-                                  ? "❌"
-                                  : available}
+                                {available === true ? (
+                                  <Typography color={" #05d105"}>✓</Typography>
+                                ) : available === false ? (
+                                  <Typography color={" #ff0000"}>✘</Typography>
+                                ) : (
+                                  available
+                                )}
                               </Typography>
                             </td>
                           ))}

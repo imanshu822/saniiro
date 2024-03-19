@@ -17,6 +17,10 @@ const IndustriesByrole = () => {
         <Nav />
 
         <Stack
+          pb={{
+            xs: "50px",
+            md: "100px",
+          }}
           gap={{
             xs: "20px",
             md: "40px",

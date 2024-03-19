@@ -24,40 +24,35 @@ const Footer = () => {
       to: "/Resources/Career",
     },
     {
-      item: "Product Reviews",
-    },
-    {
       item: "Updates",
       to: "/Updates",
     },
-    {
-      item: "Awards & Recognition",
-    },
-    {
-      item: "Get Offer",
-    },
+
     {
       item: "Contact us",
       to: "/Contact-us",
     },
+    // {
+    //   item: "Product Reviews",
+    // },
+    // {
+    //   item: "Awards & Recognition",
+    // },
+    // {
+    //   item: "Get Offer",
+    // },
   ];
   const list2 = [
     {
-      item: "Gallery",
-    },
-    {
       item: "Resources",
+      to: "/HelpAndTraining",
     },
-    {
-      item: "Contact support",
-    },
+
     {
       item: "Help & Training ",
       to: "/HelpAndTraining",
     },
-    {
-      item: "Security & Performance",
-    },
+
     {
       item: "FAQ’s",
       to: "/Resources/faq",
@@ -66,20 +61,29 @@ const Footer = () => {
       item: "Blog",
       to: "/Resources/Blog",
     },
+    // {
+    //   item: "Gallery",
+    // },
+    // {
+    //   item: "Security & Performance",
+    // },
+    // {
+    //   item: "Contact support",
+    // },
   ];
 
   const list3 = [
     {
       item: "Case studies",
-      to: "/subfooter/legal",
+      to: "/Resources/CaseStudy",
     },
     {
       item: "Testimonials",
-      to: "/subfooter/legal",
+      to: "/Resources/Testimonials",
     },
     {
       item: "Become A Partner",
-      to: "/subfooter/legal",
+      to: "/Resources/BecomeAPartner",
     },
   ];
 
@@ -327,7 +331,7 @@ const Footer = () => {
               style={{ color: "lightgray", textDecoration: "none" }}
               onClick={() => window.scrollTo(0, 0)}
             >
-              {d.item}
+              <Typography>{d.item}</Typography>
             </Link>
           ))}
         </Stack>

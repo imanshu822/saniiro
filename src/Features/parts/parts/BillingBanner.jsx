@@ -7,6 +7,7 @@ import dotedSmImg from "../../../assets/Group 62557.png";
 import dotedMdImg from "../../../assets/Group 62562.png";
 import mediaImg from "../../../assets/image 124.png";
 import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 
 const BillingBanner = () => {
   return (
@@ -20,9 +21,10 @@ const BillingBanner = () => {
       className="textured-background"
     >
       <NavLight />
+      <Stack></Stack>
       <Stack
-        margin={"0px auto"}
-        maxWidth={"1200px"}
+        maxWidth={"1536px"}
+        margin={"0 auto"}
         position={"relative"}
         zIndex={12}
       >
@@ -52,8 +54,20 @@ const BillingBanner = () => {
                 color: "white",
               }}
             >
-              Features {`>`} SalesForseAutomation {`>`}{" "}
-              <span style={{ fontWeight: "bold" }}>LEAD MANAGEMENT</span>
+              <Link
+                to="/Features"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Features
+              </Link>
+              {`>`}{" "}
+              <Link
+                to="/salesforce"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                SalesForseAutomation
+              </Link>
+              {`>`} <span style={{ fontWeight: "bold" }}>LEAD MANAGEMENT</span>
             </Typography>
           </Stack>
           <Stack

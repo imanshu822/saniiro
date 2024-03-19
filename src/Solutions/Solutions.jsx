@@ -10,13 +10,14 @@ import { Stack } from "@mui/material";
 const Solutions = () => {
   return (
     <>
+      <Nav />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
         <SolutionsBanner />
-        <SolutionSection2 />
-        <SolutionSection3 />
-        <ReadytoBuild />
       </Stack>
+      <SolutionSection2 />
+      <SolutionSection3 />
+      <ReadytoBuild />
+
       <Footer />
     </>
   );

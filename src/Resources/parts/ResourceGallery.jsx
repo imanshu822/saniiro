@@ -12,6 +12,7 @@ const ResourceGallery = () => {
   return (
     <>
       <Box
+        zIndex={111}
         sx={{
           width: {
             xs: "95%",
@@ -30,7 +31,7 @@ const ResourceGallery = () => {
           <Stack direction={"row"} gap={2}>
             <Box
               position={"relative"}
-              style={{
+              sx={{
                 backgroundImage: `url(${becomeApartner})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -46,10 +47,8 @@ const ResourceGallery = () => {
                   backgroundColor: "#999",
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
+                  cursor: "pointer",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100% - 20px) * 12 / 12)",
                 height: {
                   xs: "150px",
@@ -58,6 +57,7 @@ const ResourceGallery = () => {
                 backgroundColor: "white",
                 borderRadius: "10px",
               }}
+              alt="become a partner page"
             >
               <Typography
                 position={"absolute"}
@@ -72,7 +72,8 @@ const ResourceGallery = () => {
 
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${career})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -88,10 +89,8 @@ const ResourceGallery = () => {
                   backgroundColor: "#999",
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
+                  cursor: "pointer",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100% - 20px) * 9 / 12)", // span 9 out of 12
                 height: {
                   xs: "150px",
@@ -105,7 +104,8 @@ const ResourceGallery = () => {
           <Stack direction={"row"} gap={2}>
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${blogPageSS})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -122,9 +122,6 @@ const ResourceGallery = () => {
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100%) * 10/ 10)", // span 9 out of 12
                 height: {
                   xs: "150px",
@@ -139,7 +136,8 @@ const ResourceGallery = () => {
           <Stack direction={"row"} gap={2}>
             <Stack
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${caseStudy})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -155,10 +153,8 @@ const ResourceGallery = () => {
                   backgroundColor: "#999",
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
+                  cursor: "pointer",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100% - 20px) * 4 / 10)", // span 4 out of 12
                 height: {
                   xs: "150px",
@@ -172,7 +168,8 @@ const ResourceGallery = () => {
 
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${testimonials})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -189,9 +186,6 @@ const ResourceGallery = () => {
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100% - 20px) * 6 / 10)", // span 4 out of 12
                 height: {
                   xs: "150px",
@@ -205,7 +199,8 @@ const ResourceGallery = () => {
           <Stack direction={"row"} gap={2}>
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${videos})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -221,9 +216,6 @@ const ResourceGallery = () => {
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100%) * 10/ 10)",
                 height: {
                   xs: "150px",
@@ -237,7 +229,8 @@ const ResourceGallery = () => {
           <Stack direction={"row"} gap={2}>
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${faq})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -254,9 +247,6 @@ const ResourceGallery = () => {
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100%) * 6/ 10)",
                 height: {
                   xs: "150px",
@@ -268,7 +258,8 @@ const ResourceGallery = () => {
             ></Box>
             <Box
               border={"1px solid white"}
-              style={{
+              alt="become a partner page"
+              sx={{
                 backgroundImage: `url(${faq})`,
                 backgroundSize: "cover",
                 backgroundPosition: "top",
@@ -285,9 +276,6 @@ const ResourceGallery = () => {
                   backgroundPosition: "center",
                   boxShadow: "0 0 4px #fff",
                 },
-              }}
-              alt="become a partner page"
-              sx={{
                 width: "calc((100%) * 4/ 10)",
                 height: {
                   xs: "150px",

@@ -81,6 +81,8 @@ const Industries2 = () => {
           lg: "none",
           xl: "flex",
         }}
+        maxWidth={"1536px"}
+        margin={"0 auto"}
         bgcolor={"#f1f1f1"}
         width={"100%"}
         height={"135vh"}

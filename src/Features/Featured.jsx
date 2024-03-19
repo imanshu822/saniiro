@@ -38,6 +38,9 @@ const Featured = () => {
       >
         <NavLight />
         <Stack
+          fontFamily={"Work Sans"}
+          maxWidth={"1536px"}
+          margin={"0 auto"}
           gap={2}
           direction={{
             xs: "column",

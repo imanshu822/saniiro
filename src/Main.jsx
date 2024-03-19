@@ -39,6 +39,7 @@ import CancalationRefundPolicy from "./SubFooter/CancalationRefundPolicy";
 import PrivacyPolicy from "./SubFooter/PrivacyPolicy";
 import TnC from "./SubFooter/TnC";
 import VirtualTraining from "./VirtualTraining/VirtualTraining";
+import ViewAll1 from "./ViewAll/ViewAll1";
 
 const Main = () => {
   return (
@@ -117,6 +118,7 @@ const Main = () => {
 
         <Route exact path="/HelpAndTraining" element={<HelpAndTraining />} />
         <Route exact path="/VirtualTraining" element={<VirtualTraining />} />
+        <Route exact path="/view-all1" element={<ViewAll1 />} />
 
         {/* SubFooter pages  */}
         <Route exact path="/subfooter/legal" element={<Legal />} />

@@ -1,11 +1,68 @@
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import leftArrow from "../../../assets/icons/Frame 62667.png";
 import rightArrow from "../../../assets/icons/Frame 62666.png";
 import FrameImg1 from "../../../assets/icons/Frame 62670.png";
 import FrameImg2 from "../../../assets/icons/Frame 62671.png";
 import FrameImg3 from "../../../assets/icons/Frame 62672.png";
+
+const reviews = [
+  {
+    name: "Soya Somanathan",
+    position: "Account Manager, Ayan Tech Solutions",
+    content:
+      "I might irritate the customer as they are not at the tipping point and they are busy with other projects and do not want to exchange pleasantries, so they would actively avoid phone calls. It would have been more effective to fill in the time by perhaps emailing some white papers relevant to their industry to keep the communication open. A CRM should help me do that.",
+  },
+  {
+    name: "John Doe",
+    position: "Marketing Director, XYZ Corp",
+    content:
+      "Our team found the CRM platform to be incredibly intuitive and user-friendly. It has streamlined our processes and improved collaboration among team members. The support team has also been very responsive to any inquiries we've had.",
+  },
+  {
+    name: "Alice Smith",
+    position: "CEO, Acme Industries",
+    content:
+      "As a small business owner, I was initially skeptical about investing in a CRM system, but I'm so glad we did. It has helped us keep track of customer interactions, manage leads more effectively, and ultimately increase sales. Highly recommended!",
+  },
+  {
+    name: "Michael Johnson",
+    position: "Sales Manager, Tech Innovations Inc.",
+    content:
+      "The CRM platform has been a game-changer for our sales team. It's customizable to fit our specific needs, and the analytics feature has provided valuable insights into customer behavior. Our conversion rates have significantly improved since implementing it.",
+  },
+  {
+    name: "Emily Brown",
+    position: "Customer Support Specialist, Global Solutions Ltd.",
+    content:
+      "I've been using the CRM system for handling customer inquiries and support tickets, and it has made my job so much easier. The ticketing system is efficient, and I can quickly access customer information to provide personalized assistance. Overall, it has greatly improved our customer service workflow.",
+  },
+  {
+    name: "David Wilson",
+    position: "Product Manager, Bright Ideas Co.",
+    content:
+      "We integrated the CRM platform with our project management software, and it has streamlined our workflow tremendously. Now, our sales and development teams are better aligned, leading to smoother project execution and faster time-to-market for our products.",
+  },
+];
+
 const Industry4 = () => {
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
+  const handleNextReview = () => {
+    setCurrentReviewIndex((prevIndex) =>
+      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePreviousReview = () => {
+    setCurrentReviewIndex((prevIndex) =>
+      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
+    );
+  };
+
+  const review = reviews[currentReviewIndex];
+  const slicedContent = review.content.slice(0, 800);
+
   return (
     <>
       <Stack
@@ -104,7 +161,6 @@ const Industry4 = () => {
             >
               "
             </Stack> */}
-
             <Stack width={"95%"} margin={"50px auto 10px"}>
               <Typography
                 sx={{
@@ -117,12 +173,7 @@ const Industry4 = () => {
                   paddingTop: "30px",
                 }}
               >
-                I might irritate the customer as they are not at the tipping
-                point and they are busy with other projects and do not want to
-                exchange pleasantries, so they would actively avoid phone calls.
-                It would have been more effective to fill in the time by perhaps
-                emailing some white papers relevant to their industry to keep
-                the communication open. A CRM should help me do that.
+                {slicedContent}
               </Typography>
               <Stack
                 margin={"90px auto 30px"}
@@ -142,7 +193,6 @@ const Industry4 = () => {
                 direction={"row"}
                 justifyContent={"space-between"}
                 width={"70%"}
-                // margin={"0px auto"}
               >
                 <Stack direction={"row"}>
                   <Box
@@ -160,10 +210,10 @@ const Industry4 = () => {
                       },
                     }}
                     src={leftArrow}
+                    onClick={handlePreviousReview}
                   />
                 </Stack>
                 <Stack>
-                  {" "}
                   <Stack
                     sx={{
                       fontFamily: "Work Sans",
@@ -174,7 +224,7 @@ const Industry4 = () => {
                       textAlign: "center",
                     }}
                   >
-                    Soya Somanathan
+                    {review.name}
                   </Stack>
                   <Stack
                     sx={{
@@ -186,12 +236,11 @@ const Industry4 = () => {
                       textAlign: "center",
                     }}
                   >
-                    Account Manager, Ayan Tech Solutions
+                    {review.position}
                   </Stack>
                 </Stack>
 
                 <Stack>
-                  {" "}
                   <Box
                     component="img"
                     sx={{
@@ -208,6 +257,7 @@ const Industry4 = () => {
                     }}
                     alt="rightArrow"
                     src={rightArrow}
+                    onClick={handleNextReview}
                   />
                 </Stack>
               </Stack>
@@ -303,7 +353,13 @@ const Industry4 = () => {
               "
             </Stack>
 
-            <Stack width={"80%"} height={"100%"} margin={"0 auto"}>
+            <Stack
+              width={"80%"}
+              height={"100%"}
+              margin={"0 auto"}
+              justifyContent={"space-between"}
+              mb={3}
+            >
               <Typography
                 sx={{
                   fontFamily: "Work Sans",
@@ -327,12 +383,7 @@ const Industry4 = () => {
                   },
                 }}
               >
-                I might irritate the customer as they are not at the tipping
-                point and they are busy with other projects and do not want to
-                exchange pleasantries, so they would actively avoid phone calls.
-                It would have been more effective to fill in the time by perhaps
-                emailing some white papers relevant to their industry to keep
-                the communication open. A CRM should help me do that.
+                {slicedContent}...
               </Typography>
               <Stack
                 margin={{
@@ -375,6 +426,7 @@ const Industry4 = () => {
                       },
                     }}
                     src={leftArrow}
+                    onClick={handlePreviousReview}
                   />
                 </Stack>
                 <Stack>
@@ -433,6 +485,7 @@ const Industry4 = () => {
                     }}
                     alt="rightArrow"
                     src={rightArrow}
+                    onClick={handleNextReview}
                   />
                 </Stack>
               </Stack>

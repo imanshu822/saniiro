@@ -11,7 +11,7 @@ import Google from "../../assets/google.png";
 import LinkedIn from "../../assets/linkedIn.png";
 import "../../Solutions/parts/Solution.css";
 import NavLight from "../../Navbar/NavLight";
-import "./nm.css"
+import "./nm.css";
 const Simplify = () => {
   const [showPassword, setShowPassword] = useState(false);
   const textStyle = {
@@ -327,7 +327,7 @@ const Simplify = () => {
               {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </IconButton>
           </Stack>
-          {/* <Stack
+          <Stack
             style={{ position: "relative" }}
             sx={{
               width: {
@@ -343,7 +343,7 @@ const Simplify = () => {
             }}
           >
             <PhoneNumberInput />
-          </Stack> */}
+          </Stack>
           <CitySelector />
 
           <Typography

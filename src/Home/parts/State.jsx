@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Stack, Switch, Typography } from "@mui/material";
+import { Box, Grid, Stack, Switch, Typography } from "@mui/material";
 import ButtonWithImage from "../../utils/StateButton";
 import icon from "../../assets/icon.svg";
 import { Link } from "react-router-dom";
@@ -116,131 +116,133 @@ const ToggleSection = () => {
         },
       }}
     >
-      <Stack direction="row" alignItems="center" justifyContent={"center"}>
-        <Switch
-          checked={isToggled}
-          onChange={handleToggle}
-          sx={{
-            "& .MuiSwitch-thumb": {
-              backgroundColor: isToggled ? "#34A853" : "#F15B25",
-            },
-            "& .MuiSwitch-track": {
-              backgroundColor: "white",
-            },
-          }}
-        />
-        <Typography>let me show you something else</Typography>
-      </Stack>
-      <Stack alignItems={"center"}>
-        <Grid container spacing={2}>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={1}
+      <Box fontFamily={"Work Sans"} maxWidth={"1536px"} margin={"0 auto"}>
+        <Stack direction="row" alignItems="center" justifyContent={"center"}>
+          <Switch
+            checked={isToggled}
+            onChange={handleToggle}
             sx={{
-              justifyContent: "center",
+              "& .MuiSwitch-thumb": {
+                backgroundColor: isToggled ? "#34A853" : "#F15B25",
+              },
+              "& .MuiSwitch-track": {
+                backgroundColor: "white",
+              },
             }}
-          >
-            {renderButtons(0, 3)}
+          />
+          <Typography>let me show you something else</Typography>
+        </Stack>
+        <Stack alignItems={"center"}>
+          <Grid container spacing={2}>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={1}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(0, 3)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(3, 5)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(5, 8)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(8, 10)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(10, 13)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(13, 15)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(15, 18)}
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              spacing={2}
+              sx={{
+                justifyContent: "center",
+              }}
+            >
+              {renderButtons(18, 20)}
+            </Grid>
           </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
+        </Stack>
+        <Stack alignItems={"center"}>
+          <Button
+            endIcon={<EastIcon />}
             sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(3, 5)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(5, 8)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(8, 10)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(10, 13)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(13, 15)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(15, 18)}
-          </Grid>
-          <Grid
-            container
-            item
-            xs={12}
-            spacing={2}
-            sx={{
-              justifyContent: "center",
-            }}
-          >
-            {renderButtons(18, 20)}
-          </Grid>
-        </Grid>
-      </Stack>
-      <Stack alignItems={"center"}>
-        <Button
-          endIcon={<EastIcon />}
-          sx={{
-            bgcolor: "transparent",
-            color: "#0079FF",
-            fontSize: "16px",
-            fontWeight: "bold",
-            "&:hover": {
-              backgroundColor: "transparent",
+              bgcolor: "transparent",
               color: "#0079FF",
-              textDecoration: "underline",
-            },
-          }}
-        >
-          View all apps
-        </Button>
-      </Stack>
+              fontSize: "16px",
+              fontWeight: "bold",
+              "&:hover": {
+                backgroundColor: "transparent",
+                color: "#0079FF",
+                textDecoration: "underline",
+              },
+            }}
+          >
+            View all apps
+          </Button>
+        </Stack>
+      </Box>
     </Stack>
   );
 };

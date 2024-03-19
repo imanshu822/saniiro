@@ -63,8 +63,7 @@ const NavLight = () => {
         justifyContent={"space-between"}
         p={"20px 90px"}
         alignItems={"center"}
-        zIndex={1}
-        
+        zIndex={13}
       >
         <Stack width={{ xl: "16%", md: "25%", sm: "35%" }}>
           <Link to={"/"}>

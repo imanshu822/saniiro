@@ -40,7 +40,10 @@ const Signup = () => {
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
-          p={"15px 50px"}
+          p={{
+            xs: "15px 5%",
+            md: "15px 50px",
+          }}
         >
           <Link to={"/"}>
             <Stack>
@@ -72,11 +75,24 @@ const Signup = () => {
             </Link>
           </Stack>
         </Stack>
-        <Stack direction={"row"}>
+        <Stack
+          direction={{
+            xs: "column",
+            md: "column",
+
+            lg: "row",
+          }}
+        >
           <Stack
+            m={"0 auto"}
             alignItems={"center"}
-            width={"50%"}
-            p={"60px 0px 0 100px"}
+            width={{
+              xs: "95%",
+              sm: "95%",
+              md: "50%",
+              lg: "50%",
+            }}
+            gap={3}
             sx={{
               backgroundImage: `url(${dottedbg})`,
               backgroundSize: "auto",
@@ -85,16 +101,29 @@ const Signup = () => {
           >
             <Stack
               justifyContent={"center"}
-              width={"145px"}
+              width={{
+                xs: "20%",
+                md: "30%",
+                lg: "145px",
+              }}
               height={"145px"}
-              borderRadius={"50%"}
             >
               <img src={ImageSignup} alt="" />
             </Stack>
             <Typography
-              fontSize={"22px"}
+              width={{
+                xs: "90%",
+                sm: "80%",
+                md: "70%",
+                lg: "70%",
+              }}
+              fontSize={{
+                xs: "12px",
+                sm: "14px",
+                md: "16px",
+                lg: "18px",
+              }}
               fontWeight={"bold"}
-              p={"20px 80px"}
               textAlign={"center"}
             >
               "The ease and simplicity of the program and the way that the Zoho
@@ -104,70 +133,209 @@ const Signup = () => {
             <Stack textAlign={"end"} width={"69%"}>
               <Typography
                 color={"#F15B25"}
-                fontSize={"18px"}
+                fontSize={{
+                  xs: "12px",
+                  sm: "14px",
+                  md: "16px",
+                  lg: "18px",
+                }}
                 textAlign={"end"}
                 f
                 fontWeight={"bold"}
               >
                 CHRIS SAVOCA
               </Typography>
-              <Typography color={"141414"}>
+              <Typography
+                color={"#141414"}
+                fontSize={{
+                  xs: "12px",
+                  sm: "14px",
+                  md: "16px",
+                  lg: "18px",
+                }}
+                pb={2}
+              >
                 Executive Officer, Travelhost Network
               </Typography>
             </Stack>
           </Stack>
-          <Stack alignItems={"Center"} width={"50%"} gap={2} pt={"20px"}>
-            <Typography color={"#052973"} fontWeight={"bold"} fontSize={"22px"}>
-              Get started with your 15-day free trial.
+          <Stack
+            gap={2}
+            sx={{
+              width: {
+                xs: "100%",
+                lg: "50%",
+                xl: "50%",
+              },
+              padding: {
+                xs: "20px 0px",
+                lg: "20px 0px",
+                xl: "40px 0px",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: {
+                  xs: "18px",
+                  sm: "22px",
+                  md: "28px",
+
+                  xl: "38px",
+                },
+                textAlign: {
+                  xs: "center",
+                },
+              }}
+              color={"#052973"}
+              // color={"white"}
+              fontWeight={"bold"}
+              fontSize={"22px"}
+              textAlign={"center"}
+              fontFamily={"Work Sans"}
+            >
+              Get started with your free trial
             </Typography>
-            <Stack gap={2}>
-              <div style={{ position: "relative" }}>
+            <Stack
+              alignItems={"center"}
+              gap={2}
+              margin={"0 auto"}
+              sx={{
+                width: {
+                  xs: "80%",
+                  md: "70%",
+                  lg: "100%",
+                  xl: "100%",
+                },
+              }}
+            >
+              <Stack
+                style={{ position: "relative" }}
+                sx={{
+                  width: {
+                    xs: "220px",
+                    sm: "300px",
+                    md: "480px",
+                    lg: "385px",
+                    xl: "480px",
+                  },
+                  height: {
+                    xs: "45px",
+                    sm: "55px",
+                    md: "67px",
+                    lg: "57px",
+                    xl: "67px",
+                  },
+                }}
+              >
                 <input
                   type="text"
-                  className="input-new"
+                  style={{
+                    fontFamily: "Work Sans",
+                    width: "94%",
+                    height: "100%",
+                    border: "1px solid #AAAAAA",
+                    color: "#AAAAAA",
+                    paddingLeft: "5%",
+                    fontSize: "20px",
+                  }}
                   placeholder="Full Name"
                 />
                 <PersonIcon
                   style={{
                     position: "absolute",
                     top: "50%",
-                    right: "16px",
+                    right: "8px",
                     transform: "translateY(-50%)",
                     color: "#AAAAAA",
                     fontSize: "40px",
                   }}
                 />
-              </div>
-              <div style={{ position: "relative" }}>
+              </Stack>
+              <Stack
+                style={{ position: "relative" }}
+                sx={{
+                  width: {
+                    xs: "220px",
+                    sm: "300px",
+                    md: "480px",
+                    lg: "385px",
+                    xl: "480px",
+                  },
+                  height: {
+                    xs: "45px",
+                    sm: "55px",
+                    md: "67px",
+                    lg: "57px",
+                    xl: "67px",
+                  },
+                }}
+              >
                 <input
                   type="Email"
                   className="input-new"
                   placeholder="Work Email"
+                  style={{
+                    fontFamily: "Work Sans",
+                    width: "94%",
+                    height: "100%",
+                    border: "1px solid #AAAAAA",
+                    color: "#AAAAAA",
+                    paddingLeft: "5%",
+                    fontSize: "20px",
+                  }}
                 />
                 <EmailIcon
                   style={{
                     position: "absolute",
                     top: "50%",
-                    right: "16px",
+                    right: "8px",
                     transform: "translateY(-50%)",
                     color: "#AAAAAA",
                     fontSize: "40px",
                   }}
                 />
-              </div>
+              </Stack>
 
-              <div style={{ position: "relative" }}>
+              <Stack
+                style={{ position: "relative" }}
+                sx={{
+                  width: {
+                    xs: "220px",
+                    sm: "300px",
+                    md: "480px",
+                    lg: "385px",
+                    xl: "480px",
+                  },
+                  height: {
+                    xs: "45px",
+                    sm: "55px",
+                    md: "67px",
+                    lg: "57px",
+                    xl: "67px",
+                  },
+                }}
+              >
                 <input
                   name="Password"
                   type={showPassword ? "text" : "password"}
                   placeholder="Create Password"
                   className="input-new"
+                  style={{
+                    fontFamily: "Work Sans",
+                    width: "94%",
+                    height: "100%",
+                    border: "1px solid #AAAAAA",
+                    color: "#AAAAAA",
+                    paddingLeft: "5%",
+                    fontSize: "20px",
+                  }}
                 />
                 <IconButton
                   style={{
                     position: "absolute",
                     top: "50%",
-                    right: "16px",
+                    right: "8px",
                     transform: "translateY(-50%)",
                     color: "#AAAAAA",
                     fontSize: "50px",
@@ -176,43 +344,127 @@ const Signup = () => {
                 >
                   {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
                 </IconButton>
-              </div>
-              <PhoneNumberInput />
+              </Stack>
+              <Stack
+                style={{ position: "relative" }}
+                sx={{
+                  width: {
+                    xs: "280px",
+                    sm: "380px",
+                    md: "480px",
+                  },
+                  height: {
+                    xs: "45px",
+                    sm: "55px",
+                    md: "67px",
+                  },
+                }}
+              >
+                <PhoneNumberInput />
+              </Stack>
               <CitySelector />
-              <Typography fontSize={"13px"}>
+
+              <Typography
+                // color={"white"}
+                color={"black"}
+                fontFamily={"Work Sans"}
+                fontSize={"13px"}
+                sx={{
+                  textAlign: {
+                    xs: "center",
+                    lg: "left",
+                  },
+                }}
+              >
                 It looks like you‘re in INDIA based on your IP.
               </Typography>
-              <Stack gap={2}>
-                <Stack direction={"row"} gap={1}>
-                  <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
-                  />
-                  <Typography fontSize={"15px"}>
+
+              <Stack
+                gap={2}
+                sx={{
+                  alignItems: {
+                    xs: "center",
+                    lg: "left",
+                  },
+                }}
+              >
+                <Stack
+                  direction={"row"}
+                  gap={1}
+                  sx={{
+                    textAlign: {
+                      xs: "left",
+                      lg: "left",
+                    },
+                  }}
+                >
+                  <Stack>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={handleCheckboxChange}
+                    />
+                  </Stack>
+                  <Typography
+                    fontFamily={"Work Sans"}
+                    fontSize={"13px"}
+                    // color={"white"}
+                    color={"black"}
+                  >
                     I agree to the Terms of Service and Privacy Policy.
                   </Typography>
                 </Stack>
                 <Button
                   type="button"
+                  fontFamily={"Work Sans"}
                   sx={{
+                    width: {
+                      xs: "220px",
+                      sm: "300px",
+                      md: "480px",
+                      lg: "385px",
+                      xl: "480px",
+                    },
+                    height: {
+                      xs: "45px",
+                      sm: "55px",
+                      md: "67px",
+                      lg: "57px",
+                      xl: "67px",
+                    },
                     color: "white",
-                    width: "508px",
-                    height: "67px",
-                    fontSize: "22px",
-                    bgcolor: "#D45630",
+                    fontSize: {
+                      xs: "16px",
+                      sm: "19px",
+                      md: "22px",
+                    },
+                    border: "1px solid #F15B25",
+                    // bgcolor: "#052973",
+                    bgcolor: "#F15B25",
                     fontWeight: "bold",
                     "&:hover": {
-                      backgroundColor: "#D45630",
-                      color: "white",
+                      backgroundColor: "transparent",
+                      border: "1px solid #F15B25",
+                      // border: "1px solid #052973",
+                      // color: "white",
+                      color: "black",
                     },
                   }}
                   onClick={handleSubmit}
                 >
                   Get Started
                 </Button>
-                <Stack direction={"row"} justifyContent={"right"} gap={1}>
-                  <Typography display={"flex"} alignItems={"center"}>
+                <Stack
+                  direction={"row"}
+                  alignSelf={{ xs: "center", md: "end" }}
+                  gap={1}
+                >
+                  <Typography
+                    display={"flex"}
+                    fontFamily={"Work Sans"}
+                    // color={"white"}
+                    color={"black"}
+                  >
                     or sign in using
                   </Typography>
                   <img src={Google} style={{ width: "32px", height: "32px" }} />
@@ -227,8 +479,16 @@ const Signup = () => {
         </Stack>
         <Stack
           justifyContent={"space-around"}
-          direction={"row"}
-          pt={5}
+          direction={{
+            xs: "column",
+            sm: "column",
+            md: "row",
+          }}
+          gap={2}
+          pt={{
+            xs: 2,
+            md: 5,
+          }}
           alignItems={"center"}
         >
           <Typography fontWeight={"bold"} fontSize={"20px"}>

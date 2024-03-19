@@ -13,9 +13,9 @@ import ProductSlider from "../About/parts/ProductSlider";
 const SolutionByIndustries = () => {
   return (
     <>
+      <Nav />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
         <Stack position={"relative"}>
-          <Nav />
           <Industries1 />
           <Industries2 />
         </Stack>
@@ -26,9 +26,8 @@ const SolutionByIndustries = () => {
           <Clock />
         </Stack>
         <ContactFaq />
-
-        <Footer />
       </Stack>
+      <Footer />
     </>
   );
 };

@@ -94,7 +94,7 @@ const CommentForm = () => {
                 <input
                   style={{
                     border: "1px solid gray",
-                    width: "100%",
+                    width: "95%",
                     height: "43px",
                   }}
                   type="text"

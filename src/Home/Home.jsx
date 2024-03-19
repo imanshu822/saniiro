@@ -15,22 +15,25 @@ import NavLight from "../Navbar/NavLight";
 const Home = () => {
   return (
     <>
+      <Nav />
       <Box
         fontFamily={"Work Sans"}
         maxWidth={"1536px"}
         margin={"0 auto"}
         gap={4}
       >
-        <Nav/>
         <Simplify />
-        <RequestDemo />
-        <Billing />
-        <Testimonial />
-        <ToggleSection />
-        <Clock />
-        <Awards />
-        <ContactFaq />
       </Box>
+      <RequestDemo />
+      <Billing />
+      <Box fontFamily={"Work Sans"} maxWidth={"1536px"} margin={"0 auto"}>
+        <Testimonial />
+      </Box>
+      <ToggleSection />
+      <Clock />
+      <Awards />
+      <ContactFaq />
+
       <Footer />
 
       {/* <Stack

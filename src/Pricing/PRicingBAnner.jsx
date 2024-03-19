@@ -70,10 +70,17 @@ const PRicingBAnner = () => {
           </Typography>
         </Stack>
         <Stack
-          pl={6}
+          pl={{
+            xs: 6,
+            sm: 12,
+            smm: 0,
+            md: 0,
+          }}
           direction={{
             xs: "column",
-            sm: "row",
+            sm: "column",
+            smm: "row",
+            md: "row",
             lg: "row",
             xl: "row",
           }}

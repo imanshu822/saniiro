@@ -113,11 +113,9 @@ const Testimonial = () => {
                   sx={{
                     width: {
                       xs: "100px",
-                      xl: "200px",
                     },
                     height: {
                       xs: "100px",
-                      xl: "200px",
                     },
 
                     top: "50%",

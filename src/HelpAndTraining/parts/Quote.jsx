@@ -1,6 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 import horizontalImg from "../../assets/HrUnion.png";
+import { Link } from "react-router-dom";
 const Quote = () => {
   return (
     <>
@@ -88,31 +89,38 @@ const Quote = () => {
                   Founder/CEO at Prosound.
                 </Typography>
               </Stack>
-              <Stack
-                sx={{
-                  width: "86px",
-                  height: "36px",
-                  padding: "12px, 14px, 12px, 14px",
-                  backgroundColor: "#052973",
-                  justifyContent: "center",
-                  alignItems: "center",
+              <Link
+                to="/view-all1"
+                style={{
+                  textDecoration: "none",
                 }}
               >
-                <Typography
+                <Stack
                   sx={{
-                    fontFamily: "Work Sans",
-                    fontSize: "12px",
-                    fontWeight: 700,
-                    lineHeight: "12px",
-                    letterSpacing: "0em",
-                    textAlign: "center",
-
-                    color: "#FFFFFF",
+                    width: "86px",
+                    height: "36px",
+                    padding: "12px, 14px, 12px, 14px",
+                    backgroundColor: "#052973",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  View all
-                </Typography>
-              </Stack>
+                  <Typography
+                    sx={{
+                      fontFamily: "Work Sans",
+                      fontSize: "12px",
+                      fontWeight: 700,
+                      lineHeight: "12px",
+                      letterSpacing: "0em",
+                      textAlign: "center",
+
+                      color: "#FFFFFF",
+                    }}
+                  >
+                    View all
+                  </Typography>
+                </Stack>
+              </Link>
             </Stack>
           </Stack>
         </Stack>
@@ -129,68 +137,71 @@ const Quote = () => {
           backgroundColor: "#8AA3FF",
         }}
       >
-        <Stack margin={"0 auto"} width={"100%"} height={"100%"}>
-          <Stack
-            width={"80%"}
-            margin={"40px auto"}
-            gap={2}
-            position={"relative"}
+        <Stack width={"90%"} m={"20px auto"} gap={2}>
+          <Typography
+            sx={{
+              fontFamily: "Work Sans",
+              fontSize: {
+                xs: "12px",
+                sm: "14px",
+                md: "16px",
+                lg: "18px",
+                xl: "20px",
+              },
+              fontWeight: 500,
+              lineHeight: "40px",
+              letterSpacing: "0em",
+              textAlign: "center",
+            }}
           >
-            <Typography
-              sx={{
-                width: "90%",
-                margin: "50px auto 10px",
-                fontFamily: "Work Sans",
-                fontSize: {
-                  xs: "12px",
-                  sm: "14px",
-                  md: "16px",
-                  lg: "18px",
-                  xl: "20px",
-                },
-                fontWeight: 500,
-                lineHeight: "40px",
-                letterSpacing: "0em",
-                textAlign: "left",
+            Saniiro Business Cloud People, delivers amazing workforce
+            experiences, so that customers can become great employer brands,
+            increasing engagement, performance, and retention, while making it
+            easier to acquire top talent.
+          </Typography>
+
+          <Stack
+            direction={"row"}
+            justifyContent={"space-between"}
+            marginRight={"40px"}
+          >
+            <Stack margin={"0 40px"}>
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: {
+                    xs: "14px",
+                    sm: "14px",
+                    md: "16px",
+                    lg: "18px",
+                  },
+                  fontWeight: 700,
+                  lineHeight: "30px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                Chester Hull
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                  lineHeight: "20px",
+                  letterSpacing: "0em",
+                  textAlign: "left",
+                }}
+              >
+                Founder/CEO at Prosound.
+              </Typography>
+            </Stack>
+            <Link
+              to="/view-all1"
+              style={{
+                textDecoration: "none",
               }}
             >
-              Saniiro Business Cloud People, delivers amazing workforce
-              experiences, so that customers can become great employer brands,
-              increasing engagement, performance, and retention, while making it
-              easier to acquire top talent.
-            </Typography>
-
-            <Stack
-              direction={"row"}
-              justifyContent={"space-between"}
-              marginRight={"40px"}
-            >
-              <Stack margin={"0 40px"}>
-                <Typography
-                  sx={{
-                    fontFamily: "Work Sans",
-                    fontSize: "22px",
-                    fontWeight: 700,
-                    lineHeight: "30px",
-                    letterSpacing: "0em",
-                    textAlign: "left",
-                  }}
-                >
-                  Chester Hull
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Work Sans",
-                    fontSize: "15px",
-                    fontWeight: 500,
-                    lineHeight: "20px",
-                    letterSpacing: "0em",
-                    textAlign: "left",
-                  }}
-                >
-                  Founder/CEO at Prosound.
-                </Typography>
-              </Stack>
               <Stack
                 sx={{
                   width: "86px",
@@ -216,7 +227,7 @@ const Quote = () => {
                   View all
                 </Typography>
               </Stack>
-            </Stack>
+            </Link>
           </Stack>
         </Stack>
       </Stack>

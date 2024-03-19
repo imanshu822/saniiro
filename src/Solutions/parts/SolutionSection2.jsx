@@ -16,7 +16,14 @@ const SolutionSection2 = () => {
       bgcolor={"#052973"}
       className="textured-background"
     >
-      <Stack width={"80%"} gap={5} alignItems={"center"} zIndex={111}>
+      <Stack
+        width={"80%"}
+        gap={5}
+        alignItems={"center"}
+        zIndex={111}
+        maxWidth={"1536px"}
+        margin={"0 auto"}
+      >
         <Stack gap={2}>
           <Typography
             color={"white"}

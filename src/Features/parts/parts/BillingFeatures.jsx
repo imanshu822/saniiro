@@ -19,7 +19,7 @@ const BillingFeatures = () => {
           },
         }}
       >
-        <Stack>
+        <Stack maxWidth={"1536px"} margin={"0 auto"}>
           <Typography
             sx={{
               fontFamily: "Work Sans",

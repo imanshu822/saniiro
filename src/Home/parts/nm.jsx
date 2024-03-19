@@ -17,17 +17,21 @@ const PhoneNumberInput = () => {
       style={{ position: "relative" }}
       sx={{
         width: {
-          xs: "280px",
-          sm: "380px",
+          xs: "220px",
+          sm: "300px",
           md: "480px",
+          lg: "385px",
+          xl: "480px",
         },
         height: {
           xs: "45px",
           sm: "55px",
           md: "67px",
+          lg: "57px",
+          xl: "67px",
         },
-        marginRight: "10px",
       }}
+      margin={"0 auto"}
     >
       <PhoneInput
         country={"+91"} // Default country code for India (+91)
@@ -43,7 +47,7 @@ const PhoneNumberInput = () => {
         style={{
           position: "absolute",
           top: "50%",
-          right: "16px",
+          right: "8px",
           transform: "translateY(-50%)",
           color: "#AAAAAA",
           fontSize: "40px",

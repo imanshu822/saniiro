@@ -8,8 +8,8 @@ import { Stack } from "@mui/material";
 const Featuredd = () => {
   return (
     <>
+      <Featured />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Featured />
         <FeaturesMain />
       </Stack>
       <Readytosign />

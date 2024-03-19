@@ -14,25 +14,25 @@ import { Stack } from "@mui/material";
 const FeaturesBilling = () => {
   return (
     <>
+      <BillingBanner />
+      <BillingFeatures />
+      <FeaturesGlance />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <BillingBanner />
-        <BillingFeatures />
-        <FeaturesGlance />
         <BillingSteps />
         <BestFinchers />
-        <Stack
+        {/* <Stack
           display={{
             xs: "none",
             lg: "flex",
           }}
         >
           <CustomerFeedback />
-        </Stack>
+        </Stack> */}
         <Stack
-          display={{
-            xs: "flex",
-            lg: "none",
-          }}
+        // display={{
+        //   xs: "flex",
+        //   lg: "none",
+        // }}
         >
           <ProductSlider />
         </Stack>
