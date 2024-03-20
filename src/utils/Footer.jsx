@@ -12,6 +12,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 // import ArrowDropDownIcon from "@mui/icons-material/KeyboardArrowRight";
+
 import "./Footer.css";
 const Footer = () => {
   const list1 = [
@@ -34,7 +35,7 @@ const Footer = () => {
     },
     {
       item: "Request Callback",
-      to: "/Contact-us",
+      to: "/requestCallback",
     },
     // {
     //   item: "Product Reviews",

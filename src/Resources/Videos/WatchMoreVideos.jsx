@@ -8,9 +8,9 @@ import { Stack } from "@mui/material";
 const WatchMoreVideos = () => {
   return (
     <div>
+      <Nav />
+      <Header />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-        <Header />
         <VideoFeedSection />
       </Stack>
       <Signupfree />

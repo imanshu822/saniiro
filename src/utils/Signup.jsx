@@ -36,7 +36,7 @@ const Signup = () => {
   };
   return (
     <>
-      <Stack maxWidth={"1440px"} m={"0 auto"}>
+      <Stack m={"0 auto"}>
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
@@ -92,6 +92,11 @@ const Signup = () => {
               md: "50%",
               lg: "50%",
             }}
+            mt={{
+              xs: 0,
+              lg: -5,
+            }}
+            alignSelf={"center"}
             gap={3}
             sx={{
               backgroundImage: `url(${dottedbg})`,

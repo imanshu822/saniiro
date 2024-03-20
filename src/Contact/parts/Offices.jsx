@@ -154,7 +154,7 @@ const Offices = () => {
               <Stack
                 width={{
                   xs: "95%",
-                  sm: "50%",
+                  sm: "80%",
                   md: "23%",
                 }}
                 gap={1}
@@ -227,7 +227,7 @@ const Offices = () => {
               <Stack
                 width={{
                   xs: "95%",
-                  sm: "50%",
+                  sm: "80%",
                   md: "23%",
                 }}
                 gap={1}

@@ -60,6 +60,8 @@ const BlogFeed = () => {
       m={"0 auto"}
     >
       <Stack
+        maxWidth={"1536px"}
+        margin={"0 auto"}
         alignSelf={"center"}
         position="relative"
         width={{

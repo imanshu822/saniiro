@@ -16,9 +16,9 @@ import { Stack } from "@mui/material";
 const BecomeAPartner = () => {
   return (
     <>
+      <Nav />
+      <BuildingSuccess />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-        <BuildingSuccess />
         <Tagline />
         <Billing bgColor={true} />
         <Specialize />

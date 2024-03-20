@@ -8,9 +8,9 @@ import { Stack } from "@mui/material";
 function Career() {
   return (
     <>
+      <Nav />
+      <CareerBanner />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-        <CareerBanner />
         <JobSection />
       </Stack>
       <Readytosign />

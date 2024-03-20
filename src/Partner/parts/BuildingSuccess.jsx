@@ -16,6 +16,7 @@ const BuildingSuccess = () => {
       }}
     >
       <Box
+        maxWidth={"1536px"}
         margin={"0 auto"}
         sx={{
           width: { xs: "95%", lg: "98%" },

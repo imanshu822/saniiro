@@ -9,8 +9,8 @@ import { Stack } from "@mui/material";
 const Videos = () => {
   return (
     <>
+      <VideoSection />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <VideoSection />
         <VideoSection2 />
         <VideoSection3 />
       </Stack>

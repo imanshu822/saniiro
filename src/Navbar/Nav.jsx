@@ -153,13 +153,37 @@ const Nav = () => {
                     sx={{ p: 2, width: 140 }}
                   >
                     <Link to="/Features/Billing" className="popperLinks">
-                      <Typography sx={{}}>Billing Management</Typography>
+                      <Typography
+                        sx={{
+                          "&:hover": {
+                            color: "#F15B25",
+                          },
+                        }}
+                      >
+                        Billing Management
+                      </Typography>
                     </Link>
                     <Link to="/Features/Billing" className="popperLinks">
-                      <Typography sx={{}}>Billing Management</Typography>
+                      <Typography
+                        sx={{
+                          "&:hover": {
+                            color: "#F15B25",
+                          },
+                        }}
+                      >
+                        Billing Management
+                      </Typography>
                     </Link>
                     <Link to="/Features/Billing" className="popperLinks">
-                      <Typography sx={{}}>Billing Management</Typography>
+                      <Typography
+                        sx={{
+                          "&:hover": {
+                            color: "#F15B25",
+                          },
+                        }}
+                      >
+                        Billing Management
+                      </Typography>
                     </Link>
                   </Stack>
                 </Stack>

@@ -8,11 +8,10 @@ import { Stack } from "@mui/material";
 const Blog = () => {
   return (
     <>
-      <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-        <BlogBanner GrayBanner={false} />
-        <BlogFeed />
-      </Stack>
+      <Nav />
+      <BlogBanner GrayBanner={false} />
+
+      <BlogFeed />
       <Footer />
     </>
   );

@@ -21,13 +21,14 @@ const ContactUs = () => {
   };
   return (
     <Stack
-      height={{xl:"930px",xs:"auto"}}
+      height={{ xl: "930px", xs: "auto" }}
       position={"relative"}
       bgcolor={"#052973"}
       className="textured-background"
     >
       <NavLight />
       <Stack
+        maxWidth={"1536px"}
         zIndex={11}
         sx={{
           flexDirection: {
@@ -36,13 +37,13 @@ const ContactUs = () => {
           },
           // width: "100%",
           margin: {
-            xs: "0px",
-            sm: "20px",
+            xs: "0 auto",
+            sm: "20px auto",
           },
         }}
       >
         <Stack
-        gap={"10px"}
+          gap={"10px"}
           sx={{
             width: {
               xs: "100%",
@@ -66,7 +67,7 @@ const ContactUs = () => {
               wordSpacing: { xl: "-27px" },
               fontSize: {
                 xs: "39px",
-                sm:"39px",
+                sm: "39px",
                 md: "68px",
                 lg: "63px",
                 xl: "97px",
@@ -90,7 +91,7 @@ const ContactUs = () => {
             sx={{
               fontSize: {
                 xs: "38px",
-                sm:"37px",
+                sm: "37px",
                 md: "68px",
                 lg: "63px",
                 xl: "87px",
@@ -383,7 +384,6 @@ const ContactUs = () => {
           </Stack>
         </Stack>
       </Stack>
-     
     </Stack>
   );
 };

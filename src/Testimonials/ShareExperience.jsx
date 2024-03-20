@@ -47,17 +47,20 @@ const ShareExperience = () => {
         }}
         pt={5}
         pb={5}
-        maxWidth={"1640px"}
+        height={{
+          xs: "100%",
+          xl: "100vh",
+        }}
         margin={"0 auto"}
         bgcolor={"#052973"}
         className="textured-background-Login"
         background-repeat={"no-repeat"}
         backgroundSize={"cover"}
-        height={"100%"}
         justifyContent={"center"}
         alignItems={"Center"}
       >
         <Stack
+          maxWidth={"1640px"}
           bgcolor={"rgb(230, 245, 255)"}
           width={{
             xs: "90%",

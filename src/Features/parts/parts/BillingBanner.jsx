@@ -38,7 +38,7 @@ const BillingBanner = () => {
         >
           {" "}
           {/* Add padding for inner content */}
-          <Stack>
+          <Stack width={"90%"} margin={"0 auto"}>
             <Typography
               sx={{
                 fontFamily: "Work Sans",
@@ -60,14 +60,8 @@ const BillingBanner = () => {
               >
                 Features
               </Link>
-              {`>`}{" "}
-              <Link
-                to="/salesforce"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                SalesForseAutomation
-              </Link>
-              {`>`} <span style={{ fontWeight: "bold" }}>LEAD MANAGEMENT</span>
+              {` >`}{" "}
+              <span style={{ fontWeight: "bold" }}>BILLING MANAGEMENT</span>
             </Typography>
           </Stack>
           <Stack

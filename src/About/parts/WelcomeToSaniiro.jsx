@@ -3,7 +3,7 @@ import React from "react";
 
 const WelcomeToSaniiro = () => {
   return (
-    <Stack alignItems={"Center"}>
+    <Stack alignItems={"Center"} mt={5}>
       <Stack
         bgcolor={"#248F41"}
         width={"90%"}

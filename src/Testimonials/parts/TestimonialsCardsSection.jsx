@@ -37,8 +37,9 @@ const TestimonialsCardsSection = () => {
         paddingBottom={"50px"}
       >
         <Stack
+          maxWidth={"1536px"}
           justifyContent={"center"}
-          width={"90%"}
+          width={"95%"}
           margin={"60px auto"}
           direction={"row"}
           gap={3}

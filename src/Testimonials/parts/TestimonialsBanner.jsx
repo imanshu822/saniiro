@@ -6,6 +6,7 @@ const TestimonialsBanner = () => {
   return (
     <Stack width={"100%"}>
       <Stack
+        alignItems={"center"}
         margin={"0 auto"}
         width={{
           xs: "100%",
@@ -17,6 +18,7 @@ const TestimonialsBanner = () => {
         height={{
           xs: "600px",
           md: "729px",
+          lg: "100vh",
         }}
         sx={{
           backgroundImage: `url(${bannerImg})`,
@@ -25,7 +27,7 @@ const TestimonialsBanner = () => {
           // backgroundPosition: "center center",
         }}
       >
-        <Stack maxWidth={"1420px"} textAlign={"center"}>
+        <Stack width={"100vw"} paddingTop={"3%"} textAlign={"center"}>
           <Typography
             width={{
               xs: "90%",

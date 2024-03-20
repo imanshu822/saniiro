@@ -9,7 +9,9 @@ const CaseStudy = () => {
   return (
     <>
       <CaseStudyBanner />
-      <CompanyBanner />
+      <Stack maxWidth={"1536px"} margin={"0 auto"}>
+        <CompanyBanner />
+      </Stack>
       <TestimonialsCardsSection />
       <Footer />
     </>

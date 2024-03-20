@@ -56,39 +56,39 @@ const CaseStudyForm3 = () => {
 
   return (
     <Stack width={"100%"}>
-      <Stack
-        marginTop={"40px"}
-        direction={"column"}
-        justifyContent={"center"}
-        alignItems={"center"}
-      >
-        <img width={"170px"} height={"40px"} src={lo} alt="logo" />
-        <Typography
-          width={"90%"}
-          m={"0 auto"}
-          sx={{
-            fontFamily: "Work Sans",
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "26px",
-            letterSpacing: "0em",
-            textAlign: "center",
-            marginTop: "20px",
-            opacity: 0.6,
-          }}
+      <form onSubmit={handleSubmit}>
+        <Stack
+          marginTop={"40px"}
+          direction={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
         >
-          ZOHO CRM IMPLEMENTATION & EXPERIENCE
-        </Typography>
-      </Stack>
-      <Stack
-        width={{
-          xs: "95%",
-          sm: "90%",
-          md: "75%",
-        }}
-        margin={"0px auto"}
-      >
-        <form onSubmit={handleSubmit}>
+          <img width={"170px"} height={"40px"} src={lo} alt="logo" />
+          <Typography
+            width={"90%"}
+            m={"0 auto"}
+            sx={{
+              fontFamily: "Work Sans",
+              fontSize: "24px",
+              fontWeight: 700,
+              lineHeight: "26px",
+              letterSpacing: "0em",
+              textAlign: "center",
+              marginTop: "20px",
+              opacity: 0.6,
+            }}
+          >
+            ZOHO CRM IMPLEMENTATION & EXPERIENCE
+          </Typography>
+        </Stack>
+        <Stack
+          width={{
+            xs: "95%",
+            sm: "90%",
+            md: "75%",
+          }}
+          margin={"0px auto"}
+        >
           <hr
             style={{
               width: "100%",
@@ -543,51 +543,8 @@ const CaseStudyForm3 = () => {
               </Stack>
             </Stack>
           </Stack>
-
-          <Stack alignItems={"center"} mb={"40px"}>
-            <Link
-              to="/Resources/CaseStudy"
-              onClick={() => window.scrollTo(0, 0)}
-              style={{ textDecoration: "none" }}
-            >
-              <Button
-                type="submit"
-                style={{
-                  width: "140px",
-                  height: "40px",
-                  backgroundColor: "#F15B25",
-                  marginTop: "40px",
-                  borderRadius: "0px",
-                  alignSelf: "center",
-                }}
-              >
-                <Typography color={"white"}>NEXT</Typography>
-              </Button>
-            </Link>
-          </Stack>
-        </form>
-
-        <Stack alignItems={"center"} mb={"40px"}>
-          <Typography
-            width={"100%"}
-            margin={"0px auto"}
-            sx={{
-              fontFamily: "Work Sans",
-              fontSize: "12px",
-              fontWeight: 400,
-              lineHeight: "20px",
-              letterSpacing: "0em",
-              textAlign: "center",
-              marginTop: "15px",
-              marginBottom: "15px",
-              opacity: 0.6,
-            }}
-          >
-            The information collected through this survey will be used in
-            accordance with our Privacy Policy
-          </Typography>
         </Stack>
-      </Stack>
+      </form>
     </Stack>
   );
 };

@@ -117,6 +117,7 @@ const CareerBanner = () => {
               md: "32px",
               lg: "37px",
               xl: "50px",
+              xxl: "60px",
             },
             fontWeight: 600,
             letterSpacing: "0em",

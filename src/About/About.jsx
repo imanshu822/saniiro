@@ -14,20 +14,19 @@ import { Stack } from "@mui/material";
 const About = () => {
   return (
     <>
-      <Stack
-        sx={{
-          gap: 5,
-          maxWidth: "1440px",
-          margin: "0 auto",
-        }}
-      >
+      <Stack gap={5}>
         <Nav />
         <AboutBanner />
+      </Stack>
+      <Stack gap={5} maxWidth={"1536px"} margin={"0 auto"}>
         <WelcomeToSaniiro />
-        <ExploreAbout />
-        <OurJourney />
-        <OurNetwork />
-        <ProductSlider />
+      </Stack>
+      <ExploreAbout />
+
+      <OurJourney />
+      <OurNetwork />
+      <ProductSlider />
+      <Stack gap={5} maxWidth={"1536px"} margin={"0 auto"}>
         <Name />
         <Clock />
         <Awards />

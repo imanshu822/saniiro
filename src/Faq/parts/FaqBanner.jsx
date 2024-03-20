@@ -23,7 +23,7 @@ const BlogBanner = (props) => {
         <Box
           component="img"
           width={{
-            lg: "1036px",
+            lg: "90vw",
             md: "90%",
             sm: "100%",
             xs: "100%",

@@ -8,8 +8,8 @@ import { Stack } from "@mui/material";
 const CaseStudyUserExperience = () => {
   return (
     <>
+      <CaseStudyUserBanner />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <CaseStudyUserBanner />
         <ContentSection />
         <RecommendedSection />
       </Stack>

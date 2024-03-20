@@ -23,7 +23,7 @@ const BlogBanner = (props) => {
         <Box
           component="img"
           width={{
-            lg: "1036px",
+            lg: "90vw",
             md: "90%",
             sm: "100%",
             xs: "100%",
@@ -34,6 +34,8 @@ const BlogBanner = (props) => {
         ></Box>
       </Stack>
       <Stack
+        maxWidth={"1536px"}
+        margin={"0 auto"}
         alignSelf={"center"}
         width={{
           lg: "70%",

@@ -9,16 +9,25 @@ import Readytosign from "./parts/Readytosign";
 
 const Contact = () => {
   return (
-    <Box fontFamily={"Work Sans"} maxWidth={"1536px"} margin={"0 auto"} gap={4}>
+    <>
       <ContactUs />
+
       <Stack bgcolor={"#F1F1F1"}>
-        <GrennSection />
-        <Bluescreen />
+        <Box
+          fontFamily={"Work Sans"}
+          maxWidth={"1536px"}
+          margin={"0 auto"}
+          gap={4}
+        >
+          <GrennSection />
+          <Bluescreen />
+        </Box>
       </Stack>
+
       <Offices />
       <Readytosign />
       <Footer />
-    </Box>
+    </>
   );
 };
 

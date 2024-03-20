@@ -9,6 +9,8 @@ const VideoSection = () => {
     <Stack bgcolor={"#052973"} className="textured-background">
       <NavLight />
       <Stack
+        maxWidth={"1536px"}
+        margin={"0 auto"}
         pb={{
           lg: 10,
           xs: 5,

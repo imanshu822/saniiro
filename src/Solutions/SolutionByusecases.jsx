@@ -8,8 +8,8 @@ import Signupfree from "./Signupfree";
 const SolutionByusecases = () => {
   return (
     <>
+      <Industries />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Industries />
         <Industry2 />
       </Stack>
       <Signupfree />

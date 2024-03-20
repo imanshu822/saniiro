@@ -103,8 +103,8 @@ const videos = [
 const PlayVideo = () => {
   return (
     <>
+      <Nav />
       <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
         <Stack width={"100%"} margin={"20px auto 50px"}>
           <Stack
             width={"90%"}

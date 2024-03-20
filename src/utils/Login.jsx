@@ -22,7 +22,6 @@ const Login = () => {
           xs: "none",
           lg: "flex",
         }}
-        maxWidth={"1640px"}
         margin={"0 auto"}
         bgcolor={"#052973"}
         className="textured-background-Login"
@@ -33,6 +32,7 @@ const Login = () => {
         alignItems={"Center"}
       >
         <Stack
+          maxWidth={"1640px"}
           bgcolor={"rgb(230, 245, 255)"}
           width={{
             xs: "90%",

@@ -44,6 +44,7 @@ import ViewAll1 from "./ViewAll/ViewAll1";
 import ViewAll2 from "./ViewAll/ViewAll2";
 import ViewAll3 from "./ViewAll/ViewAll3";
 import LookingFor from "./ViewAll/LookingFor";
+import RequestCallback from "./utils/RequestCallback";
 
 const Main = () => {
   return (
@@ -150,6 +151,8 @@ const Main = () => {
           path="/subfooter/employee-login"
           element={<LegalEmployeeLogin />}
         />
+
+        <Route exact path="/requestCallback" element={<RequestCallback />} />
       </Routes>
     </>
   );

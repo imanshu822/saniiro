@@ -7,12 +7,9 @@ import { Stack } from "@mui/material";
 const Testimonials = () => {
   return (
     <>
-      <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <Nav />
-        <TestimonialsBanner />
-
-        <TestimonialsCardsSection />
-      </Stack>
+      <Nav />
+      <TestimonialsBanner />
+      <TestimonialsCardsSection />
       <Footer />
     </>
   );
