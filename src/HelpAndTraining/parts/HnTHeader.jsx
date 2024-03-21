@@ -5,6 +5,7 @@ import AdministratorsImg from "./../../assets/strators.png";
 import DevelopersImg from "./../../assets/developers.png";
 import SalesImg from "./../../assets/sales.png";
 import managerImg from "./../../assets/salesManager.png";
+import { Link } from "react-router-dom";
 const HnTHeader = () => {
   return (
     <>
@@ -224,6 +225,7 @@ const HnTHeader = () => {
                           configuration, and maintenance of their organization’s
                           CRM software.
                         </Typography>
+
                         <Typography
                           sx={{
                             fontFamily: "Work Sans",
@@ -233,6 +235,10 @@ const HnTHeader = () => {
                             letterSpacing: "-0.02em",
                             textAlign: "right",
                             color: "#0079FF",
+                            "&:hover": {
+                              color: "#052973",
+                              pointer: "cursor",
+                            },
                           }}
                         >
                           Learn More
