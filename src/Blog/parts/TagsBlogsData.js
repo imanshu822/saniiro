@@ -4,6 +4,7 @@ import Blog3Img from "../assets/BlogImg3.png";
 import Blog4Img from "../assets/BlogImg4.png";
 import Blog5Img from "../assets/BlogImg5.png";
 import Blog6Img from "../assets/BlogImg6.png";
+import profileImg from "../../assets/Group 62904.png";
 
 const FeaturedPosts = [
   {
@@ -609,4 +610,31 @@ const Blogs = [
   },
 ];
 
-export { Tags, Blogs, FeaturedPosts };
+const trainingInfo = [
+  {
+    id: 1,
+    imgUrl: Blog1Img,
+    title: "Design Systems for Websites using Figma",
+    disc: "Learn how to build design systems for visually appealing websites using Figma...",
+    postDate: "December 20, 2023",
+    time: "10 AM to 5 PM",
+    timezone: "Eastern Standard Time (EST)",
+    trannieName: "Mani Prabhu",
+    trannieImgUrl: profileImg,
+    trannieCompany: "Director of Sales, CIMCO Refrigeration",
+  },
+  {
+    id: 2,
+    imgUrl: Blog2Img,
+    title: "Design Systems for Websites using Figma",
+    disc: "Learn how to build design systems for visually appealing websites using Figma...",
+    postDate: "December 20, 2023",
+    time: "10 AM to 5 PM",
+    timezone: "Eastern Standard Time (EST)",
+    trannieName: "Mani Prabhu",
+    trannieImgUrl: profileImg,
+    trannieCompany: "Director of Sales, CIMCO Refrigeration",
+  },
+];
+
+export { Tags, Blogs, FeaturedPosts, trainingInfo };

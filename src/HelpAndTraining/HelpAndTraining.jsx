@@ -13,14 +13,12 @@ const HelpAndTraining = () => {
   return (
     <>
       <Nav />
-      <Stack maxWidth={"1536px"} margin={"0 auto"}>
-        <HnTHeader />
-        <HnTVirtal />
-        <HnTBanner />
-        <HnTTranie />
-        <Quote />
-        <ContactFaq />
-      </Stack>
+      <HnTHeader />
+      <HnTVirtal />
+      <HnTBanner />
+      <HnTTranie />
+      <Quote />
+      <ContactFaq />
       <Footer />
     </>
   );

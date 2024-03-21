@@ -7,6 +7,7 @@ import caseStudy from "../../assets/icons/caseStudy.png";
 import testimonials from "../../assets/icons/testimonials.png";
 import videos from "../../assets/icons/videos.png";
 import faq from "../../assets/icons/faq.png";
+import { Link } from "react-router-dom";
 
 const ResourceGallery = () => {
   return (
@@ -28,263 +29,334 @@ const ResourceGallery = () => {
             width: "100%",
           }}
         >
-          <Stack direction={"row"} gap={2}>
-            <Box
-              position={"relative"}
+          <Stack direction={"row"} gap={2} position={"relative"}>
+            <Stack
               sx={{
-                backgroundImage: `url(${becomeApartner})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                  cursor: "pointer",
-                },
                 width: "calc((100% - 20px) * 12 / 12)",
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
               }}
-              alt="become a partner page"
             >
-              <Typography
-                position={"absolute"}
-                left={0}
-                right={0}
-                ml={"auto"}
-                mr={"auto"}
-                color={"red"}
-                width={"fit-content"}
-              ></Typography>
-            </Box>
+              <Link
+                to="/Resources/BecomeAPartner"
+                onClick={() => window.scroll(0, 0)}
+              >
+                <Box
+                  sx={{
+                    backgroundImage: `url(${becomeApartner})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
 
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                      cursor: "pointer",
+                    },
+                    width: "100%",
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                  alt="become a partner page"
+                >
+                  <Typography
+                    position={"absolute"}
+                    left={0}
+                    right={0}
+                    ml={"auto"}
+                    mr={"auto"}
+                    color={"red"}
+                    width={"fit-content"}
+                  ></Typography>
+                </Box>
+              </Link>
+            </Stack>
+            <Stack
               sx={{
-                backgroundImage: `url(${career})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                  cursor: "pointer",
-                },
-                width: "calc((100% - 20px) * 9 / 12)", // span 9 out of 12
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100% - 20px) * 9 / 12)",
               }}
-            ></Box>
+            >
+              <Link to="/Resources/Career" onClick={() => window.scroll(0, 0)}>
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${career})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
+
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                      cursor: "pointer",
+                    },
+                    width: "100%", // span 9 out of 12
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
           </Stack>
           <Stack direction={"row"} gap={2}>
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
+            <Stack
               sx={{
-                backgroundImage: `url(${blogPageSS})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                },
-                width: "calc((100%) * 10/ 10)", // span 9 out of 12
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100%) * 10/ 10)",
               }}
-            ></Box>
+            >
+              <Link to="/Resources/Blog" onClick={() => window.scroll(0, 0)}>
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${blogPageSS})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
+
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                    },
+                    width: "100%", // span 9 out of 12
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
           </Stack>
 
           <Stack direction={"row"} gap={2}>
             <Stack
-              border={"1px solid white"}
-              alt="become a partner page"
               sx={{
-                backgroundImage: `url(${caseStudy})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                  cursor: "pointer",
-                },
-                width: "calc((100% - 20px) * 4 / 10)", // span 4 out of 12
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100% - 20px) * 4 / 10)",
               }}
-            ></Stack>
+            >
+              <Link
+                to="/Resources/CaseStudy"
+                onClick={() => window.scroll(0, 0)}
+              >
+                <Stack
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${caseStudy})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
 
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                      cursor: "pointer",
+                    },
+                    width: "100%", // span 4 out of 12
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Stack>
+              </Link>
+            </Stack>
+            <Stack
               sx={{
-                backgroundImage: `url(${testimonials})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                },
-                width: "calc((100% - 20px) * 6 / 10)", // span 4 out of 12
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100% - 20px) * 6 / 10)",
               }}
-            ></Box>
+            >
+              <Link
+                to="/Resources/Testimonials"
+                onClick={() => window.scroll(0, 0)}
+              >
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${testimonials})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
+
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                    },
+                    width: "100%", // span 4 out of 12
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
+          </Stack>
+
+          <Stack direction={"row"} gap={2}>
+            <Stack
+              sx={{
+                width: "calc((100% - 20px) * 10 / 10)",
+              }}
+            >
+              <Link to="/Resources/Videos" onClick={() => window.scroll(0, 0)}>
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${videos})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                    },
+                    width: "100%",
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
           </Stack>
           <Stack direction={"row"} gap={2}>
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
+            <Stack
               sx={{
-                backgroundImage: `url(${videos})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                },
-                width: "calc((100%) * 10/ 10)",
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100% - 20px) * 6 / 10)",
               }}
-            ></Box>
-          </Stack>
-          <Stack direction={"row"} gap={2}>
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
-              sx={{
-                backgroundImage: `url(${faq})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
+            >
+              <Link to="/Resources/FaQ" onClick={() => window.scroll(0, 0)}>
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${faq})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
 
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                },
-                width: "calc((100%) * 6/ 10)",
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
-              }}
-            ></Box>
-            <Box
-              border={"1px solid white"}
-              alt="become a partner page"
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                    },
+                    width: "100%",
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
+            <Stack
               sx={{
-                backgroundImage: `url(${faq})`,
-                backgroundSize: "cover",
-                backgroundPosition: "top",
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222",
-
-                transition: "all 1s ease-in-out",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#999",
-                  backgroundPosition: "center",
-                  boxShadow: "0 0 4px #fff",
-                },
-                width: "calc((100%) * 4/ 10)",
-                height: {
-                  xs: "150px",
-                  md: "230px",
-                },
-                backgroundColor: "white",
-                borderRadius: "10px",
+                width: "calc((100% - 20px) * 4 / 10)",
               }}
-            ></Box>
+            >
+              <Link to="/Resources/FaQ" onClick={() => window.scroll(0, 0)}>
+                <Box
+                  border={"1px solid white"}
+                  alt="become a partner page"
+                  sx={{
+                    backgroundImage: `url(${faq})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "top",
+                    color: "white",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "#222",
+
+                    transition: "all 1s ease-in-out",
+                    cursor: "pointer",
+                    "&:hover": {
+                      backgroundColor: "#999",
+                      backgroundPosition: "center",
+                      boxShadow: "0 0 4px #fff",
+                    },
+                    width: "100%",
+                    height: {
+                      xs: "150px",
+                      md: "230px",
+                    },
+                    backgroundColor: "white",
+                    borderRadius: "10px",
+                  }}
+                ></Box>
+              </Link>
+            </Stack>
           </Stack>
         </Stack>
       </Box>

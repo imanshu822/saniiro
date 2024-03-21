@@ -6,6 +6,34 @@ import DevelopersImg from "./../../assets/developers.png";
 import SalesImg from "./../../assets/sales.png";
 import managerImg from "./../../assets/salesManager.png";
 import { Link } from "react-router-dom";
+
+const stackData = [
+  {
+    imgSrc: AdministratorsImg,
+    title: "Administrators",
+    description:
+      "For admins who are responsible for the setup, configuration, and maintenance of their organization’s CRM software.",
+  },
+  {
+    imgSrc: DevelopersImg,
+    title: "Developers",
+    description:
+      "For developers who customize, extend, and build applications on the CRM platform.",
+  },
+  {
+    imgSrc: SalesImg,
+    title: "Sales Team",
+    description:
+      "For sales representatives who use CRM to manage customer interactions, track leads, and close deals.",
+  },
+  {
+    imgSrc: managerImg,
+    title: "Managers",
+    description:
+      "For managers who oversee teams and utilize CRM data to make strategic decisions and optimize processes.",
+  },
+];
+
 const HnTHeader = () => {
   return (
     <>
@@ -178,259 +206,83 @@ const HnTHeader = () => {
                     borderRadius={"10px"}
                     direction={"row"}
                   >
-                    <Stack
-                      width={"25%"}
-                      height={"100%"}
-                      borderRight={"1px solid #34A853"}
-                    >
-                      <Stack padding={"15px 20px 27px 20px"} gap={3.7}>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: 51,
-                            width: 61,
-                          }}
-                          alt="AdministratorsImg"
-                          src={AdministratorsImg}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            lineHeight: "27px",
-                            color: "#052973",
-                          }}
-                        >
-                          Administrators
-                        </Typography>
-                        <Box
-                          marginTop={"-25px"}
-                          width={"20%"}
-                          height={"4px"}
-                          backgroundColor={"#34A853"}
-                          borderRadius={"10px"}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "19px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "left",
-                          }}
-                        >
-                          For admins who are responsible for the setup,
-                          configuration, and maintenance of their organization’s
-                          CRM software.
-                        </Typography>
-
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: 500,
-                            lineHeight: "21px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "right",
-                            color: "#0079FF",
-                            "&:hover": {
+                    {stackData.map((stack, index) => (
+                      <Stack
+                        key={index}
+                        width="25%"
+                        height="100%"
+                        borderRight={
+                          index < stackData.length - 1
+                            ? "1px solid #34A853"
+                            : "none"
+                        } // Adding border to all stacks except the last one
+                      >
+                        <Stack padding="15px 20px 27px 20px" gap={3.7}>
+                          <Box
+                            component="img"
+                            sx={{
+                              height: 51,
+                              width: 61,
+                            }}
+                            alt="Stack Image"
+                            src={stack.imgSrc}
+                          />
+                          <Typography
+                            sx={{
+                              fontFamily: "Work Sans",
+                              fontSize: "18px",
+                              fontWeight: 600,
+                              lineHeight: "27px",
                               color: "#052973",
-                              pointer: "cursor",
-                            },
-                          }}
-                        >
-                          Learn More
-                        </Typography>
+                            }}
+                          >
+                            {stack.title}
+                          </Typography>
+                          <Box
+                            marginTop="-25px"
+                            width="20%"
+                            height="4px"
+                            backgroundColor="#34A853"
+                            borderRadius="10px"
+                          />
+                          <Typography
+                            sx={{
+                              fontFamily: "Work Sans",
+                              fontSize: "16px",
+                              fontWeight: 400,
+                              lineHeight: "19px",
+                              letterSpacing: "-0.02em",
+                              textAlign: "left",
+                            }}
+                          >
+                            {stack.description}
+                          </Typography>
+                          <Link
+                            to="/view-all3"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <Typography
+                              zIndex={444}
+                              sx={{
+                                fontFamily: "Work Sans",
+                                fontSize: "18px",
+                                fontWeight: 500,
+                                lineHeight: "21px",
+                                letterSpacing: "-0.02em",
+                                textAlign: "right",
+                                color: "#0079FF",
+                                "&:hover": {
+                                  color: "#052973",
+                                  cursor: "pointer",
+                                },
+                              }}
+                            >
+                              Learn More
+                            </Typography>
+                          </Link>
+                        </Stack>
                       </Stack>
-                    </Stack>
-                    <Stack
-                      width={"25%"}
-                      height={"100%"}
-                      borderRight={"1px solid #34A853"}
-                    >
-                      <Stack padding={"11px 20px 23px 15px"} gap={3.7}>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: 51,
-                            width: 61,
-                          }}
-                          alt="AdministratorsImg"
-                          src={DevelopersImg}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            lineHeight: "27px",
-                            color: "#052973",
-                          }}
-                        >
-                          Administrators
-                        </Typography>
-                        <Box
-                          marginTop={"-25px"}
-                          width={"20%"}
-                          height={"4px"}
-                          backgroundColor={"#34A853"}
-                          borderRadius={"10px"}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "19px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "left",
-                          }}
-                        >
-                          For admins who are responsible for the setup,
-                          configuration, and maintenance of their organization’s
-                          CRM software.
-                        </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: 500,
-                            lineHeight: "21px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "right",
-                            color: "#0079FF",
-                          }}
-                        >
-                          Learn More
-                        </Typography>
-                      </Stack>
-                    </Stack>
-                    <Stack
-                      width={"25%"}
-                      height={"100%"}
-                      borderRight={"1px solid #34A853"}
-                    >
-                      <Stack padding={"11px 20px 23px 15px"} gap={3.7}>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: 51,
-                            width: 61,
-                          }}
-                          alt="AdministratorsImg"
-                          src={SalesImg}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            lineHeight: "27px",
-                            color: "#052973",
-                          }}
-                        >
-                          Administrators
-                        </Typography>
-                        <Box
-                          marginTop={"-25px"}
-                          width={"20%"}
-                          height={"4px"}
-                          backgroundColor={"#34A853"}
-                          borderRadius={"10px"}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "19px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "left",
-                          }}
-                        >
-                          For admins who are responsible for the setup,
-                          configuration, and maintenance of their organization’s
-                          CRM software.
-                        </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: 500,
-                            lineHeight: "21px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "right",
-                            color: "#0079FF",
-                          }}
-                        >
-                          Learn More
-                        </Typography>
-                      </Stack>
-                    </Stack>
-                    <Stack
-                      width={"25%"}
-                      height={"100%"}
-                      borderRight={"1px solid #34A853"}
-                    >
-                      <Stack padding={"11px 20px 23px 15px"} gap={3.7}>
-                        <Box
-                          component="img"
-                          sx={{
-                            height: 51,
-                            width: 61,
-                          }}
-                          alt="AdministratorsImg"
-                          src={managerImg}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: "600",
-                            lineHeight: "27px",
-                            color: "#052973",
-                          }}
-                        >
-                          Administrators
-                        </Typography>
-                        <Box
-                          marginTop={"-25px"}
-                          width={"20%"}
-                          height={"4px"}
-                          backgroundColor={"#34A853"}
-                          borderRadius={"10px"}
-                        />
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "16px",
-                            fontWeight: 400,
-                            lineHeight: "19px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "left",
-                          }}
-                        >
-                          For admins who are responsible for the setup,
-                          configuration, and maintenance of their organization’s
-                          CRM software.
-                        </Typography>
-                        <Typography
-                          sx={{
-                            fontFamily: "Work Sans",
-                            fontSize: "18px",
-                            fontWeight: 500,
-                            lineHeight: "21px",
-                            letterSpacing: "-0.02em",
-                            textAlign: "right",
-                            color: "#0079FF",
-                          }}
-                        >
-                          Learn More
-                        </Typography>
-                      </Stack>
-                    </Stack>
+                    ))}
                     {/* <Stack
                     width={"25%"}
                     height={"100%"}

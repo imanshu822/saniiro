@@ -8,7 +8,7 @@ const Quote = () => {
       <Stack
         display={{
           xs: "none",
-          lg: "flex",
+          xl: "flex",
         }}
         width={"100%"}
         margin={"0 auto"}
@@ -129,7 +129,7 @@ const Quote = () => {
       <Stack
         display={{
           xs: "flex",
-          lg: "none",
+          xl: "none",
         }}
         width={"100%"}
         margin={"0 auto"}
@@ -137,7 +137,18 @@ const Quote = () => {
           backgroundColor: "#8AA3FF",
         }}
       >
-        <Stack width={"90%"} m={"20px auto"} gap={2}>
+        <Stack
+          maxWidth={"1536px"}
+          width={{
+            xs: "90%",
+            lg: "80%",
+          }}
+          m={{
+            xs: "20px auto",
+            lg: "60px auto",
+          }}
+          gap={2}
+        >
           <Typography
             sx={{
               fontFamily: "Work Sans",

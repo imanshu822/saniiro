@@ -1,14 +1,11 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
-import BlogCard from "../../Blog/parts/BlogCard";
-import { Blogs } from "../../Blog/parts/TagsBlogsData";
+// import BlogCard from "../../Blog/parts/BlogCard";
+import { trainingInfo } from "../../Blog/parts/TagsBlogsData";
 import { Link } from "react-router-dom";
+import BookYourSeatCard from "./BookYourSeatCard";
 
 const HnTVirtal = () => {
-  const limitedBlogs = Blogs.slice(0, 2);
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  };
   return (
     <Stack
       mt={{
@@ -89,15 +86,8 @@ const HnTVirtal = () => {
         gap={2}
         justifyContent={"center"}
       >
-        {limitedBlogs.map((blog) => (
-          <Link
-            style={{ textDecoration: "none", color: "black" }}
-            to={`/Resources/Blog/${blog.id}`}
-            key={blog.id}
-            onClick={handleClick} // Attach onClick event to trigger window scroll
-          >
-            <BlogCard key={blog.id} blog={blog} />
-          </Link>
+        {trainingInfo.map((traning) => (
+          <BookYourSeatCard key={traning.id} traning={traning} />
         ))}
       </Stack>
     </Stack>
